@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+<body ng-app="app">
+<div class="container">
+        <h2>Metascape Gene List Analysis Report</h2><p/>  <a href="http://metascape.org">metascape.org</a><sup>1</sup><p/>
+
+              <h3>Bar Graph Summary</h3>
+              <div class="panel panel-info">
+                <div class="panel-heading">Figure 1. Bar graph of enriched terms across input gene lists, colored by p-values.</div>
+                <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./Enrichment_heatmap/HeatmapSelectedGO.png" style="width:1000px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            
+                <a href='./Enrichment_heatmap/HeatmapSelectedGO.pdf' title='download PDF file'>
+                <img class='link' src='icon/PDF48.png' >
+                </a>
+                
+                        </td>
+                    </tr>
+                    
+                </table>
+                </div>
+              </div><p/>
+      <h3>Gene Lists</h3>
+      User-provided gene identifiers are first converted into their corresponding A. thaliana Entrez gene IDs using the latest version of the database (last updated on 2019-08-14).  If multiple identifiers correspond to the same Entrez gene ID, they will be considered as a single Entrez gene ID in downstream analyses.   The gene lists are summarized in Table 1.<p/>
+          <div class="panel panel-info">
+            <div class="panel-heading">Table 1. Statistics of input gene lists.</div>
+            <div class="panel-body"><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">Name</TH>
+      <TH class="info">Total</TH>
+      <TH class="info">Unique</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>Input ID</TD>
+      <TD>111</TD>
+      <TD>111</TD>
+    </TR>
+  </TBODY>
+</TABLE></div>
+          </div>
+
+
+
+
+              <h3>Pathway and Process Enrichment Analysis</h3>
+              For each given gene list, pathway and process enrichment analysis has been carried out with the following ontology sources: KEGG Pathway, GO Biological Processes, GO Cellular Components, GO Molecular Functions and KEGG Structural Complexes.  All genes in the genome have been used as the enrichment background. Terms with a p-value &lt; 0.05, a minimum count of 3, and an enrichment factor &gt; 1.5 (the enrichment factor is the ratio between the observed counts and the counts expected by chance) are collected and grouped into clusters based on their membership similarities.  More specifically, p-values are calculated based on the accumulative hypergeometric distribution<sup>2</sup>, and q-values are calculated using the Banjamini-Hochberg procedure to account for multiple testings<sup>3</sup>.  Kappa scores<sup>4</sup> are used as the similarity metric when performing hierachical clustering on the enriched terms, and sub-trees with a similarity of > 0.3 are considered a cluster.  The most statistically significant term within a cluster is chosen to represent the cluster.<p/>
+          <div class="panel panel-info">
+          <div class="panel-heading">Table 2. Top 15 clusters with their representative enriched terms (one per cluster).  "Count" is the number of genes in the user-provided lists with membership in the given ontology term. "%" is the percentage of all of the user-provided genes that are found in the given ontology term (only input genes with at least one ontology term annotation are included in the calculation).  "Log10(P)" is the p-value in log base 10.  "Log10(q)" is the multi-test adjusted p-value in log base 10.</div>
+                <div class="panel-body"><TABLE class="table">
+  <THEAD>
+    <TR>
+      <TH class="info">GO</TH>
+      <TH class="info">Category</TH>
+      <TH class="info">Description</TH>
+      <TH class="info">Count</TH>
+      <TH class="info">%</TH>
+      <TH class="info">Log10(P)</TH>
+      <TH class="info">Log10(q)</TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR>
+      <TD>GO:0009904</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>chloroplast accumulation movement</TD>
+      <TD>3</TD>
+      <TD>3.23</TD>
+      <TD>-3.84</TD>
+      <TD>-0.14</TD>
+    </TR>
+    <TR>
+      <TD>GO:0031669</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>cellular response to nutrient levels</TD>
+      <TD>6</TD>
+      <TD>6.45</TD>
+      <TD>-3.26</TD>
+      <TD>-0.09</TD>
+    </TR>
+    <TR>
+      <TD>GO:1901701</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>cellular response to oxygen-containing compound</TD>
+      <TD>11</TD>
+      <TD>11.83</TD>
+      <TD>-3.00</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0030234</TD>
+      <TD>GO Molecular Functions</TD>
+      <TD>enzyme regulator activity</TD>
+      <TD>8</TD>
+      <TD>8.60</TD>
+      <TD>-2.94</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0042493</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>response to drug</TD>
+      <TD>9</TD>
+      <TD>9.68</TD>
+      <TD>-2.65</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>ath04141</TD>
+      <TD>KEGG Pathway</TD>
+      <TD>Protein processing in endoplasmic reticulum</TD>
+      <TD>5</TD>
+      <TD>5.38</TD>
+      <TD>-2.41</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0007568</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>aging</TD>
+      <TD>4</TD>
+      <TD>4.30</TD>
+      <TD>-1.99</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0016567</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>protein ubiquitination</TD>
+      <TD>8</TD>
+      <TD>8.60</TD>
+      <TD>-1.94</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0009579</TD>
+      <TD>GO Cellular Components</TD>
+      <TD>thylakoid</TD>
+      <TD>7</TD>
+      <TD>7.53</TD>
+      <TD>-1.75</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0009611</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>response to wounding</TD>
+      <TD>4</TD>
+      <TD>4.30</TD>
+      <TD>-1.69</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0020037</TD>
+      <TD>GO Molecular Functions</TD>
+      <TD>heme binding</TD>
+      <TD>5</TD>
+      <TD>5.38</TD>
+      <TD>-1.63</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0010118</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>stomatal movement</TD>
+      <TD>3</TD>
+      <TD>3.23</TD>
+      <TD>-1.49</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0005509</TD>
+      <TD>GO Molecular Functions</TD>
+      <TD>calcium ion binding</TD>
+      <TD>4</TD>
+      <TD>4.30</TD>
+      <TD>-1.48</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>GO:0009743</TD>
+      <TD>GO Biological Processes</TD>
+      <TD>response to carbohydrate</TD>
+      <TD>3</TD>
+      <TD>3.23</TD>
+      <TD>-1.39</TD>
+      <TD>0.00</TD>
+    </TR>
+    <TR>
+      <TD>ath04075</TD>
+      <TD>KEGG Pathway</TD>
+      <TD>Plant hormone signal transduction</TD>
+      <TD>4</TD>
+      <TD>4.30</TD>
+      <TD>-1.37</TD>
+      <TD>0.00</TD>
+    </TR>
+  </TBODY>
+</TABLE></div>
+              </div><p/>
+                  To further capture the relationships between the terms, a subset of enriched terms have been selected and rendered as a network plot, where terms with a similarity &gt; 0.3 are connected by edges.  We select the terms with the best p-values from each of the 20 clusters, with the constraint that there are no more than 15 terms per cluster and no more than 250 terms in total.  The network is visualized using <a href="http://www.cytoscape.org">Cytoscape</a><sup>5</sup>, where each node represents an enriched term and is colored first by its cluster ID (Figure 2.a) and then by its p-value (Figure 2.b).  These networks can be interactively viewed in Cytoscape through the .cys files (contained in the Zip package, which also contains a publication-quality version as a PDF) or within a browser by clicking on the web icon.  For clarity, term labels are only shown for one term per cluster, so it is recommended to use Cytoscape or a browser to visualize the network in order to inspect all node labels.  We can also export the network into a PDF file within Cytoscape, and then edit the labels using Adobe Illustrator for publication purposes.  To switch off all labels, delete the "Label" mapping under the "Style" tab within Cytoscape, and then export the network view.<p/>
+                  <div class="panel panel-info">
+                    <div class="panel-heading">Figure 2. Network of enriched terms: (a) colored by cluster ID, where nodes that share the same cluster ID are typically close to each other; (b) colored by p-value, where terms containing more genes tend to have a more significant p-value.</div>
+                    <div class="panel-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="./Enrichment_GO/ColorByCluster.png" style="width:500px;">
+                            </td>
+                            <td>
+                                <img src="./Enrichment_GO/ColorByPValue.png" style="width:500px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align='center'>
+                                <a href='./Enrichment_GO/ColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_GO/GONetwork.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_GO/GONetwork.html?Network=GONetwork&Style=ColorByCluster' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    
+                            </td>
+                            <td align='center'>
+                                <a href='./Enrichment_GO/ColorByPValue.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_GO/GONetwork.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_GO/GONetwork.html?Network=GONetwork&Style=ColorByPValue' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+
+                  </div><p/>
+<h3>Protein-protein Interaction Enrichment Analysis</h3>
+For each given gene list, protein-protein interaction enrichment analysis has been carried out with the following databases: BioGrid<sup>6</sup>. The resultant network contains the subset of proteins that form physical interactions with at least one other member in the list.  If the network contains between 3 and 500 proteins, the Molecular Complex Detection (MCODE) algorithm<sup>7</sup> has been applied to identify densely connected network components.  The MCODE networks identified for individual gene lists have been gathered and are shown in Figure 3.<p/>
+
+                    Pathway and process enrichment analysis has been applied to each MCODE component independently, and the three best-scoring terms by p-value have been retained as the functional description of the corresponding components, shown in the tables underneath corresponding network plots within Figure 3.<p/>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">Figure 3. Protein-protein interaction network and MCODE components identified in the gene lists.</div>
+        <div class="panel-body">
+        
+                <table border-collapse='collapse'>
+                <tr><td><img src="./Enrichment_PPI/Input ID_PPIColorByCluster.png" style="width:500px;"></td></tr>
+                <tr><td align="center"><a href='./Enrichment_PPI/Input ID_PPIColorByCluster.pdf' title='download PDF file'>
+                        <img class='link' src='icon/PDF48.png' >
+                        </a>
+                     
+                        <a href='./Enrichment_PPI/MCODE_PPI.cys' title='download CYS file'>
+                        <img class='link' src='icon/CYS48.png' >
+                        </a>
+                    
+                        
+                    
+                        
+                        <a href='Enrichment_PPI/PPINetwork.html?Network=Input ID_PPIColorByCluster&Style=PPIColorByClusterNoLabel&isPPI=True' title='interactive cytoscape' target='_blank'>
+                        <img class='link' src='icon/WEB_CYS48.png' >
+                        </a>
+                        
+                    </td></tr>
+                <tr><td align="center" valign="top"></td></tr>
+                </table>
+        </div>
+      </div><p/>
+
+    <h3>Reference</h3></p>
+    <ol style="list-style: decimal inside;">
+      <li>Zhou et al., Metascape provides a biologist-oriented resource for the analysis of systems-level datasets. Nature Communications (2019) 10(1):1523.</li>
+      <li>Zar, J.H. Biostatistical Analysis 1999 4th edn., NJ Prentice Hall, pp. 523</li>
+      <li>Hochberg Y., Benjamini Y. More powerful procedures for multiple significance testing. Statistics in Medicine (1990) 9:811-818.</li>
+      <li>Cohen, J. A coefficient of agreement for nominal scales. Educ. Psychol. Meas. (1960) 20:27-46.</li>
+      <li>Shannon P. et al., Cytoscape: a software environment for integrated models of biomolecular interaction networks. Genome Res (2003) 11:2498-2504.</li>
+      <li>Stark C. et al. BioGRID: a general repository for interaction datasets. Nucleic Acids Res. (2006) 34:D535-539.</li>
+      <li>Bader, G.D. et al. An automated method for finding molecular complexes in large protein interaction networks. BMC bioinformatics (2003) 4:2.</li>
+</ol>
+</div>
+
+</body></html>
