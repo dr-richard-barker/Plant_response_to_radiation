@@ -1,0 +1,67 @@
+# This file configures the Gitpod workspace.
+# See https://www.gitpod.io/docs/config-gitpod-file
+
+tasks:
+  - name: Install Dependencies
+    init: |
+      # Update package lists
+      sudo apt-get update
+
+      # Install general dependencies
+      echo "Installing general dependencies..."
+      sudo apt-get install -y wget unzip default-jre cpanminus build-essential
+
+      # --- Install Circos ---
+      echo "Installing Circos..."
+      # Install Circos system dependencies
+      sudo apt-get install -y libgd-dev libgd-gd2-perl libswitch-perl
+      # Install Circos Perl modules
+      sudo cpanm Config::General Font::TTF::Font Math::Bezier Math::VecStat Readonly Set::IntSpan Text::Format GD
+      # Download and unpack Circos
+      wget -O circos.tgz http://circos.ca/distribution/circos-0.69.9.tgz
+      tar xvfz circos.tgz
+      sudo mv circos-0.69.9 /opt/circos
+      sudo ln -s /opt/circos/bin/circos /usr/local/bin/circos
+
+      # --- Install Cytoscape ---
+      echo "Installing Cytoscape..."
+      # Download Cytoscape
+      wget -O Cytoscape_unix_3_10_1.sh "https://github.com/cytoscape/cytoscape/releases/download/3.10.1/Cytoscape_unix_3_10_1.sh"
+      # Make executable
+      chmod +x Cytoscape_unix_3_10_1.sh
+      # Run installer in unattended mode
+      sudo ./Cytoscape_unix_3_10_1.sh -q -dir /opt/cytoscape
+
+      # --- Install JTreeView ---
+      echo "Installing JTreeView..."
+      # Download JTreeView
+      wget -O TreeView-1.2.1-bin.tar.gz "https://sourceforge.net/projects/jtreeview/files/jtreeview/1.2.1/TreeView-1.2.1-bin.tar.gz/download"
+      # Unpack JTreeView
+      sudo mkdir -p /opt/jtreeview
+      sudo tar xvfz TreeView-1.2.1-bin.tar.gz -C /opt/jtreeview --strip-components=1
+
+      # --- Setup VNC for GUI applications ---
+      echo "Setting up VNC..."
+      sudo apt-get install -y tigervnc-standalone-server novnc websockify
+      # Configure VNC password
+      mkdir -p ~/.vnc
+      echo "gitpod" | vncpasswd -f > ~/.vnc/passwd
+      chmod 600 ~/.vnc/passwd
+      # Start VNC server
+      vncserver -xstartup /usr/bin/xterm -localhost no -geometry 1280x800 -depth 24 :1
+      # Start noVNC
+      websockify --web /usr/share/novnc/ 6080 localhost:5901 &
+    command: |
+      echo "Your workspace is ready."
+      echo "To access GUI applications like Cytoscape and JTreeView, open port 6080 in a browser."
+      echo "The VNC password is 'gitpod'."
+      echo "You can start Cytoscape by running '/opt/cytoscape/cytoscape.sh' in the VNC terminal."
+      echo "You can start JTreeView by running 'java -jar /opt/jtreeview/TreeView.jar' in the VNC terminal."
+
+ports:
+  - port: 6080
+    onOpen: open-preview
+    name: "VNC - GUI Apps"
+    description: "VNC access to the desktop for GUI applications"
+  - port: 5901
+    onOpen: ignore
