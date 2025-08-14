@@ -9,7 +9,7 @@ tasks:
 
       # Install general dependencies
       echo "Installing general dependencies..."
-      sudo apt-get install -y wget unzip default-jre cpanminus build-essential
+      sudo apt-get install -y wget unzip default-jre cpanminus build-essential libreoffice
 
       # --- Install Circos ---
       echo "Installing Circos..."
