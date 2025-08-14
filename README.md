@@ -66,8 +66,22 @@ To move this forward we'll need processed data from… GLDS-329, -321, -320, -29
 
 * Briefly summarize the research plan and its potential contribution to the field of plant radiation response feield and how this might impact space biology experiemnt that go below low earth orbit. .
 
+---
 
+## Viewing Reports and Presentations
 
+### HTML Reports
 
+This repository contains HTML reports that can be viewed as live web pages using GitHub Pages.
 
-\
+1.  **Analysis Report:** [View the Analysis Report](docs/reports/AnalysisReport.html)
+
+To view these reports, you need to enable GitHub Pages in your repository settings. Go to **Settings > Pages**, and under "Build and deployment", select **Source** as "Deploy from a branch", and choose the `main` branch and the `/docs` folder as the source.
+
+Once enabled, the link above will work, but you will need to prepend the GitHub Pages URL (e.g., `https://<your-username>.github.io/<repo-name>/`).
+
+### Presentations
+
+This repository contains presentations that have been converted to PDF for easy viewing in your browser.
+
+1.  **Analysis Report Presentation:** [View the Presentation (PDF)](presentations/AnalysisReport.pdf)
