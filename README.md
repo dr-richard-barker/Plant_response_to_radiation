@@ -10,7 +10,8 @@ The response of plants to ionizing radiation has been well categorized in studie
 
 To move this forward we'll need processed data from… GLDS-329, -321, -320, -296, -282, -281, -223.
 
-
+### New RNAseq Data and Deep Learning Potential
+The repository has been updated to include new RNAseq data from OSDR studies. The transition from legacy microarray platforms to RNAseq provides higher resolution transcriptomic profiles, enabling the application of advanced machine learning and deep learning models to predict plant adaptive responses to space radiation.
 
 **1. Research Topic:** Plant Response to Radiation in Space Environments (focusing on model organism like Arabidopsis or Hemp)
 
@@ -68,6 +69,22 @@ To move this forward we'll need processed data from… GLDS-329, -321, -320, -29
 
 ---
 
+## Repository Structure
+
+The repository follows FAIR data principles and is organized as follows:
+
+- `data/`:
+    - `raw/`: Unmodified data files.
+        - `microarray/`: Legacy microarray datasets.
+        - `rnaseq/`: New RNAseq datasets.
+    - `metadata/`: Sample metadata and experimental design information.
+    - `processed/`: Normalized counts, differential expression results (DESeq2), and network modules (WGCNA).
+- `scripts/`: R and Python scripts for data processing, visualization, and documentation.
+- `output/`:
+    - `reports/`: HTML analysis reports (DEG, Pathway, Metascape).
+    - `figures/`: Generated plots and diagrams.
+- `docs/`: Supplemental documentation, manuscript outlines, and data management plans.
+
 ## Viewing Reports and Presentations
 
 ### HTML Reports
@@ -75,6 +92,8 @@ To move this forward we'll need processed data from… GLDS-329, -321, -320, -29
 This repository contains HTML reports that can be viewed as live web pages using GitHub Pages.
 
 1.  **Analysis Report:** [View the Analysis Report](docs/reports/AnalysisReport.html)
+2.  **DEG Reports:** [View DEG Reports](output/reports/deg/)
+3.  **Pathway Reports:** [View Pathway Reports](output/reports/pathway/)
 
 To view these reports, you need to enable GitHub Pages in your repository settings. Go to **Settings > Pages**, and under "Build and deployment", select **Source** as "Deploy from a branch", and choose the `main` branch and the `/docs` folder as the source.
 
