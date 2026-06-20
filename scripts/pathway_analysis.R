@@ -11,7 +11,7 @@ cat("Starting pathway analysis template...\n")
 
 # 1. Load Data
 # Assuming Arabidopsis data for this example
-data_path <- "data/raw/Arabidopsis_Shenzhou_results_combined_DRB.xlsx"
+data_path <- "data/raw/microarray/Arabidopsis_Shenzhou_results_combined_DRB.xlsx"
 
 if (file.exists(data_path)) {
   cat("Loading data from:", data_path, "\n")
@@ -43,7 +43,7 @@ if (file.exists(data_path)) {
 
 } else {
   cat("Data file not found at:", data_path, "\n")
-  cat("Please ensure the raw data is placed in data/raw/\n")
+  cat("Please ensure the raw data is placed in data/raw/microarray/microarray/\n")
 }
 
 cat("\nAnalysis template completed.\n")
