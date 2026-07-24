@@ -155,7 +155,11 @@ The theme kit is plain CSS/JS, so it *can* drop into all of these — but the me
    - `theme.js` now samples the host page's background brightness and matches the rail to a
      hard-coded light/dark site (fixes light-rail-on-dark-page). Older shipped copies (the 4 live
      sites) can be re-synced with this build; no visual change since they follow the OS preference.
-5. ⬜ Jekyll layout for `deepspace-seed`.
+5. 🟡 Jekyll (`deepspace-seed`) — **preview live** at `/cose-preview/`. It's a gem theme
+   (`jekyll-theme-slate`) built by GitHub Actions, so the CoSE look ships as a custom layout
+   (`docs/_layouts/cose.html`, radiation design + markdown-content styles) rendering the same content
+   through a preview page; the live slate `index.md` is untouched. Verified on the live build (9-entry
+   doc-map, styled tables/code/figures, branding, no errors). Promote = set `index.md` `layout: cose`.
 6. ⬜ GitBook sites (`AIRI`, `TICTOC`) — decide per-site.
 7. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.
 8. ⬜ Resolve `OSDR_plant_spaceflight_omics` access; scaffold `aph-physiospace` when ready.
