@@ -45,6 +45,10 @@
   var sitePanel = el("div", {class:"cose-panel", id:"panel-site", hidden:""});
   bar.appendChild(switcher); bar.appendChild(docPanel); bar.appendChild(sitePanel);
 
+  /* drag handle on the rail's right edge to resize the panel width */
+  var resizeH = el("div", {class:"cose-resize", "aria-hidden":"true", title:"Drag to resize"});
+  bar.appendChild(resizeH);
+
   var scrim = el("div", {class:"map-scrim"});
 
   /* wrap existing body content so we can push it when the rail opens */
@@ -191,6 +195,26 @@
   try{ savedTheme = localStorage.getItem(LS_THEME); }catch(e){}
   if(savedTheme){ applyTheme(savedTheme); }
   else { themeBtn.innerHTML = effectiveTheme() === "dark" ? SUN : MOON; }
+
+  /* ---------- resize the rail width (drag the right edge) ---------- */
+  var LS_RAIL = "barker.rail", RAIL_MIN = 220, RAIL_MAX = 460;
+  try{ var savedRail = localStorage.getItem(LS_RAIL);
+    if(savedRail){ document.documentElement.style.setProperty("--rail", savedRail + "px"); } }catch(e){}
+  var dragging = false;
+  function railFrom(x){ return Math.max(RAIL_MIN, Math.min(RAIL_MAX, Math.round(x))); }
+  function onMove(x){ if(dragging){ document.documentElement.style.setProperty("--rail", railFrom(x) + "px"); } }
+  function endDrag(){ if(!dragging) return; dragging = false; document.body.style.userSelect = "";
+    var w = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--rail"), 10);
+    try{ localStorage.setItem(LS_RAIL, w); }catch(e){} }
+  resizeH.addEventListener("mousedown", function(e){ dragging = true; document.body.style.userSelect = "none"; e.preventDefault(); });
+  document.addEventListener("mousemove", function(e){ onMove(e.clientX); });
+  document.addEventListener("mouseup", endDrag);
+  resizeH.addEventListener("touchstart", function(e){ dragging = true; }, {passive:true});
+  document.addEventListener("touchmove", function(e){ if(dragging && e.touches[0]) onMove(e.touches[0].clientX); }, {passive:true});
+  document.addEventListener("touchend", endDrag);
+  // double-click resets to the default width
+  resizeH.addEventListener("dblclick", function(){ document.documentElement.style.setProperty("--rail","288px");
+    try{ localStorage.removeItem(LS_RAIL); }catch(e){} });
 
   /* ---------- scroll-spy ---------- */
   var spy = null;

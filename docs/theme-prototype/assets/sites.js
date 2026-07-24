@@ -68,9 +68,6 @@ window.BARKER_SITES = {
     {
       name: "Interactive Notebooks, Web Tools & Pipelines",
       items: [
-        { id:"OSDR_jupyter_book.io", title:"OSDR Jupyter Book (TOAST10)",
-          desc:"OSDR Jupyter Book / TOAST10 interactive notebooks",
-          url:"https://dr-richard-barker.github.io/OSDR_jupyter_book.io/" },
         { id:"Anthocyanin-Image-analysis", title:"Anthocyanin Image Analysis Tool",
           desc:"Browser tool for anthocyanin image analysis",
           url:"https://dr-richard-barker.github.io/Anthocyanin-Image-analysis/" },
@@ -80,12 +77,28 @@ window.BARKER_SITES = {
         { id:"virtual-root", title:"Virtual Root",
           desc:"Interactive auxin-transport root model",
           url:"https://dr-richard-barker.github.io/virtual-root/" },
-        { id:"AIRI", title:"Astrobotany International Research Initiative",
-          desc:"AIRI — astrobotany international research initiative",
-          url:"https://dr-richard-barker.github.io/AIRI/" },
         { id:"madwest-astrobotany", title:"MadWest Astrobotany",
           desc:"MadWest astrobotany outreach & resources",
           url:"https://dr-richard-barker.github.io/madwest-astrobotany/" },
+      ]
+    },
+    {
+      name: "Games & 3D Simulations",
+      items: [
+        { id:"Settlers_of_Mars_3D_LLM", title:"Settlers of Mars (3D + LLM)",
+          desc:"Space-biology education game: browser colony sim, AI role-play & a 3D-printed board",
+          url:"https://dr-richard-barker.github.io/Settlers_of_Mars_3D_LLM/" },
+      ]
+    },
+    {
+      name: "Documentation & Education Hubs",
+      items: [
+        { id:"OSDR_jupyter_book.io", title:"OSDR Jupyter Book (TOAST10)",
+          desc:"OSDR Jupyter Book / TOAST10 interactive notebooks",
+          url:"https://dr-richard-barker.github.io/OSDR_jupyter_book.io/" },
+        { id:"AIRI", title:"Astrobotany International Research Initiative",
+          desc:"AIRI — astrobotany international research initiative",
+          url:"https://dr-richard-barker.github.io/AIRI/" },
       ]
     }
   ]

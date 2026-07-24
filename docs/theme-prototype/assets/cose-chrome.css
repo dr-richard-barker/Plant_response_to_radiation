@@ -104,3 +104,7 @@ body.map-open .map-scrim{opacity:1;visibility:visible}
   --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#2b3543;
   --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; }
 .sitebar.cose-dark{background:#161d27;border-right-color:#2b3543}
+
+/* draggable resize handle on the rail edge */
+.cose-resize{position:absolute;top:0;right:0;bottom:0;width:8px;cursor:ew-resize;z-index:3}
+.cose-resize:hover,.cose-resize:active{background:linear-gradient(90deg,transparent,rgba(59,110,165,.28))}
