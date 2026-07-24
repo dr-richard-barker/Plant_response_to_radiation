@@ -13,7 +13,7 @@
    ========================================================================== */
 (function(){
   "use strict";
-  var LS_OPEN = "barker.map.open", LS_PANEL = "barker.map.panel";
+  var LS_OPEN = "barker.map.open", LS_PANEL = "barker.map.panel", LS_THEME = "barker.theme";
   var slug = document.body.getAttribute("data-site-id") || "";
   var LOGO = document.body.getAttribute("data-brand-logo") || "assets/cose-logo.png";
   var BRAND_URL = document.body.getAttribute("data-brand-url") || "https://cosecloud.com/";
@@ -23,12 +23,17 @@
     "aria-expanded":"false"});
   toggle.innerHTML = '<span class="bars"><span></span></span><span class="lbl">Map</span>';
 
-  /* top-left bar: COSE brand logo + the toggle */
+  /* top-left bar: COSE brand logo + the map toggle + the light/dark toggle */
   var topbar = el("div", {class:"topbar"});
   var brand = el("a", {class:"cose-brand", href:BRAND_URL, target:"_blank",
     rel:"noopener", title:"COSE — cosecloud.com", "aria-label":"COSE — cosecloud.com"});
   brand.appendChild(el("img", {src:LOGO, alt:"COSE"}));
+  var SUN = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  var MOON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  var themeBtn = el("button", {class:"cose-theme-btn",
+    "aria-label":"Toggle light or dark theme", title:"Toggle light / dark"});
   topbar.appendChild(brand); topbar.appendChild(toggle);
+  if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ topbar.appendChild(themeBtn); }
 
   var bar = el("nav", {class:"sitebar", "aria-label":"Site and document map"});
   var switcher = el("div", {class:"switch", role:"tablist"});
@@ -154,6 +159,31 @@
     document.body.classList.contains("map-open") ? close() : open(); });
   scrim.addEventListener("click", close);
   document.addEventListener("keydown", function(e){ if(e.key==="Escape") close(); });
+
+  /* ---------- light / dark theme toggle ----------
+     Sets data-theme on <html>; cose-theme.css / theme.css define the token
+     values for html[data-theme="light|dark"], overriding the page's own
+     prefers-color-scheme media queries. Persisted; default follows the OS. */
+  function effectiveTheme(){
+    return document.documentElement.getAttribute("data-theme")
+      || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }
+  function applyTheme(t){
+    document.documentElement.setAttribute("data-theme", t);
+    themeBtn.innerHTML = t === "dark" ? SUN : MOON;
+    themeBtn.setAttribute("title", t === "dark" ? "Switch to light" : "Switch to dark");
+    [bar, topbar].forEach(function(e){
+      e.classList.remove("cose-dark","cose-light");
+      e.classList.add(t === "dark" ? "cose-dark" : "cose-light");
+    });
+    try{ localStorage.setItem(LS_THEME, t); }catch(e){}
+  }
+  themeBtn.addEventListener("click", function(){
+    applyTheme(effectiveTheme() === "dark" ? "light" : "dark"); });
+  var savedTheme = null;
+  try{ savedTheme = localStorage.getItem(LS_THEME); }catch(e){}
+  if(savedTheme){ applyTheme(savedTheme); }
+  else { themeBtn.innerHTML = effectiveTheme() === "dark" ? SUN : MOON; }
 
   /* ---------- scroll-spy ---------- */
   var spy = null;

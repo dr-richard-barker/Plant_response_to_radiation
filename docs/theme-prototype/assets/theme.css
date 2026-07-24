@@ -14,6 +14,15 @@
   :root{ --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#232c39;
          --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; }
 }
+/* Manual light/dark override — the theme toggle sets html[data-theme]. */
+html[data-theme="light"]{
+  --bg:#ffffff; --fg:#1a2230; --muted:#5a6473; --line:#e5e9f0;
+  --card:#f7f9fc; --accent:#3B6EA5; --accent2:#3FB6A8; color-scheme:light;
+}
+html[data-theme="dark"]{
+  --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#232c39;
+  --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; color-scheme:dark;
+}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -91,6 +100,15 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem}
 .map-toggle .bars::before{top:0}.map-toggle .bars span{top:5px}.map-toggle .bars::after{top:10px}
 .map-toggle .lbl{display:none}
 @media (min-width:900px){ .map-toggle .lbl{display:inline} }
+.cose-theme-btn{display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:34px;border-radius:8px;cursor:pointer;
+  border:1px solid var(--line);background:var(--card);color:var(--fg);
+  box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.cose-theme-btn:hover{filter:brightness(.98)}
+.cose-theme-btn svg{display:block}
+@media (min-width:1180px){
+  body.map-open .cose-theme-btn{background:transparent;border-color:transparent;box-shadow:none}
+}
 
 /* The rail */
 .sitebar{
