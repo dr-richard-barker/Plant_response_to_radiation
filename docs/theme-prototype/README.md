@@ -80,45 +80,55 @@ python3 -m http.server 8799
 # open http://localhost:8799/index.html — toggle the "Map" button top-left
 ```
 
-## 4. The repos this would cover
+## 4. The sites this covers (Richard's authoritative list, 2026-07-24)
 
-Found locally on 2026-07-24. **They are not uniform today** — three different hosting styles,
-which is the main thing the rollout has to reconcile:
+17 live sites in 4 groups (see `sites.js`). Classified by cloning each repo and inspecting its
+Pages source. **Five different hosting architectures** — the rollout must handle each differently:
 
-| Repo | Current page style | Notes |
+| Site (repo) | Architecture | Rollout effort |
 |---|---|---|
-| `Plant_response_to_radiation` | self-contained `docs/index.html` | the reference; already ideal |
-| `Tropism_autodecoder_2026` | self-contained `docs/index.html` | closest to reference |
-| `tropism-autodecoder-webtool` | self-contained `docs/index.html` | closest to reference |
-| `astroroot` | root `index.html` | not in `docs/` |
-| `Space_Biology_Education.io` | **Jekyll** (`_config.yml`) | theme via Jekyll layout |
-| `bloodbowl` (Training_LLM…) | **Jekyll** (`_config.yml`) + `game/` | game page separate |
-| `deepspace-seed-stress-decoder` | **Jekyll** (`docs/_config.yml`, `index.md`) | markdown-driven |
-| `B_rappa_LLGCSS` | no page yet | docs/ has manuscript md only |
-| `VEGGIE_Tom_Red_Blue…` | no page yet | — |
-| `PhysioSpace_stress_decoding_VEG05` (DeepLearning_VEG05) | no page yet | rename pending |
-| `smallRNAseq-DREAM` | no page yet | — |
+| `Plant_response_to_radiation` | static `docs/index.html` + `.nojekyll` | ✅ reference (done) |
+| `Tropism_autodecoder_2026` | static `docs/index.html` + `.nojekyll` | 🟢 drop-in |
+| `Astronaut_health_search` | static `docs/index.html` + `.nojekyll` | 🟢 drop-in |
+| `APEX05_results_and_code` | static `docs/index.html` + `.nojekyll` | 🟢 drop-in |
+| `veg05-integrated-omics` | static `docs/index.html` + `.nojekyll` | 🟢 drop-in |
+| `Astronaut_trends` | static `docs/index.html` | 🟢 drop-in |
+| `LunarLeaf-CFD` | static **root** `index.html` | 🟢 drop-in (root paths) |
+| `Anthocyanin-Image-analysis` | static **root** `index.html` | 🟢 drop-in (root paths) |
+| `madwest-astrobotany` | static **root** `index.html` + `.nojekyll` | 🟢 drop-in (root paths) |
+| `deepspace-seed-stress-decoder` | **Jekyll** (`docs/index.md`) | 🟡 edit Jekyll layout |
+| `AIRI` | **GitBook** (`docs/index.md`) | 🟠 GitBook has its own theme system |
+| `TICTOC` | **GitBook** + a custom `docs/index.html` landing | 🟠 theme the landing; GitBook body separate |
+| `smallRNAseq-DREAM` | **built → gh-pages** (no page source on `main`) | 🔴 edit source template + rebuild |
+| `osdr-plant-microbiome` | **built → gh-pages** (no page source on `main`) | 🔴 edit source template + rebuild |
+| `OSDR_jupyter_book.io` | **Jupyter Book → gh-pages** | 🔴 theme via `_config.yml`/templates + rebuild |
+| `OSDR_plant_spaceflight_omics` | ⚠️ repo **"not found"** (private or renamed) | ❓ needs access |
+| `aph-physiospace` (APH PhysioSpace DL) | not published yet ("coming soon") | ⬜ scaffold later |
 
-> ⚠️ This list is what's on disk, not confirmed live Pages. **Please confirm the full/authoritative
-> list** (you mentioned you'd send it) and which are actually published — I'll reconcile `sites.js`
-> against it.
+Legend: 🟢 identical drop-in · 🟡 layout edit · 🟠 bespoke (GitBook) · 🔴 build-pipeline edit + rebuild.
 
-## 5. Rollout approach (by hosting style)
+## 5. Rollout approach (by architecture)
 
-The theme kit is plain CSS/JS, so it drops into all three styles — but the mechanics differ:
+The theme kit is plain CSS/JS, so it *can* drop into all of these — but the mechanics differ:
 
-1. **Self-contained static pages** (radiation, both tropism pages, astroroot)
-   → copy `assets/theme.{css,js}` + `sites.js`, swap the page's `<style>` block for the stylesheet
-   link, add the two scripts and `data-site-id`. Lowest risk; do these first.
+1. **Static pages (9 sites)** — the bulk, lowest risk. Add `assets/theme.{css,js}` + `sites.js` +
+   `cose-logo.png`, add the `<link>`/`<script>` tags + `data-site-id`. Root-index sites use
+   root-relative asset paths. **Do these first, in batches, verifying each.**
 
-2. **Jekyll sites** (education, bloodbowl, deepspace-seed)
-   → add `theme.css` and the scripts to the Jekyll **default layout** (`_layouts/default.html`) and
-   ensure each rendered page emits `<section><h2>…` structure (or point the doc-map at Jekyll's
-   heading output). Content stays in markdown; only the layout changes.
+2. **Jekyll (deepspace-seed)** — add the kit to the default layout (`_layouts/default.html`) so every
+   rendered page emits `<section><h2>` for the doc-map. Content stays in markdown.
 
-3. **Repos with no page yet** (B_rapa, VEGGIE, PhysioSpace, smallRNAseq)
-   → scaffold a new `docs/index.html` from the radiation template, populated from each repo's real
-   README/manuscript content (no invented content).
+3. **GitBook (AIRI, TICTOC)** — GitBook ships its own theme; the CoSE map/brand can't be injected the
+   same way. Options: (a) theme only a custom static landing page (TICTOC already has one), or
+   (b) add COSE logo + cross-links via GitBook's own customisation. Decide per site.
+
+4. **Built sites (smallRNAseq-DREAM, osdr-plant-microbiome, OSDR_jupyter_book.io)** — the live HTML is
+   generated to a `gh-pages` branch from notebooks/markdown. Theming means editing the build config
+   (e.g. Jupyter Book `_config.yml`/`_templates`) and re-running the build, not swapping HTML.
+
+5. **Blocked / pending** — `OSDR_plant_spaceflight_omics` clone returns "not found" (confirm it's
+   public / the right name); `aph-physiospace` has no page yet (scaffold from the radiation template
+   using real content when ready).
 
 ### Keeping the site map in sync
 `sites.js` is the single source of truth for cross-site nav. Two options — recommend deciding early:
@@ -129,19 +139,28 @@ The theme kit is plain CSS/JS, so it drops into all three styles — but the mec
 
 ## 6. Suggested sequence
 
-1. ✅ Prototype on the radiation page *(done — this folder)*.
-2. ⬜ Richard confirms the authoritative page list + live URLs → finalise `sites.js`.
-3. ⬜ Decide sync model (A copy vs B hosted).
-4. ⬜ Roll to the 3 other static pages (lowest risk), verify each in-browser.
-5. ⬜ Adapt the Jekyll layouts for the 3 Jekyll sites.
-6. ⬜ Scaffold pages for the 4 repos that have none.
-7. ⬜ Promote `theme-prototype/` to replace `docs/index.html` on the radiation repo.
+1. ✅ Prototype on the radiation page + COSE branding *(done — this folder)*.
+2. ✅ Authoritative `sites.js` (17 sites, 4 groups) *(done)*.
+3. ⬜ Decide **apply style**: non-destructive preview path per repo first, or direct-to-`main`.
+4. ⬜ Decide **sync model**: copy `sites.js` per repo, or one hosted canonical copy.
+5. ⬜ Roll the **9 static sites** (batches, verify each in-browser). ← bulk of the value.
+6. ⬜ Jekyll layout for `deepspace-seed`.
+7. ⬜ GitBook sites (`AIRI`, `TICTOC`) — decide per-site.
+8. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.
+9. ⬜ Resolve `OSDR_plant_spaceflight_omics` access; scaffold `aph-physiospace` when ready.
+10. ⬜ **Hub site** linking all of them (built from `sites.js` — same theme, grid of project cards).
+11. ⬜ Promote `theme-prototype/` over the radiation `docs/index.html`.
 
-## 7. Open questions for Richard
+## 7. The hub (step 10)
 
-- The **full list of pages** you want unified (with live URLs) — several repos on disk may not have
-  Pages enabled.
-- Sidebar default: **closed** on first visit (current prototype) or **open** on desktop?
-- Should the site map group headings (Radiation / Tropism / VEGGIE / Education) match how you think
-  about the projects, or do you want a flat alphabetical list?
-- Do you want a shared **header/footer** (lab name, links) unified too, or *only* the left map?
+Once the family shares the theme, a new landing site (e.g. a `cose-hub` repo or a page on
+`cosecloud.com`) renders the same `sites.js` groups as a card grid — one entry per project, COSE-
+branded, same left map. Because it reads the shared registry, adding a project to `sites.js` adds it
+to both every site's map *and* the hub with no extra edits.
+
+## 8. Open decisions for Richard
+
+- **Apply style:** preview path first (recommended — matches "test") or straight to each live page?
+- **Sync model:** per-repo copy of `sites.js` (simple) vs one hosted canonical copy (one edit updates all).
+- **Sidebar default:** closed on first visit (current) or open on desktop?
+- **Scope of unification:** just the left map + COSE brand, or also a shared header/footer?
