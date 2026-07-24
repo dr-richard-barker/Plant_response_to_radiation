@@ -149,9 +149,15 @@ The theme kit is plain CSS/JS, so it *can* drop into all of these — but the me
    - ✅ **Preview built** (`index.cose.html` beside the live page, live page untouched):
      `madwest-astrobotany` → `/index.cose.html`; `Astronaut_trends` → `/index.cose.html`
      (dashboard; 14-entry doc-map; rail auto-matches its light theme).
-   - ⚠️ **`LunarLeaf-CFD` and `Anthocyanin-Image-analysis` are React SPAs** (`<div id="root">`,
-     built bundles) — a static overlay can't theme them. They need the CoSE map/brand as a React
-     component + a rebuild. Blocked on: how they deploy (gh-pages branch? Actions build?).
+   - ✅ **`LunarLeaf-CFD` and `Anthocyanin-Image-analysis` — React/Vite tools, done.** They're
+     interactive tools (no document sections), so the kit is wired into `index.html` (kit in
+     `public/cose/`, copied to the site root by Vite) for COSE branding + the cross-site map; the
+     headingless doc-map tab hides automatically. React bundles untouched. Verified live (apps render,
+     overlay works, 17-project map). Note: `data-brand-logo` must be a **relative** path — Vite doesn't
+     base-rewrite data-attributes, so a root-absolute path 404s on a project page.
+   - ✅ **`astroroot` — static client-side tool, done (direct-to-live).** Static drop-in with
+     `data-cose-doc="off"` (tabbed tool → shows the cross-site map, not a doc-map) and a small header
+     `padding-left` to clear the COSE logo/toggle. Verified locally.
    - `theme.js` now samples the host page's background brightness and matches the rail to a
      hard-coded light/dark site (fixes light-rail-on-dark-page). Older shipped copies (the 4 live
      sites) can be re-synced with this build; no visual change since they follow the OS preference.
