@@ -1,0 +1,66 @@
+/* ============================================================================
+   COSE token map (v0.1) — remaps the *structural* colour tokens used by the
+   bespoke tool/app pages (backgrounds, surfaces, text, borders, primary accent)
+   to the shared CoSE light/dark palette, so those pages adopt the CoSE look and
+   the light/dark toggle works and stays readable.
+
+   Load AFTER the page's own stylesheet and cose-chrome.css. Follows the OS by
+   default; the toggle's html[data-theme] wins. Semantic status colours
+   (--go/--stop/--pass/--warn/--pending/--flame*) are intentionally left alone.
+   ========================================================================== */
+
+/* one place to define the palette, expanded into each selector below */
+:root{
+  --cose-l-bg:#ffffff;   --cose-l-surface:#f7f9fc; --cose-l-surface2:#eef2f8;
+  --cose-l-text:#1a2230;  --cose-l-muted:#5a6473;  --cose-l-faint:#8892a3;
+  --cose-l-line:#e5e9f0;  --cose-l-accent:#3B6EA5; --cose-l-accent2:#3FB6A8;
+  --cose-d-bg:#0f141b;   --cose-d-surface:#161d27; --cose-d-surface2:#1f2937;
+  --cose-d-text:#e6ebf2;  --cose-d-muted:#9aa6b6;  --cose-d-faint:#6f7d9c;
+  --cose-d-line:#232c39;  --cose-d-accent:#6ea3d8; --cose-d-accent2:#54c9ba;
+}
+
+/* ---- LIGHT (default on light OS, and when toggled to light) ---- */
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:var(--cose-l-bg); --panel:var(--cose-l-surface); --panel-2:var(--cose-l-surface2);
+  --surface:var(--cose-l-surface); --surface-2:var(--cose-l-surface2); --soft:var(--cose-l-surface);
+  --space-900:var(--cose-l-bg); --space-800:var(--cose-l-surface); --space-700:var(--cose-l-surface2); --space-600:#e3e9f2;
+  --ink:var(--cose-l-text); --fg:var(--cose-l-text); --ink-soft:var(--cose-l-muted); --muted:var(--cose-l-muted); --ink-faint:var(--cose-l-faint);
+  --line:var(--cose-l-line); --border:var(--cose-l-line); --edge:var(--cose-l-line);
+  --accent:var(--cose-l-accent); --green:var(--cose-l-accent); --green-l:var(--cose-l-accent2);
+  --leaf-500:var(--cose-l-accent); --leaf-400:var(--cose-l-accent2); --leaf-300:#7fd0c6;
+  --sky-400:var(--cose-l-accent); --accent2:var(--cose-l-accent2); --code:#f1f5f9;
+}}
+html[data-theme="light"]{
+  --bg:var(--cose-l-bg); --panel:var(--cose-l-surface); --panel-2:var(--cose-l-surface2);
+  --surface:var(--cose-l-surface); --surface-2:var(--cose-l-surface2); --soft:var(--cose-l-surface);
+  --space-900:var(--cose-l-bg); --space-800:var(--cose-l-surface); --space-700:var(--cose-l-surface2); --space-600:#e3e9f2;
+  --ink:var(--cose-l-text); --fg:var(--cose-l-text); --ink-soft:var(--cose-l-muted); --muted:var(--cose-l-muted); --ink-faint:var(--cose-l-faint);
+  --line:var(--cose-l-line); --border:var(--cose-l-line); --edge:var(--cose-l-line);
+  --accent:var(--cose-l-accent); --green:var(--cose-l-accent); --green-l:var(--cose-l-accent2);
+  --leaf-500:var(--cose-l-accent); --leaf-400:var(--cose-l-accent2); --leaf-300:#7fd0c6;
+  --sky-400:var(--cose-l-accent); --accent2:var(--cose-l-accent2); --code:#f1f5f9;
+  color-scheme:light;
+}
+
+/* ---- DARK (default on dark OS, and when toggled to dark) ---- */
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:var(--cose-d-bg); --panel:var(--cose-d-surface); --panel-2:var(--cose-d-surface2);
+  --surface:var(--cose-d-surface); --surface-2:var(--cose-d-surface2); --soft:var(--cose-d-surface);
+  --space-900:#0b0f14; --space-800:var(--cose-d-surface); --space-700:var(--cose-d-surface2); --space-600:#2b3647;
+  --ink:var(--cose-d-text); --fg:var(--cose-d-text); --ink-soft:var(--cose-d-muted); --muted:var(--cose-d-muted); --ink-faint:var(--cose-d-faint);
+  --line:var(--cose-d-line); --border:var(--cose-d-line); --edge:var(--cose-d-line);
+  --accent:var(--cose-d-accent); --green:var(--cose-d-accent); --green-l:var(--cose-d-accent2);
+  --leaf-500:var(--cose-d-accent); --leaf-400:var(--cose-d-accent2); --leaf-300:#54c9ba;
+  --sky-400:var(--cose-d-accent); --accent2:var(--cose-d-accent2); --code:#0f1a2e;
+}}
+html[data-theme="dark"]{
+  --bg:var(--cose-d-bg); --panel:var(--cose-d-surface); --panel-2:var(--cose-d-surface2);
+  --surface:var(--cose-d-surface); --surface-2:var(--cose-d-surface2); --soft:var(--cose-d-surface);
+  --space-900:#0b0f14; --space-800:var(--cose-d-surface); --space-700:var(--cose-d-surface2); --space-600:#2b3647;
+  --ink:var(--cose-d-text); --fg:var(--cose-d-text); --ink-soft:var(--cose-d-muted); --muted:var(--cose-d-muted); --ink-faint:var(--cose-d-faint);
+  --line:var(--cose-d-line); --border:var(--cose-d-line); --edge:var(--cose-d-line);
+  --accent:var(--cose-d-accent); --green:var(--cose-d-accent); --green-l:var(--cose-d-accent2);
+  --leaf-500:var(--cose-d-accent); --leaf-400:var(--cose-d-accent2); --leaf-300:#54c9ba;
+  --sky-400:var(--cose-d-accent); --accent2:var(--cose-d-accent2); --code:#0f1a2e;
+  color-scheme:dark;
+}

@@ -1,0 +1,36 @@
+/* ============================================================================
+   COSE light-mode override for Tailwind (slate) apps.
+   Apps that hardcode Tailwind `bg-slate-*` / `text-slate-*` classes can't be
+   themed via CSS variables, so this remaps the slate ramp to a CoSE light
+   palette when the reader toggles to light (html[data-theme="light"]). The
+   app's native dark stays the default. !important is needed to beat Tailwind's
+   runtime-injected utilities.
+   ========================================================================== */
+
+html[data-theme="light"] body{ background:#ffffff !important; color:#1a2230 !important; }
+
+html[data-theme="light"] .bg-slate-950{ background-color:#ffffff !important; }
+html[data-theme="light"] .bg-slate-900{ background-color:#f4f7fb !important; }
+html[data-theme="light"] .bg-slate-800{ background-color:#eef2f8 !important; }
+html[data-theme="light"] .bg-slate-700{ background-color:#e3e9f2 !important; }
+html[data-theme="light"] .bg-slate-600{ background-color:#d7deea !important; }
+
+html[data-theme="light"] .text-white,
+html[data-theme="light"] .text-slate-100,
+html[data-theme="light"] .text-slate-200,
+html[data-theme="light"] .text-slate-300{ color:#1a2230 !important; }
+html[data-theme="light"] .text-slate-400,
+html[data-theme="light"] .text-slate-500,
+html[data-theme="light"] .text-slate-600{ color:#5a6473 !important; }
+html[data-theme="light"] .text-slate-700,
+html[data-theme="light"] .text-slate-800,
+html[data-theme="light"] .text-slate-900{ color:#1a2230 !important; }
+
+html[data-theme="light"] .border-slate-600,
+html[data-theme="light"] .border-slate-700,
+html[data-theme="light"] .border-slate-800{ border-color:#e5e9f0 !important; }
+
+html[data-theme="light"] .divide-slate-700 > * + *,
+html[data-theme="light"] .divide-slate-800 > * + *{ border-color:#e5e9f0 !important; }
+html[data-theme="light"] .ring-slate-700,
+html[data-theme="light"] .ring-slate-800{ --tw-ring-color:#e5e9f0 !important; }
