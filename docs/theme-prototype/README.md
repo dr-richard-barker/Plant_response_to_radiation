@@ -55,6 +55,10 @@ docs/theme-prototype/
 - **Responsive:** on wide screens (≥1180px) the open rail *pushes* the content; on narrow screens it
   *overlays* with a dim scrim (tap-to-close, Esc-to-close).
 - **Remembers** open/closed state and last-used tab in `localStorage`.
+- **Light/dark toggle:** a sun/moon button in the top bar sets `html[data-theme]` (persisted; default
+  follows the OS). Works on pages that use the shared CoSE token names; pages with a bespoke palette or
+  their own toggle opt out with `data-cose-themetoggle="off"` (e.g. madwest, astroroot, virtual-root,
+  the SPAs, Astronaut_trends). Tabbed/tool pages hide the document-map tab with `data-cose-doc="off"`.
 - **COSE branding:** the COSE logo appears **top-left next to the Map button** and **in the footer
   before the author name** — both link to <https://cosecloud.com/>. Injected automatically by
   `theme.js`; logo path and target are overridable per page via `data-brand-logo` / `data-brand-url`
