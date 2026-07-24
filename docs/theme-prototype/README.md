@@ -167,7 +167,17 @@ The theme kit is plain CSS/JS, so it *can* drop into all of these — but the me
      search + dark-mode already give a left doc map). CoSE unification done through Material's own
      config — COSE header logo + favicon, CoSE blue/teal palette via `extra_css`, COSE footer link —
      not the static overlay. Pushed; verified on the live build.
-7. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.
+7. ✅ Built / gh-pages sites — three different mechanisms:
+   - **`smallRNAseq-DREAM`** — the published page is a hand-written static `index.html` on the
+     **`gh-pages` branch** (numbered sections, radiation structure). CoSE overlay applied there
+     directly (7-section doc-map), verified locally, pushed to `gh-pages`.
+   - **`OSDR_jupyter_book.io`** — real **Jupyter Book** (`jupyter-book build`, sphinx-book-theme,
+     native left TOC). Brand-aligned via `chapters/_config.yml`: CoSE palette in `_static/cose.css`
+     (`html_css_files`) + COSE footer link; **GeneLab logo kept** (NASA resource). Verified on live build.
+   - **`osdr-plant-microbiome`** — a **generated Plotly report** (`report.html` rebuilt by
+     `run_all.py` each deploy). Themed at deploy time: the workflow copies the kit into `_site/assets`
+     and runs `web-theme/inject_theme.py` to add the map + branding to the fresh report (idempotent,
+     Plotly untouched). Verified locally on the committed report; verified on live build.
 8. ⬜ Resolve `OSDR_plant_spaceflight_omics` access; scaffold `aph-physiospace` when ready.
 9. ⬜ **Hub site** linking all of them (built from `sites.js` — same theme, grid of project cards).
 10. ⬜ Promote `theme-prototype/` over the radiation `docs/index.html`.
