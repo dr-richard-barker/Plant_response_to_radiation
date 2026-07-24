@@ -141,15 +141,25 @@ The theme kit is plain CSS/JS, so it *can* drop into all of these — but the me
 
 1. ✅ Prototype on the radiation page + COSE branding *(done — this folder)*.
 2. ✅ Authoritative `sites.js` (17 sites, 4 groups) *(done)*.
-3. ⬜ Decide **apply style**: non-destructive preview path per repo first, or direct-to-`main`.
-4. ⬜ Decide **sync model**: copy `sites.js` per repo, or one hosted canonical copy.
-5. ⬜ Roll the **9 static sites** (batches, verify each in-browser). ← bulk of the value.
-6. ⬜ Jekyll layout for `deepspace-seed`.
-7. ⬜ GitBook sites (`AIRI`, `TICTOC`) — decide per-site.
-8. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.
-9. ⬜ Resolve `OSDR_plant_spaceflight_omics` access; scaffold `aph-physiospace` when ready.
-10. ⬜ **Hub site** linking all of them (built from `sites.js` — same theme, grid of project cards).
-11. ⬜ Promote `theme-prototype/` over the radiation `docs/index.html`.
+3. ✅ Decisions locked: **direct-to-live** for simple static sites, **preview path** for tricky ones;
+   **copy `sites.js` per repo** (sync via script).
+4. 🟡 Static sites — the shared-template group is **live** (direct-to-`main`, verified in-browser):
+   `Astronaut_health_search`, `APEX05_results_and_code`, `veg05-integrated-omics`,
+   `Tropism_autodecoder_2026`. Remaining static/quasi-static → preview path:
+   `Astronaut_trends` (dashboard), `LunarLeaf-CFD` (React SPA), `Anthocyanin-Image-analysis`,
+   `madwest-astrobotany`.
+5. ⬜ Jekyll layout for `deepspace-seed`.
+6. ⬜ GitBook sites (`AIRI`, `TICTOC`) — decide per-site.
+7. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.
+8. ⬜ Resolve `OSDR_plant_spaceflight_omics` access; scaffold `aph-physiospace` when ready.
+9. ⬜ **Hub site** linking all of them (built from `sites.js` — same theme, grid of project cards).
+10. ⬜ Promote `theme-prototype/` over the radiation `docs/index.html`.
+
+### Theme kit files (copy set for existing styled pages)
+`assets/cose-theme.css` (token override + rail + brand overlay) · `assets/theme.js`
+(doc-map from `<h2>`, scroll-spy, toggle, brand, persistence) · `assets/sites.js` (shared registry)
+· `assets/cose-logo.png`. Wire-up per page: add the `cose-theme.css` `<link>` after the page's own
+stylesheet, set `<body data-site-id="REPO_SLUG">`, and add the two `<script>` tags before `</body>`.
 
 ## 7. The hub (step 10)
 

@@ -50,8 +50,11 @@
   document.body.appendChild(scrim);
   document.body.appendChild(page);
 
-  /* COSE brand link in the footer, immediately before the author name */
-  var footP = page.querySelector("footer .wrap p") || page.querySelector("footer .wrap");
+  /* COSE brand link in the footer, immediately before the author name.
+     Falls back through common footer shapes (radiation uses footer>.wrap>p;
+     the shared template uses a bare <footer class="site">text). */
+  var footP = page.querySelector("footer .wrap p") || page.querySelector("footer .wrap")
+    || page.querySelector("footer p") || page.querySelector("footer");
   if(footP){
     var fLink = el("a", {class:"cose-foot", href:BRAND_URL, target:"_blank",
       rel:"noopener", title:"COSE — cosecloud.com", "aria-label":"COSE — cosecloud.com"});
@@ -60,16 +63,17 @@
     footP.insertBefore(fLink, footP.firstChild);
   }
 
-  /* ---------- document map (auto from sections) ---------- */
+  /* ---------- document map (auto from <h2> headings) ----------
+     Works whether headings are wrapped in <section> (radiation page) or are
+     bare <h2 id> children of <main> (the shared Okabe-Ito template). */
   var links = [];
-  var secs = page.querySelectorAll("section");
+  var scope = page.querySelector("main") || page;
+  var heads = [].slice.call(scope.querySelectorAll("h2"));
   var docList = el("ul", {class:"docmap"});
   var idx = 0;
-  secs.forEach(function(sec){
-    var h = sec.querySelector("h2");
-    if(!h) return;
-    if(!sec.id){ sec.id = "sec-" + (++idx); }
-    // Format "<span class=n>01</span>Title" as "01 · Title"; strip inline tags (e.g. .tag pills).
+  heads.forEach(function(h){
+    if(!h.id){ h.id = "sec-" + (++idx); }
+    // Format "<span class=n>01</span>Title" as "01 · Title"; strip inline .tag pills.
     var num = h.querySelector(".n");
     var label;
     if(num){
@@ -80,11 +84,11 @@
     }
     var pill = h.querySelector(".tag");
     if(pill){ label = label.replace(pill.textContent.replace(/\s+/g," ").trim(),"").trim(); }
-    var a = el("a", {href:"#"+sec.id});
+    var a = el("a", {href:"#"+h.id});
     a.textContent = label;
     a.addEventListener("click", function(){ if(isOverlay()) close(); });
     var li = el("li"); li.appendChild(a); docList.appendChild(li);
-    links.push({a:a, sec:sec});
+    links.push({a:a, sec:h});
   });
   docPanel.appendChild(header4("On this page"));
   docPanel.appendChild(docList);
