@@ -1,0 +1,90 @@
+[
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-251",
+    "R2": 0.2818909287452698,
+    "rho_dose": 0.0,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-314",
+    "R2": -0.004033565521240234,
+    "rho_dose": 0.0,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-346",
+    "R2": 0.20745545625686646,
+    "rho_dose": 0.0,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-498",
+    "R2": -0.07293295860290527,
+    "rho_dose": 0.0,
+    "rho_time": 0.861001468878982,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-502",
+    "R2": -1.0711414813995361,
+    "rho_dose": 0.0,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-508",
+    "R2": -0.09175825119018555,
+    "rho_dose": 0.0,
+    "rho_time": 0.5147794586503148,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-510",
+    "R2": 0.23549902439117432,
+    "rho_dose": 0.0,
+    "rho_time": 0.47752667580350694,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-study-out",
+    "held_out": "OSD-658",
+    "R2": 0.45564645528793335,
+    "rho_dose": 0.2859724108724822,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-quality-out",
+    "held_out": "GCR",
+    "R2": 0.5304961800575256,
+    "rho_dose": 0.5672567494355795,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-quality-out",
+    "held_out": "gamma",
+    "R2": -0.07712197303771973,
+    "rho_dose": 0.0,
+    "rho_time": 0.16400377798636728,
+    "rho_let": 0.0
+  },
+  {
+    "cv": "leave-one-quality-out",
+    "held_out": "spaceflight-LEO",
+    "R2": 0.0887601375579834,
+    "rho_dose": 0.0,
+    "rho_time": 0.0,
+    "rho_let": 0.0
+  }
+]

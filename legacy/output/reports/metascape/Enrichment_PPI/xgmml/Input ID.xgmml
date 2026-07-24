@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<graph label="Input ID" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cy="http://www.cytoscape.org" xmlns="http://www.cs.rpi.edu/XGMML" >
+  <att name="documentVersion" value="1.1"/>
+  <att name="networkMetadata">
+    <rdf:RDF>
+      <rdf:Description rdf:about="http://www.cytoscape.org/">
+        <dc:type>Protein-Protein Interaction</dc:type>
+        <dc:description>N/A</dc:description>
+        <dc:identifier>N/A</dc:identifier>
+        <dc:date>2020-01-09 09:42:33</dc:date>
+        <dc:title>Cytoscape Network</dc:title>
+        <dc:source>http://www.cytoscape.org/</dc:source>
+        <dc:format>Cytoscape-XGMML</dc:format>
+      </rdf:Description>
+    </rdf:RDF>
+  </att>
+  <att type="string" name="backgroundColor" value="#ffffff"/>
+  <att type="real" name="GRAPH_VIEW_ZOOM" value="1.0"/>
+  <att type="real" name="GRAPH_VIEW_CENTER_X" value="300.0"/>
+  <att type="real" name="GRAPH_VIEW_CENTER_Y" value="300.0"/>
+  <node label="AT2G42390" id="1">
+    <att type="string" name="canonicalName" value="AT2G42390"/>
+    <att type="string" name="Gene" value="818840"/>
+    <att type="string" name="Symbol" value="AT2G42390"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="428.5340790372501" y="403.6991547665733"/>
+  </node>
+  <node label="NHL3" id="2">
+    <att type="string" name="canonicalName" value="NHL3"/>
+    <att type="string" name="Gene" value="830520"/>
+    <att type="string" name="Symbol" value="NHL3"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="386.99333422844006" y="353.2816564782841"/>
+  </node>
+  <node label="RAE1" id="3">
+    <att type="string" name="canonicalName" value="RAE1"/>
+    <att type="string" name="Gene" value="844406"/>
+    <att type="string" name="Symbol" value="RAE1"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="352.29899006555286" y="232.75699431659842"/>
+  </node>
+  <node label="AT2G40480" id="4">
+    <att type="string" name="canonicalName" value="AT2G40480"/>
+    <att type="string" name="Gene" value="818643"/>
+    <att type="string" name="Symbol" value="AT2G40480"/>
+    <att type="integer" name="DEGREE" value="1"/>
+    <graphics type="CIRCLE" x="273.58242650441616" y="159.11484511934668"/>
+  </node>
+  <edge label="818643 (pp) 844406" source="4" target="3">
+    <att type="string" name="canonicalName" value="818643 (pp) 844406"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="0"/>
+  </edge>
+  <edge label="818840 (pp) 830520" source="1" target="2">
+    <att type="string" name="canonicalName" value="818840 (pp) 830520"/>
+    <att type="string" name="interaction" value="pp"/>
+    <att type="int" name="SCORE" value="0"/>
+  </edge>
+</graph>

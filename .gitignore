@@ -1,0 +1,14 @@
+# Raw OSDR download — regenerable, not versioned (see code/15_osd782_validation.py
+# and README: https://osdr.nasa.gov/osdr/data/osd/files/782 → GLDS-679 normalized counts)
+data/osd782_normalized_counts.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS / editor cruft
+.DS_Store
+*~
+.vscode/

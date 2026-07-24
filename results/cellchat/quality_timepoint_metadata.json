@@ -1,0 +1,153 @@
+{
+  "gamma__0-0.5h": {
+    "quality": "gamma",
+    "time_bin": "0-0.5h",
+    "n_samples": 16,
+    "mean_time_h": 0.27083333333333326,
+    "studies": [
+      "OSD-498",
+      "OSD-508",
+      "OSD-510"
+    ],
+    "platform": "rnaseq"
+  },
+  "gamma__0.5-2h": {
+    "quality": "gamma",
+    "time_bin": "0.5-2h",
+    "n_samples": 8,
+    "mean_time_h": 1.5,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "gamma__2-6h": {
+    "quality": "gamma",
+    "time_bin": "2-6h",
+    "n_samples": 4,
+    "mean_time_h": 3.0,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "gamma__6-12h": {
+    "quality": "gamma",
+    "time_bin": "6-12h",
+    "n_samples": 8,
+    "mean_time_h": 6.0,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "gamma__12-30h": {
+    "quality": "gamma",
+    "time_bin": "12-30h",
+    "n_samples": 16,
+    "mean_time_h": 18.0,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "GCR__2-6h": {
+    "quality": "GCR",
+    "time_bin": "2-6h",
+    "n_samples": 8,
+    "mean_time_h": 3.0,
+    "studies": [
+      "OSD-658"
+    ],
+    "platform": "rnaseq"
+  },
+  "spaceflight-LEO__static": {
+    "quality": "spaceflight-LEO",
+    "time_bin": "static",
+    "n_samples": 53,
+    "mean_time_h": NaN,
+    "studies": [
+      "OSD-314",
+      "OSD-346"
+    ],
+    "platform": "rnaseq"
+  },
+  "HZE-Fe__0.5-2h": {
+    "quality": "HZE-Fe",
+    "time_bin": "0.5-2h",
+    "n_samples": 8,
+    "mean_time_h": 1.5,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "HZE-Fe__2-6h": {
+    "quality": "HZE-Fe",
+    "time_bin": "2-6h",
+    "n_samples": 4,
+    "mean_time_h": 3.0,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "HZE-Fe__6-12h": {
+    "quality": "HZE-Fe",
+    "time_bin": "6-12h",
+    "n_samples": 8,
+    "mean_time_h": 6.0,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "HZE-Fe__12-30h": {
+    "quality": "HZE-Fe",
+    "time_bin": "12-30h",
+    "n_samples": 16,
+    "mean_time_h": 18.0,
+    "studies": [
+      "OSD-46",
+      "OSD-320"
+    ],
+    "platform": "microarray"
+  },
+  "UV-B__0.5-2h": {
+    "quality": "UV-B",
+    "time_bin": "0.5-2h",
+    "n_samples": 9,
+    "mean_time_h": 1.0,
+    "studies": [
+      "OSD-296"
+    ],
+    "platform": "microarray"
+  },
+  "UV-B__6-12h": {
+    "quality": "UV-B",
+    "time_bin": "6-12h",
+    "n_samples": 9,
+    "mean_time_h": 6.0,
+    "studies": [
+      "OSD-296"
+    ],
+    "platform": "microarray"
+  },
+  "UV-B__30h+": {
+    "quality": "UV-B",
+    "time_bin": "30h+",
+    "n_samples": 18,
+    "mean_time_h": 96.0,
+    "studies": [
+      "OSD-296"
+    ],
+    "platform": "microarray"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "study": "OSD-782 / GLDS-679",
+  "n_samples": 36,
+  "n_control": 12,
+  "n_irradiated": 24,
+  "doses_Gy": [
+    0.0,
+    0.1,
+    1.0
+  ],
+  "times_h": [
+    1.0,
+    3.0,
+    24.0,
+    72.0
+  ],
+  "n_genes_measured": 23657,
+  "n_response_genes": 815,
+  "universe_n": 1971,
+  "response_in_universe": 48,
+  "background_frac": 0.0244,
+  "enrichment": {
+    "blue": {
+      "k": 41,
+      "module_n": 725,
+      "frac": 0.05655172413793103,
+      "fold": 2.322155172413793,
+      "p": 2.807867132206352e-12
+    },
+    "turquoise": {
+      "k": 4,
+      "module_n": 1199,
+      "frac": 0.003336113427856547,
+      "fold": 0.13698915763135946,
+      "p": 0.9999999999999991
+    },
+    "grey": {
+      "k": 3,
+      "module_n": 47,
+      "frac": 0.06382978723404255,
+      "fold": 2.6210106382978724,
+      "p": 0.10427400411247315
+    }
+  },
+  "module_trajectory": {
+    "blue": {
+      "n_genes": 725,
+      "time_rho": -0.17228220865861296,
+      "score_by_time": {
+        "1.0": 0.13631947662581723,
+        "3.0": 0.05372168819451206,
+        "24.0": 0.04090773219558471,
+        "72.0": 0.1281982496552256
+      }
+    },
+    "turquoise": {
+      "n_genes": 1199,
+      "time_rho": -0.27995858907024607,
+      "score_by_time": {
+        "1.0": -0.031376877556588904,
+        "3.0": -0.030737398333973015,
+        "24.0": -0.03737583988396267,
+        "72.0": -0.04900848332327287
+      }
+    },
+    "grey": {
+      "n_genes": 47,
+      "time_rho": -0.26919095102908275,
+      "score_by_time": {
+        "1.0": 0.15388601848337455,
+        "3.0": 0.1252436722211545,
+        "24.0": 0.030048202705880985,
+        "72.0": 0.03787909600679735
+      }
+    }
+  },
+  "ddr_genes": {
+    "BRCA1": {
+      "agi": "AT4G21070",
+      "effect": -0.017,
+      "padj": 0.7948448842807844,
+      "module": "grey",
+      "responsive": false
+    },
+    "BRCA2A": {
+      "agi": "AT4G00020",
+      "effect": -0.173,
+      "padj": 7.485384010230924e-06,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "BRCA2B": {
+      "agi": "AT5G01630",
+      "effect": -0.169,
+      "padj": 6.0590392194845266e-06,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "RAD51": {
+      "agi": "AT5G20850",
+      "effect": 0.035,
+      "padj": 0.7790899255432826,
+      "module": "grey",
+      "responsive": false
+    },
+    "RAD54": {
+      "agi": "AT3G19210",
+      "effect": -0.149,
+      "padj": 0.0009463635637443416,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "PARP1": {
+      "agi": "AT2G31320",
+      "effect": 0.008,
+      "padj": 0.8860416156554282,
+      "module": "blue",
+      "responsive": false
+    },
+    "PARP2": {
+      "agi": "AT4G02390",
+      "effect": 0.305,
+      "padj": 0.02236559113837532,
+      "module": "grey",
+      "responsive": false
+    },
+    "SMR5": {
+      "agi": "AT1G07500",
+      "effect": 0.127,
+      "padj": 0.6188100030814405,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "SMR7": {
+      "agi": "AT3G27630",
+      "effect": 0.289,
+      "padj": 0.1428966991927153,
+      "module": "grey",
+      "responsive": false
+    },
+    "GMI1": {
+      "agi": "AT5G24280",
+      "effect": 0.152,
+      "padj": 0.054495663813501106,
+      "module": "grey",
+      "responsive": false
+    },
+    "XRI1": {
+      "agi": "AT5G48720",
+      "effect": 0.256,
+      "padj": 0.02842192491863127,
+      "module": "grey",
+      "responsive": false
+    },
+    "KU70": {
+      "agi": "AT1G16970",
+      "effect": -0.017,
+      "padj": 0.5520680154601513,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "KU80": {
+      "agi": "AT1G48050",
+      "effect": -0.038,
+      "padj": 0.15371790933802298,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "MRE11": {
+      "agi": "AT5G54260",
+      "effect": -0.039,
+      "padj": 0.15890472312363577,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "RAD17": {
+      "agi": "AT5G66130",
+      "effect": 0.07,
+      "padj": 0.2705475046111039,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    },
+    "WEE1": {
+      "agi": "AT1G02970",
+      "effect": -0.156,
+      "padj": 0.002861503905578034,
+      "module": "not-in-HVG-panel",
+      "responsive": false
+    }
+  },
+  "cohort_blue_time_rho": -0.66
+}

@@ -1,0 +1,11 @@
+{
+  "R2": 0.5750494003295898,
+  "rho_dose": 0.488779170168944,
+  "rho_time": 0.356727126382027,
+  "rho_let": 0.48923126769385655,
+  "n_samples": 195,
+  "n_genes": 2000,
+  "latent_dim": 16,
+  "epochs": 150,
+  "center_within_study": true
+}

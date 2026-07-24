@@ -1,0 +1,34 @@
+name: plant-radiation-kinetic
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+dependencies:
+  # Python core
+  - python=3.11
+  - numpy=2.4.6
+  - pandas=3.0.3
+  - scipy=1.17.1
+  - matplotlib=3.10.5
+  - seaborn=0.13.2
+  # Bioinformatics
+  - anndata=0.12.1
+  # PyTorch + GP (install via pip for CUDA builds)
+  - pip
+  - pip:
+    - torch==2.7.1
+    - gpytorch==1.15.2
+  # R ecosystem
+  - r-base=4.4.3
+  - r-ggplot2
+  - r-dplyr
+  - r-tibble
+  - r-patchwork
+  - r-svglite=2.2.2
+  - bioconductor-impute
+  - bioconductor-preprocesscore
+  # R packages installed from GitHub (not on conda):
+  #   WGCNA v1.74        -> install.packages("WGCNA", repos=c("http://horvath.genetics.ucla.edu/html/repositories/CRAN", CRAN))
+  #   PlantCellChat v0.0.9 -> devtools::install_github("mrliuw/PlantCellChat")
+  #   ggPlantmap v1.1.0  -> devtools::install_github("leonardojo/ggPlantmap")
+  #   PlantPhoneDB       -> devtools::install_github("Leonardo-lab/PlantPhoneDB")

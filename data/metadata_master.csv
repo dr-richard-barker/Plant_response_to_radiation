@@ -1,0 +1,300 @@
+SampleID,StudyID,Organism,Ecotype,Genotype,Tissue,RadiationQuality,RadiationClass,LET_class,LET_keV_um,LET_imputed,AbsorbedDose_Gy,DoseRate_Gy_min,TimePostExposure_h,AgeAtHarvest_d,Replicate,IsControl,AssayType,RawDataFile,ProcessedDataFile,ControlMatchedID,OriginalSampleName
+GSM1506014_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,5 day,,False,microarray,,,,GSM1506014 1
+GSM1506015_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,5 day,,False,microarray,,,,GSM1506015 1
+GSM1506016_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,5 day,,False,microarray,,,,GSM1506016 1
+GSM1506017_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,5 day,,False,microarray,,,,GSM1506017 1
+GSM1506018_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,5 day,,False,microarray,,,,GSM1506018 1
+GSM1506019_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,5 day,,False,microarray,,,,GSM1506019 1
+GSM1506020_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,5 day,,False,microarray,,,,GSM1506020 1
+GSM1506021_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,5 day,,False,microarray,,,,GSM1506021 1
+GSM1506022_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,6 day,,False,microarray,,,,GSM1506022 1
+GSM1506023_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,6 day,,False,microarray,,,,GSM1506023 1
+GSM1506024_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,1.5,5 day,,False,microarray,,,,GSM1506024 1
+GSM1506025_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,1.5,5 day,,False,microarray,,,,GSM1506025 1
+GSM1506026_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,3.0,5 day,,False,microarray,,,,GSM1506026 1
+GSM1506027_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,3.0,5 day,,False,microarray,,,,GSM1506027 1
+GSM1506028_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,6.0,5 day,,False,microarray,,,,GSM1506028 1
+GSM1506029_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,6.0,5 day,,False,microarray,,,,GSM1506029 1
+GSM1506030_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,12.0,5 day,,False,microarray,,,,GSM1506030 1
+GSM1506031_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,12.0,5 day,,False,microarray,,,,GSM1506031 1
+GSM1506032_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,24.0,6 day,,False,microarray,,,,GSM1506032 1
+GSM1506033_1,OSD-46,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,24.0,6 day,,False,microarray,,,,GSM1506033 1
+GSM1506034_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,5 day,,False,microarray,,,,GSM1506034 1
+GSM1506035_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,5 day,,False,microarray,,,,GSM1506035 1
+GSM1506036_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,5 day,,False,microarray,,,,GSM1506036 1
+GSM1506037_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,5 day,,False,microarray,,,,GSM1506037 1
+GSM1506038_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,5 day,,False,microarray,,,,GSM1506038 1
+GSM1506039_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,5 day,,False,microarray,,,,GSM1506039 1
+GSM1506040_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,6 day,,False,microarray,,,,GSM1506040 1
+GSM1506041_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,6 day,,False,microarray,,,,GSM1506041 1
+GSM1506042_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,1.5,5 day,,False,microarray,,,,GSM1506042 1
+GSM1506043_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,1.5,5 day,,False,microarray,,,,GSM1506043 1
+GSM1506044_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,6.0,5 day,,False,microarray,,,,GSM1506044 1
+GSM1506045_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,6.0,5 day,,False,microarray,,,,GSM1506045 1
+GSM1506046_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,12.0,5 day,,False,microarray,,,,GSM1506046 1
+GSM1506047_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,12.0,5 day,,False,microarray,,,,GSM1506047 1
+GSM1506048_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,24.0,6 day,,False,microarray,,,,GSM1506048 1
+GSM1506049_1,OSD-46,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,30.0,,24.0,6 day,,False,microarray,,,,GSM1506049 1
+GSM1506050_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,5 day,,True,microarray,,,,GSM1506050 1
+GSM1506051_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,5 day,,True,microarray,,,,GSM1506051 1
+GSM1506052_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,6 day,,True,microarray,,,,GSM1506052 1
+GSM1506053_1,OSD-46,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,6 day,,True,microarray,,,,GSM1506053 1
+GSM1506054_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,5 day,,True,microarray,,,,GSM1506054 1
+GSM1506055_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,5 day,,True,microarray,,,,GSM1506055 1
+GSM1506056_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,6 day,,True,microarray,,,,GSM1506056 1
+GSM1506057_1,OSD-46,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,0.0,,0.0,6 day,,True,microarray,,,,GSM1506057 1
+Atha_Col-0_sl_WT_345nm-4d_305nm-1h_Rep1,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,1,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_305nm-1h_Rep1
+Atha_Col-0_sl_WT_345nm-4d_305nm-1h_Rep2,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,2,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_305nm-1h_Rep2
+Atha_Col-0_sl_WT_345nm-4d_305nm-1h_Rep3,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,3,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_305nm-1h_Rep3
+Atha_Col-0_sl_cop1_345nm-4d_305nm-1h_Rep1,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,1,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_305nm-1h_Rep1
+Atha_Col-0_sl_cop1_345nm-4d_305nm-1h_Rep2,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,2,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_305nm-1h_Rep2
+Atha_Col-0_sl_cop1_345nm-4d_305nm-1h_Rep3,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,3,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_305nm-1h_Rep3
+Atha_Col-0_sl_uvr8_345nm-4d_305nm-1h_Rep1,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,1,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_305nm-1h_Rep1
+Atha_Col-0_sl_uvr8_345nm-4d_305nm-1h_Rep2,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,2,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_305nm-1h_Rep2
+Atha_Col-0_sl_uvr8_345nm-4d_305nm-1h_Rep3,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,1.0,,3,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_305nm-1h_Rep3
+Atha_Col-0_sl_WT_345nm-4d_305nm-6h_Rep1,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,1,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_305nm-6h_Rep1
+Atha_Col-0_sl_WT_345nm-4d_305nm-6h_Rep2,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,2,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_305nm-6h_Rep2
+Atha_Col-0_sl_WT_345nm-4d_305nm-6h_Rep3,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,3,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_305nm-6h_Rep3
+Atha_Col-0_sl_cop1_345nm-4d_305nm-6h_Rep1,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,1,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_305nm-6h_Rep1
+Atha_Col-0_sl_cop1_345nm-4d_305nm-6h_Rep2,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,2,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_305nm-6h_Rep2
+Atha_Col-0_sl_cop1_345nm-4d_305nm-6h_Rep3,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,3,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_305nm-6h_Rep3
+Atha_Col-0_sl_uvr8_345nm-4d_305nm-6h_Rep1,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,1,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_305nm-6h_Rep1
+Atha_Col-0_sl_uvr8_345nm-4d_305nm-6h_Rep2,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,2,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_305nm-6h_Rep2
+Atha_Col-0_sl_uvr8_345nm-4d_305nm-6h_Rep3,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,6.0,,3,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_305nm-6h_Rep3
+Atha_Col-0_sl_WT_305nm-4d_CTRL_Rep1,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,1,False,microarray,,,,Atha_Col-0_sl_WT_305nm-4d_CTRL_Rep1
+Atha_Col-0_sl_WT_305nm-4d_CTRL_Rep2,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,2,False,microarray,,,,Atha_Col-0_sl_WT_305nm-4d_CTRL_Rep2
+Atha_Col-0_sl_WT_305nm-4d_CTRL_Rep3,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,3,False,microarray,,,,Atha_Col-0_sl_WT_305nm-4d_CTRL_Rep3
+Atha_Col-0_sl_WT_345nm-4d_CTRL_Rep1,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,1,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_CTRL_Rep1
+Atha_Col-0_sl_WT_345nm-4d_CTRL_Rep2,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,2,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_CTRL_Rep2
+Atha_Col-0_sl_WT_345nm-4d_CTRL_Rep3,OSD-296,Arabidopsis thaliana,,Wild Type,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,3,False,microarray,,,,Atha_Col-0_sl_WT_345nm-4d_CTRL_Rep3
+Atha_Col-0_sl_cop1_345nm-4d_CTRL_Rep1,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,1,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_CTRL_Rep1
+Atha_Col-0_sl_cop1_345nm-4d_CTRL_Rep2,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,2,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_CTRL_Rep2
+Atha_Col-0_sl_cop1_345nm-4d_CTRL_Rep3,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,3,False,microarray,,,,Atha_Col-0_sl_cop1_345nm-4d_CTRL_Rep3
+Atha_Col-0_sl_cop1_305nm-4d_CTRL_Rep1,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,1,False,microarray,,,,Atha_Col-0_sl_cop1_305nm-4d_CTRL_Rep1
+Atha_Col-0_sl_cop1_305nm-4d_CTRL_Rep2,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,2,False,microarray,,,,Atha_Col-0_sl_cop1_305nm-4d_CTRL_Rep2
+Atha_Col-0_sl_cop1_305nm-4d_CTRL_Rep3,OSD-296,Arabidopsis thaliana,,cop-1,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,3,False,microarray,,,,Atha_Col-0_sl_cop1_305nm-4d_CTRL_Rep3
+Atha_Col-0_sl_uvr8_345nm-4d_CTRL_Rep1,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,1,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_CTRL_Rep1
+Atha_Col-0_sl_uvr8_345nm-4d_CTRL_Rep2,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,2,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_CTRL_Rep2
+Atha_Col-0_sl_uvr8_345nm-4d_CTRL_Rep3,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,3,False,microarray,,,,Atha_Col-0_sl_uvr8_345nm-4d_CTRL_Rep3
+Atha_Col-0_sl_uvr8_305nm-4d_CTRL_Rep1,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,1,False,microarray,,,,Atha_Col-0_sl_uvr8_305nm-4d_CTRL_Rep1
+Atha_Col-0_sl_uvr8_305nm-4d_CTRL_Rep2,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,2,False,microarray,,,,Atha_Col-0_sl_uvr8_305nm-4d_CTRL_Rep2
+Atha_Col-0_sl_uvr8_305nm-4d_CTRL_Rep3,OSD-296,Arabidopsis thaliana,,uvr-8,,UV-B,non-ionizing-UV,n/a,,True,,,96.0,,3,False,microarray,,,,Atha_Col-0_sl_uvr8_305nm-4d_CTRL_Rep3
+21H5_WT_RED_Col0_1g_Rep1,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,1,False,RNA-seq,,,,21H5_WT_RED_Col0_1g_Rep1
+22A6_WT_RED_Col0_1g_Rep2,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,2,False,RNA-seq,,,,22A6_WT_RED_Col0_1g_Rep2
+23B6_WT_RED_Col0_1g_Rep3,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,3,False,RNA-seq,,,,23B6_WT_RED_Col0_1g_Rep3
+30H7_WT_DARK_Col0_1g_Rep1,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,1,False,RNA-seq,,,,30H7_WT_DARK_Col0_1g_Rep1
+31A8_WT_DARK_Col0_1g_Rep2,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,2,False,RNA-seq,,,,31A8_WT_DARK_Col0_1g_Rep2
+32B8_WT_DARK_Col0_1g_Rep3,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,3,False,RNA-seq,,,,32B8_WT_DARK_Col0_1g_Rep3
+05G4_WT_RED_Col0_03g_Rep1,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,1,False,RNA-seq,,,,05G4_WT_RED_Col0_03g_Rep1
+06H4_WT_RED_Col0_03g_Rep2,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,2,False,RNA-seq,,,,06H4_WT_RED_Col0_03g_Rep2
+07A5_WT_RED_Col0_03g_Rep3,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,3,False,RNA-seq,,,,07A5_WT_RED_Col0_03g_Rep3
+13I4_WT_DARK_Col0_03g_Rep1,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,1,False,RNA-seq,,,,13I4_WT_DARK_Col0_03g_Rep1
+14J4_WT_DARK_Col0_03g_Rep2,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,2,False,RNA-seq,,,,14J4_WT_DARK_Col0_03g_Rep2
+15A7_WT_DARK_Col0_03g_Rep3,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,3,False,RNA-seq,,,,15A7_WT_DARK_Col0_03g_Rep3
+JBA1_WT_DARK_Col0_0g_Rep1,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,1,False,RNA-seq,,,,JBA1_WT_DARK_Col0_0g_Rep1
+JBB1_WT_DARK_Col0_0g_Rep2,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,2,False,RNA-seq,,,,JBB1_WT_DARK_Col0_0g_Rep2
+JBH2_WT_RED_Col0_0g_Rep1,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,1,False,RNA-seq,,,,JBH2_WT_RED_Col0_0g_Rep1
+JBA3_WT_RED_Col0_0g_Rep2,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,2,False,RNA-seq,,,,JBA3_WT_RED_Col0_0g_Rep2
+JBB3_WT_RED_Col0_0g_Rep3,OSD-314,Arabidopsis thaliana,,,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,3,False,RNA-seq,,,,JBB3_WT_RED_Col0_0g_Rep3
+GSM1506014,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,microarray,,,,GSM1506014
+GSM1506015,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,microarray,,,,GSM1506015
+GSM1506016,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,microarray,,,,GSM1506016
+GSM1506017,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,microarray,,,,GSM1506017
+GSM1506018,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,microarray,,,,GSM1506018
+GSM1506019,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,microarray,,,,GSM1506019
+GSM1506020,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,microarray,,,,GSM1506020
+GSM1506021,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,microarray,,,,GSM1506021
+GSM1506022,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,microarray,,,,GSM1506022
+GSM1506023,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,microarray,,,,GSM1506023
+GSM1506024,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,1.5,,,False,microarray,,,,GSM1506024
+GSM1506025,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,1.5,,,False,microarray,,,,GSM1506025
+GSM1506026,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,3.0,,,False,microarray,,,,GSM1506026
+GSM1506027,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,3.0,,,False,microarray,,,,GSM1506027
+GSM1506028,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,6.0,,,False,microarray,,,,GSM1506028
+GSM1506029,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,6.0,,,False,microarray,,,,GSM1506029
+GSM1506030,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,12.0,,,False,microarray,,,,GSM1506030
+GSM1506031,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,12.0,,,False,microarray,,,,GSM1506031
+GSM1506032,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,24.0,,,False,microarray,,,,GSM1506032
+GSM1506033,OSD-320,Arabidopsis thaliana,,Wild Type,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,24.0,,,False,microarray,,,,GSM1506033
+GSM1506034,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,microarray,,,,GSM1506034
+GSM1506035,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,microarray,,,,GSM1506035
+GSM1506036,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,microarray,,,,GSM1506036
+GSM1506037,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,microarray,,,,GSM1506037
+GSM1506038,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,microarray,,,,GSM1506038
+GSM1506039,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,microarray,,,,GSM1506039
+GSM1506040,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,microarray,,,,GSM1506040
+GSM1506041,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,microarray,,,,GSM1506041
+GSM1506042,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,1.5,,,False,microarray,,,,GSM1506042
+GSM1506043,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,1.5,,,False,microarray,,,,GSM1506043
+GSM1506044,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,6.0,,,False,microarray,,,,GSM1506044
+GSM1506045,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,6.0,,,False,microarray,,,,GSM1506045
+GSM1506046,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,12.0,,,False,microarray,,,,GSM1506046
+GSM1506047,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,12.0,,,False,microarray,,,,GSM1506047
+GSM1506048,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,24.0,,,False,microarray,,,,GSM1506048
+GSM1506049,OSD-320,Arabidopsis thaliana,,atm-1,,HZE-Fe,ionizing-particulate-high-LET,high,175.0,True,100.0,,24.0,,,False,microarray,,,,GSM1506049
+GSM1506050,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506050
+GSM1506051,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506051
+GSM1506052,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506052
+GSM1506053,OSD-320,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506053
+GSM1506054,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506054
+GSM1506055,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506055
+GSM1506056,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506056
+GSM1506057,OSD-320,Arabidopsis thaliana,,atm-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,microarray,,,,GSM1506057
+Athaliana_PhyA_Sample_112_0G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_112_0G
+Athaliana_PhyA_Sample_115_0G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_115_0G
+Athaliana_PhyA_Sample_132_0-08G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_132_0-08G
+Athaliana_PhyA_Sample_134_0-11G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_134_0-11G
+Athaliana_PhyA_Sample_152_0-25G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_152_0-25G
+Athaliana_PhyA_Sample_155_0-39G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_155_0-39G
+Athaliana_PhyA_Sample_212_0-42G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_212_0-42G
+Athaliana_PhyA_Sample_172_0-64G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_172_0-64G
+Athaliana_PhyA_Sample_215_0-65G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_215_0-65G
+Athaliana_PhyA_Sample_232_0-68G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_232_0-68G
+Athaliana_PhyA_Sample_174_0-88G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_174_0-88G
+Athaliana_PhyA_Sample_234_0-92G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_234_0-92G
+Athaliana_PhyA_Sample_117_0G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_117_0G
+Athaliana_PhyA_Sample_119_0G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_119_0G
+Athaliana_PhyA_Sample_137_0-08G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_137_0-08G
+Athaliana_PhyA_Sample_140_0-13G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_140_0-13G
+Athaliana_PhyA_Sample_157_0-25G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_157_0-25G
+Athaliana_PhyA_Sample_159_0-34G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_159_0-34G
+Athaliana_PhyA_Sample_217_0-42G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_217_0-42G
+Athaliana_PhyA_Sample_219_0-58G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_219_0-58G
+Athaliana_PhyA_Sample_177_0-64G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_177_0-64G
+Athaliana_PhyA_Sample_237_0-68G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_237_0-68G
+Athaliana_PhyA_Sample_180_1G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_180_1G
+Athaliana_PhyA_Sample_240_1-05G,OSD-346,Arabidopsis thaliana,,Phytochrome A mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyA_Sample_240_1-05G
+Athaliana_PhyB_Sample_113_0G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_113_0G
+Athaliana_PhyB_Sample_133_0-1G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_133_0-1G
+Athaliana_PhyB_Sample_153_0-3G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_153_0-3G
+Athaliana_PhyB_Sample_213_0-5G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_213_0-5G
+Athaliana_PhyB_Sample_173_0-76G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_173_0-76G
+Athaliana_PhyB_Sample_233_0-8G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_233_0-8G
+Athaliana_PhyB_Sample_118_0G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_118_0G
+Athaliana_PhyB_Sample_138_0-1G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_138_0-1G
+Athaliana_PhyB_Sample_158_0-3G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_158_0-3G
+Athaliana_PhyB_Sample_218_0-5G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_218_0-5G
+Athaliana_PhyB_Sample_178_0-76G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_178_0-76G
+Athaliana_PhyB_Sample_238_0-8G,OSD-346,Arabidopsis thaliana,,Phytochrome B mutant,,spaceflight-LEO,ionizing-mixed-chronic,mixed,1.0,True,,,,,,False,RNA-seq,,,,Athaliana_PhyB_Sample_238_0-8G
+GSM3072467,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,False,RNA-seq,,,,GSM3072467
+GSM3072468,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,False,RNA-seq,,,,GSM3072468
+GSM3072469,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3072469
+GSM3072470,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3072470
+GSM3072471,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3072471
+GSM3072472,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3072472
+GSM3072473,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3072473
+GSM3072474,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3072474
+GSM3072475,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,True,RNA-seq,,,,GSM3072475
+GSM3072476,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,True,RNA-seq,,,,GSM3072476
+GSM3072477,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,True,RNA-seq,,,,GSM3072477
+GSM3072478,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,True,RNA-seq,,,,GSM3072478
+GSM3072479,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,True,RNA-seq,,,,GSM3072479
+GSM3072480,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,True,RNA-seq,,,,GSM3072480
+GSM3072481,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072481
+GSM3072482,OSD-498,Arabidopsis thaliana,,,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072482
+GSM3072483,OSD-502,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,RNA-seq,,,,GSM3072483
+GSM3072484,OSD-502,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,,,,False,RNA-seq,,,,GSM3072484
+GSM3072485,OSD-502,Arabidopsis thaliana,,myb3r135,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,RNA-seq,,,,GSM3072485
+GSM3072486,OSD-502,Arabidopsis thaliana,,myb3r135,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,,,,False,RNA-seq,,,,GSM3072486
+GSM3072487,OSD-502,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,RNA-seq,,,,GSM3072487
+GSM3072488,OSD-502,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,,,,False,RNA-seq,,,,GSM3072488
+GSM3072489,OSD-502,Arabidopsis thaliana,,myb3r135,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.0,,,True,RNA-seq,,,,GSM3072489
+GSM3072490,OSD-502,Arabidopsis thaliana,,myb3r135,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,,,,False,RNA-seq,,,,GSM3072490
+GSM3082835,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3082835
+GSM3082836,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3082836
+GSM3082837,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,False,RNA-seq,,,,GSM3082837
+GSM3082838,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,False,RNA-seq,,,,GSM3082838
+GSM3082839,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3082839
+GSM3082840,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3082840
+GSM3082841,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.75,,,False,RNA-seq,,,,GSM3082841
+GSM3082842,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.75,,,False,RNA-seq,,,,GSM3082842
+GSM3082843,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3082843
+GSM3082844,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3082844
+GSM3082845,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3082845
+GSM3082846,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3082846
+GSM3082847,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3082847
+GSM3082848,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3082848
+GSM3082849,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3082849
+GSM3082850,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3082850
+GSM3082851,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3082851
+GSM3082852,OSD-508,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3082852
+GSM3082853,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3082853
+GSM3082854,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3082854
+GSM3082855,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,False,RNA-seq,,,,GSM3082855
+GSM3082856,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.16666666666666666,,,False,RNA-seq,,,,GSM3082856
+GSM3082857,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3082857
+GSM3082858,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3082858
+GSM3082859,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.75,,,False,RNA-seq,,,,GSM3082859
+GSM3082860,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.75,,,False,RNA-seq,,,,GSM3082860
+GSM3082861,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3082861
+GSM3082862,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3082862
+GSM3082863,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3082863
+GSM3082864,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3082864
+GSM3082865,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3082865
+GSM3082866,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3082866
+GSM3082867,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3082867
+GSM3082868,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3082868
+GSM3082869,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3082869
+GSM3082870,OSD-508,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3082870
+GSM3072302,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3072302
+GSM3072303,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3072303
+GSM3072304,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3072304
+GSM3072305,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3072305
+GSM3072306,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3072306
+GSM3072307,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3072307
+GSM3072308,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3072308
+GSM3072309,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3072309
+GSM3072310,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3072310
+GSM3072311,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3072311
+GSM3072312,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3072312
+GSM3072313,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3072313
+GSM3072314,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072314
+GSM3072315,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072315
+GSM3072316,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072316
+GSM3072317,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072317
+GSM3072318,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072318
+GSM3072319,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072319
+GSM3072320,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072320
+GSM3072321,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072321
+GSM3072322,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072322
+GSM3072323,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072323
+GSM3072324,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072324
+GSM3072325,OSD-510,Arabidopsis thaliana,,Wild Type,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072325
+GSM3072326,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3072326
+GSM3072327,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,0.3333333333333333,,,False,RNA-seq,,,,GSM3072327
+GSM3072328,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3072328
+GSM3072329,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,1.5,,,False,RNA-seq,,,,GSM3072329
+GSM3072330,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3072330
+GSM3072331,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,3.0,,,False,RNA-seq,,,,GSM3072331
+GSM3072332,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3072332
+GSM3072333,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,6.0,,,False,RNA-seq,,,,GSM3072333
+GSM3072334,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3072334
+GSM3072335,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,12.0,,,False,RNA-seq,,,,GSM3072335
+GSM3072336,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3072336
+GSM3072337,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,False,RNA-seq,,,,GSM3072337
+GSM3072338,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072338
+GSM3072339,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072339
+GSM3072340,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072340
+GSM3072341,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072341
+GSM3072342,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072342
+GSM3072343,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072343
+GSM3072344,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072344
+GSM3072345,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072345
+GSM3072346,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072346
+GSM3072347,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072347
+GSM3072348,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072348
+GSM3072349,OSD-510,Arabidopsis thaliana,,sog1-1,,gamma,ionizing-photon-low-LET,low,0.2,True,100.0,,24.0,,,True,RNA-seq,,,,GSM3072349
+CWRU004174_S1,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.0,,3.0,,,True,RNA-seq,,,,CWRU004174_S1
+CWRU004175_S2,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.0,,3.0,,,True,RNA-seq,,,,CWRU004175_S2
+CWRU004176_S3,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.0,,3.0,,,True,RNA-seq,,,,CWRU004176_S3
+CWRU004177_S4,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.4,,3.0,,,False,RNA-seq,,,,CWRU004177_S4
+CWRU004178_S5,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.4,,3.0,,,False,RNA-seq,,,,CWRU004178_S5
+CWRU004179_S6,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.4,,3.0,,,False,RNA-seq,,,,CWRU004179_S6
+CWRU004180_S7,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.4,,3.0,,,False,RNA-seq,,,,CWRU004180_S7
+CWRU004181_S8,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.0,,3.0,,,True,RNA-seq,,,,CWRU004181_S8
+CWRU004182_S9,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.0,,3.0,,,True,RNA-seq,,,,CWRU004182_S9
+CWRU004183_S10,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.0,,3.0,,,True,RNA-seq,,,,CWRU004183_S10
+CWRU004184_S11,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.8,,3.0,,,False,RNA-seq,,,,CWRU004184_S11
+CWRU004185_S12,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.8,,3.0,,,False,RNA-seq,,,,CWRU004185_S12
+CWRU004186_S13,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.8,,3.0,,,False,RNA-seq,,,,CWRU004186_S13
+CWRU004187_S14,OSD-658,Arabidopsis thaliana,,,,GCR,ionizing-particulate-mixed,mixed,5.0,True,0.8,,3.0,,,False,RNA-seq,,,,CWRU004187_S14

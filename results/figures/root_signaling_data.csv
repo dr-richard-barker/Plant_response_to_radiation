@@ -1,0 +1,41 @@
+ROI,value,time_bin
+Columella.Columella,0.8587267600308625,0-0.5h
+Cortex.Cortex,0.9442090380406812,0-0.5h
+Endodermis.Endodermis,0.9618669516890207,0-0.5h
+Epidermis.Epidermis,0.5369799831344806,0-0.5h
+Lateral Root Cap.Lateral Root Cap,0.0,0-0.5h
+Meristem.QC,0.7164048236327686,0-0.5h
+Stele.Pericycle,1.0,0-0.5h
+Stele.Vascular Tissue,0.5474899916969718,0-0.5h
+Columella.Columella,0.8528050546371551,0.5-2h
+Cortex.Cortex,0.9473139479841111,0.5-2h
+Endodermis.Endodermis,0.9790982778866864,0.5-2h
+Epidermis.Epidermis,0.5568772664289986,0.5-2h
+Lateral Root Cap.Lateral Root Cap,0.0,0.5-2h
+Meristem.QC,0.8141505217045443,0.5-2h
+Stele.Pericycle,1.0,0.5-2h
+Stele.Vascular Tissue,0.5580788582128196,0.5-2h
+Columella.Columella,0.8238857266295246,2-6h
+Cortex.Cortex,0.9031264243966514,2-6h
+Endodermis.Endodermis,0.9311224496869597,2-6h
+Epidermis.Epidermis,0.4382294346508772,2-6h
+Lateral Root Cap.Lateral Root Cap,0.0,2-6h
+Meristem.QC,0.6674679444598726,2-6h
+Stele.Pericycle,1.0,2-6h
+Stele.Vascular Tissue,0.4104089716888863,2-6h
+Columella.Columella,0.870452174938367,6-12h
+Cortex.Cortex,0.945363872590773,6-12h
+Endodermis.Endodermis,0.9105621550067664,6-12h
+Epidermis.Epidermis,0.5080089078172862,6-12h
+Lateral Root Cap.Lateral Root Cap,0.0,6-12h
+Meristem.QC,0.6625623322207252,6-12h
+Stele.Pericycle,1.0,6-12h
+Stele.Vascular Tissue,0.5571163107775894,6-12h
+Columella.Columella,0.8628940013992984,12-30h
+Cortex.Cortex,0.9513826734844701,12-30h
+Endodermis.Endodermis,0.8951066765704684,12-30h
+Epidermis.Epidermis,0.47331259808824977,12-30h
+Lateral Root Cap.Lateral Root Cap,0.0,12-30h
+Meristem.QC,0.708776774983137,12-30h
+Stele.Pericycle,1.0,12-30h
+Stele.Vascular Tissue,0.5404660930748927,12-30h

@@ -1,0 +1,35 @@
+[
+  {
+    "study": "OSD-498",
+    "held_time_h": 24.0,
+    "ref_time_h": 1.5,
+    "n_train": 12,
+    "n_test": 4,
+    "R2": -2.8504486083984375,
+    "rho_time": 0.0,
+    "direction_rho": 0.25274341406020223,
+    "cosine_sim": 0.19149458408355713
+  },
+  {
+    "study": "OSD-508",
+    "held_time_h": 24.0,
+    "ref_time_h": 12.0,
+    "n_train": 28,
+    "n_test": 8,
+    "R2": -0.59858238697052,
+    "rho_time": 0.0,
+    "direction_rho": 0.5927446646625589,
+    "cosine_sim": 0.7950571179389954
+  },
+  {
+    "study": "OSD-510",
+    "held_time_h": 24.0,
+    "ref_time_h": 12.0,
+    "n_train": 20,
+    "n_test": 28,
+    "R2": -0.023022055625915527,
+    "rho_time": 0.0,
+    "direction_rho": 0.4471254048139731,
+    "cosine_sim": 0.8192848563194275
+  }
+]

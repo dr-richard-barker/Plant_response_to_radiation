@@ -1,0 +1,16 @@
+ROI,value,time_bin
+epidermis.adaxial,0.034109388304480695,0-0.5h
+Parenchima.palisade,1.0,0-0.5h
+vascularbundle.xylem,0.0,0-0.5h
+epidermis.adaxial,0.000994086063879207,0.5-2h
+Parenchima.palisade,1.0,0.5-2h
+vascularbundle.xylem,0.0,0.5-2h
+epidermis.adaxial,0.0,2-6h
+Parenchima.palisade,1.0,2-6h
+vascularbundle.xylem,0.47763631406509655,2-6h
+epidermis.adaxial,0.0,6-12h
+Parenchima.palisade,1.0,6-12h
+vascularbundle.xylem,0.020718715572115808,6-12h
+epidermis.adaxial,0.0,12-30h
+Parenchima.palisade,1.0,12-30h
+vascularbundle.xylem,0.0769632016074092,12-30h

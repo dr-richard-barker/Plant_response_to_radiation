@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kinetic Landscape of Plant Ionizing-Radiation Response</title>
+<meta name="description" content="A kinetic, cross-study transcriptomic analysis of the plant ionizing-radiation response across NASA OSDR datasets — with independent held-out validation.">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a2230; --muted:#5a6473; --line:#e5e9f0;
+    --card:#f7f9fc; --accent:#3B6EA5; --accent2:#3FB6A8; --grey:#8A8A8A;
+    --maxw:960px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#232c39;
+           --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  header{border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(59,110,165,.10),transparent)}
+  header .wrap{padding:56px 20px 40px}
+  .eyebrow{color:var(--accent);font-weight:600;letter-spacing:.04em;
+    text-transform:uppercase;font-size:.78rem;margin:0 0 10px}
+  h1{font-size:2.05rem;line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+  .lede{font-size:1.12rem;color:var(--muted);margin:0 0 22px;max-width:66ch}
+  .meta{color:var(--muted);font-size:.92rem;margin:0 0 20px}
+  .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;padding:9px 16px;border-radius:8px;font-weight:600;
+    font-size:.92rem;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{text-decoration:none;filter:brightness(1.06)}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+  h2 .n{color:var(--accent);font-weight:700;margin-right:.5rem}
+  .sub{color:var(--muted);margin:0 0 24px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px}
+  .card h3{margin:0 0 6px;font-size:1.02rem}
+  .card p{margin:0;color:var(--muted);font-size:.93rem}
+  .stat{font-size:1.9rem;font-weight:700;line-height:1;margin:2px 0 8px;color:var(--accent)}
+  figure{margin:26px 0 0;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px}
+  figure img{width:100%;height:auto;border-radius:6px;display:block;background:#fff}
+  figcaption{color:var(--muted);font-size:.88rem;margin-top:10px}
+  .tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;
+    background:rgba(63,182,168,.14);color:var(--accent2);margin-left:8px;vertical-align:middle}
+  ul.clean{padding-left:1.15rem;margin:0}
+  ul.clean li{margin:.35rem 0}
+  table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:8px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;
+    padding:1px 6px;font-size:.86em}
+  footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem}
+  .disc{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent2);
+    border-radius:8px;padding:12px 16px;color:var(--muted);font-size:.9rem;margin-top:18px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Plant Response to Radiation · NASA OSDR</p>
+    <h1>The Kinetic Landscape of Plant Ionizing-Radiation Response</h1>
+    <p class="lede">A cross-study transcriptomic pipeline that resolves how the plant radiation
+      response unfolds over time — from DNA-damage recognition, through a crisis nadir, to partial
+      recovery — across five radiation qualities and 24 pseudo-cell-types.</p>
+    <p class="meta">Richard Barker · Arabidopsis thaliana · 299 samples · 10 NASA OSDR studies</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/dr-richard-barker/Plant_response_to_radiation/blob/main/manuscript_chapter.md">Read the manuscript</a>
+      <a class="btn" href="https://github.com/dr-richard-barker/Plant_response_to_radiation">Code &amp; data (GitHub)</a>
+      <a class="btn" href="https://osdr.nasa.gov">NASA OSDR</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Overview</h2>
+    <p class="sub">Radiation response as a dynamic trajectory, not a single snapshot.</p>
+    <p>Most plant radiation transcriptomics treats exposure as a binary condition at one timepoint.
+      This pipeline instead aggregates 299 samples spanning gamma, HZE-Fe, GCR, UV-B and
+      spaceflight-LEO exposures, deconvolves bulk transcriptomes into pseudo-cell-type profiles,
+      and trains a Gaussian-Process autoencoder with continuous dose, time and linear-energy-transfer
+      (LET) covariates. Inter-tissue signaling is reconstructed with PlantCellChat, co-expression
+      structure with kinetic WGCNA, and tissue stability with a composite
+      <strong>Radiation Resilience Index (RRI)</strong>.</p>
+    <div class="cards" style="margin-top:22px">
+      <div class="card"><div class="stat">3-phase</div><h3>Kinetic architecture</h3>
+        <p>Recognition (0–2 h) → crisis nadir (2–6 h) → partial recovery (6–24 h).</p></div>
+      <div class="card"><div class="stat">0.79→0.68</div><h3>RRI at the nadir</h3>
+        <p>Tissue resilience drops at 2–6 h, driven by housekeeping-network disruption, then recovers.</p></div>
+      <div class="card"><div class="stat">2.8×10⁻¹²</div><h3>Independent validation</h3>
+        <p>Held-out OSD-782 response genes recover the early-response module (2.3× enrichment).</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="n">01</span>The resilience trajectory</h2>
+    <p class="sub">A single dynamic metric tracks stability degradation and recovery over time.</p>
+    <figure>
+      <img src="assets/rri_trajectory.png" alt="Radiation Resilience Index over time, showing a nadir at 2–6 hours">
+      <figcaption>The Radiation Resilience Index (RRI) across five timepoint bins. The nadir at
+        2–6 h (RRI = 0.68) is driven by disruption of housekeeping co-expression networks before
+        partial recovery by 12–30 h.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="n">02</span>Temporally-phased pathways</h2>
+    <p class="sub">DNA repair, hormonal signaling and oxidative stress activate in sequence.</p>
+    <figure>
+      <img src="assets/pathway_kinetic_lines.png" alt="Eight radiation-response pathways plotted over five timepoint bins">
+      <figcaption>Pathway activation kinetics: DNA repair peaks at 0.5–2 h, auxin signaling
+        earliest (0–0.5 h), salicylic-acid signaling latest (12–30 h), while jasmonate signaling is
+        consistently suppressed — an abiotic-stress hormonal signature distinct from biotic stress.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="n">03</span>Independent validation<span class="tag">held-out study</span></h2>
+    <p class="sub">The module structure holds on data entirely external to the discovery cohort.</p>
+    <p>The kinetic modules were projected — without refitting — onto <strong>OSD-782 / GLDS-679</strong>,
+      a wild-type low-dose gamma time-course (0 / 0.1 / 1 Gy) absent from the training cohort and
+      using a dose regime ~100× below its 100 Gy gamma studies. Radiation-response genes in this
+      held-out study are strongly over-represented in the blue early-response module and depleted in
+      the sustained module, and the projected module scores independently reproduce the
+      crisis-and-recovery trajectory.</p>
+    <figure>
+      <img src="assets/osd782_validation.png" alt="Independent validation on held-out study OSD-782">
+      <figcaption><strong>A.</strong> Held-out OSD-782 response genes are enriched in the blue
+        early-response module (41/725, 2.3×, P = 2.8 × 10⁻¹²) and the DDR-core module.
+        <strong>B.</strong> Projected blue and grey module scores dip through the 1–24 h crisis
+        window and recover by 72 h; the sustained module stays flat.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/old_repo_overlap.png" alt="Cross-pipeline consistency with the earlier DESeq2/WGCNA analysis">
+      <figcaption>Cross-pipeline consistency with the earlier per-contrast DESeq2/WGCNA analysis
+        (preserved under <code>legacy/</code>): its radiation DEGs are enriched in the blue module,
+        while the canonical DNA double-strand-break repair genes concentrate in a tight grey
+        DDR-core module.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Data &amp; code</h2>
+    <p class="sub">Reproducible, FAIR-aligned, grounded in public NASA data.</p>
+    <table>
+      <tr><th>Component</th><th>Location</th></tr>
+      <tr><td>Pipeline scripts (01–15)</td><td><code>code/</code></td></tr>
+      <tr><td>Metadata, expression, model, validation inputs</td><td><code>data/</code></td></tr>
+      <tr><td>Deconvolution, WGCNA, RRI, CellChat, figures</td><td><code>results/</code></td></tr>
+      <tr><td>Manuscript draft</td><td><a href="https://github.com/dr-richard-barker/Plant_response_to_radiation/blob/main/manuscript_chapter.md"><code>manuscript_chapter.md</code></a></td></tr>
+      <tr><td>Pipeline reference + data dictionary</td><td><a href="https://github.com/dr-richard-barker/Plant_response_to_radiation/blob/main/README_pipeline.md"><code>README_pipeline.md</code></a></td></tr>
+      <tr><td>Earlier per-contrast analysis</td><td><a href="https://github.com/dr-richard-barker/Plant_response_to_radiation/tree/main/legacy"><code>legacy/</code></a></td></tr>
+    </table>
+    <div class="disc">All primary data derive from the NASA Open Science Data Repository (OSDR).
+      The held-out validation study OSD-782 corresponds to GeneLab accession <strong>GLDS-679</strong>
+      (the OSD and GLDS numbers differ). The raw OSD-782 count matrix is not versioned in git; it is
+      regenerated from OSDR by <code>code/15_osd782_validation.py</code>.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Richard Barker · <a href="https://github.com/dr-richard-barker/Plant_response_to_radiation">github.com/dr-richard-barker/Plant_response_to_radiation</a><br>
+    Data: NASA OSDR (<a href="https://osdr.nasa.gov">osdr.nasa.gov</a>). Pseudo-cell-type profiles are
+    in-silico reconstructions from bulk transcriptomes — no plant single-cell radiation dataset
+    currently exists.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "n_samples": 72,
+  "n_genes": 2000,
+  "soft_power": "1",
+  "n_modules": 3,
+  "n_early_response": 1,
+  "n_late_adaptation": 0,
+  "n_sustained": 1,
+  "n_ddr_core": 1
+}

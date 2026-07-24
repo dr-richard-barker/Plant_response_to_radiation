@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "latent": 0.5,
+    "pathway": 0.25,
+    "module": 0.25
+  },
+  "n_samples": 195,
+  "n_non_control_with_time": 72,
+  "rri_overall_mean": 0.7611777187020139,
+  "rri_overall_std": 0.08557652652718327,
+  "rri_control_mean": 0.7708623869620902,
+  "latent_sigma": 5.865485613230705,
+  "n_pathways": 3,
+  "n_sustained_genes": 1261
+}

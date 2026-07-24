@@ -1,0 +1,12 @@
+quality,osdr_studies,let_class,let_gap_score,mission_score,note,availability_score,composite_score,rank,tier
+proton,12,low,0.25,1.0,Dominant GCR component; NSRL + cyclotron. Fills low-LET particle gap.,1.0,0.8125,1,Tier 1 (acquire now)
+cosmic-mixed,10,mixed,0.75,0.8,Mixed-LET; spaceflight-relevant. Usually maps to GCR+spaceflight.,0.8333333333333334,0.8041666666666667,2,Tier 1 (acquire now)
+helium,6,low,0.25,0.7,Alpha/He ions; GCR component. Low-LET particle.,0.5,0.4875,3,Tier 2 (acquire if feasible)
+solar-particle-event,0,mixed,0.75,1.0,Acute mission hazard; 0 OSDR studies. Needs dedicated NSRL campaign.,0.0,0.4375,4,Tier 2 (acquire if feasible)
+neutron,2,mixed,0.75,0.6,Mixed-LET; secondary radiation hazard. Fills LET gap.,0.16666666666666666,0.4208333333333333,5,Tier 2 (acquire if feasible)
+HZE-Si,1,high,0.5,0.9,Silicon ions; major GCR component. High-LET. Reprocess OSD-658.,0.08333333333333333,0.39166666666666666,6,Tier 2 (acquire if feasible)
+HZE-O,1,high,0.5,0.85,Oxygen ions; GCR component. High-LET. Reprocess OSD-658.,0.08333333333333333,0.37916666666666665,7,Tier 2 (acquire if feasible)
+beta,5,low,0.25,0.2,Beta emitters; often dosimetry context. Minimal spaceflight relevance.,0.4166666666666667,0.32083333333333336,8,Tier 3 (opportunistic)
+X-ray,2,low,0.25,0.1,Ground-based; not spaceflight-relevant. Low-LET photon.,0.16666666666666666,0.1708333333333333,9,Tier 3 (opportunistic)
+UV-A,2,n/a,0.0,0.3,ISS UV exposure; non-ionizing. No LET.,0.16666666666666666,0.15833333333333333,10,Tier 3 (opportunistic)
+UV-C,0,n/a,0.0,0.1,Germicidal; not spaceflight-relevant. 0 OSDR studies. GEO only.,0.0,0.025,11,Tier 4 (requires new experiments)

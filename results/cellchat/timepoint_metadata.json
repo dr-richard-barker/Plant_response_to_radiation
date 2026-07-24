@@ -1,0 +1,62 @@
+{
+  "0-0.5h": {
+    "n_samples": 16,
+    "mean_time_h": 0.27083333333333326,
+    "studies": [
+      "OSD-498",
+      "OSD-508",
+      "OSD-510"
+    ],
+    "qualities": [
+      "gamma"
+    ]
+  },
+  "0.5-2h": {
+    "n_samples": 14,
+    "mean_time_h": 1.2857142857142858,
+    "studies": [
+      "OSD-498",
+      "OSD-508",
+      "OSD-510"
+    ],
+    "qualities": [
+      "gamma"
+    ]
+  },
+  "2-6h": {
+    "n_samples": 16,
+    "mean_time_h": 3.0,
+    "studies": [
+      "OSD-508",
+      "OSD-510",
+      "OSD-658"
+    ],
+    "qualities": [
+      "gamma",
+      "GCR"
+    ]
+  },
+  "6-12h": {
+    "n_samples": 8,
+    "mean_time_h": 6.0,
+    "studies": [
+      "OSD-508",
+      "OSD-510"
+    ],
+    "qualities": [
+      "gamma"
+    ]
+  },
+  "12-30h": {
+    "n_samples": 18,
+    "mean_time_h": 18.666666666666668,
+    "studies": [
+      "OSD-498",
+      "OSD-508",
+      "OSD-510"
+    ],
+    "qualities": [
+      "gamma"
+    ]
+  }
+}
