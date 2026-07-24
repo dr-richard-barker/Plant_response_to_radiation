@@ -21,6 +21,17 @@
   :root{ --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#232c39;
          --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; }
 }
+/* theme.js samples the host page's actual background brightness and tags the
+   rail + toggle so they match a hard-coded-dark (or hard-coded-light) site,
+   regardless of the OS colour-scheme preference. Custom props inherit, so
+   setting them on .sitebar/.topbar re-colours all their descendants only. */
+.sitebar.cose-dark, .topbar.cose-dark{
+  --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#2b3543;
+  --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; }
+.sitebar.cose-light, .topbar.cose-light{
+  --bg:#ffffff; --fg:#1a2230; --muted:#5a6473; --line:#e5e9f0;
+  --card:#f7f9fc; --accent:#3B6EA5; --accent2:#3FB6A8; }
+.sitebar.cose-dark{background:#161d27;border-right-color:#2b3543}
 
 /* If the host page has a sticky top nav, reserve room so the fixed COSE
    logo + Map toggle don't overlap its leading brand. Harmless otherwise. */

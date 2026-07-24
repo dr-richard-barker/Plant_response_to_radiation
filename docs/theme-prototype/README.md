@@ -143,11 +143,18 @@ The theme kit is plain CSS/JS, so it *can* drop into all of these — but the me
 2. ✅ Authoritative `sites.js` (17 sites, 4 groups) *(done)*.
 3. ✅ Decisions locked: **direct-to-live** for simple static sites, **preview path** for tricky ones;
    **copy `sites.js` per repo** (sync via script).
-4. 🟡 Static sites — the shared-template group is **live** (direct-to-`main`, verified in-browser):
-   `Astronaut_health_search`, `APEX05_results_and_code`, `veg05-integrated-omics`,
-   `Tropism_autodecoder_2026`. Remaining static/quasi-static → preview path:
-   `Astronaut_trends` (dashboard), `LunarLeaf-CFD` (React SPA), `Anthocyanin-Image-analysis`,
-   `madwest-astrobotany`.
+4. 🟡 Static sites:
+   - ✅ **Live** (direct-to-`main`, verified): `Astronaut_health_search`, `APEX05_results_and_code`,
+     `veg05-integrated-omics`, `Tropism_autodecoder_2026`.
+   - ✅ **Preview built** (`index.cose.html` beside the live page, live page untouched):
+     `madwest-astrobotany` → `/index.cose.html`; `Astronaut_trends` → `/index.cose.html`
+     (dashboard; 14-entry doc-map; rail auto-matches its light theme).
+   - ⚠️ **`LunarLeaf-CFD` and `Anthocyanin-Image-analysis` are React SPAs** (`<div id="root">`,
+     built bundles) — a static overlay can't theme them. They need the CoSE map/brand as a React
+     component + a rebuild. Blocked on: how they deploy (gh-pages branch? Actions build?).
+   - `theme.js` now samples the host page's background brightness and matches the rail to a
+     hard-coded light/dark site (fixes light-rail-on-dark-page). Older shipped copies (the 4 live
+     sites) can be re-synced with this build; no visual change since they follow the OS preference.
 5. ⬜ Jekyll layout for `deepspace-seed`.
 6. ⬜ GitBook sites (`AIRI`, `TICTOC`) — decide per-site.
 7. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.

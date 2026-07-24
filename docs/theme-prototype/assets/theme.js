@@ -63,6 +63,23 @@
     footP.insertBefore(fLink, footP.firstChild);
   }
 
+  /* Match the rail + toggle to the host page's ACTUAL background brightness,
+     so a site that hard-codes light or dark (ignoring the OS preference) still
+     gets a matching rail. Scoped tokens only recolour the CoSE chrome. */
+  (function(){
+    function lum(c){
+      var m = c && c.match(/rgba?\(([^)]+)\)/); if(!m) return null;
+      var p = m[1].split(",").map(parseFloat);
+      if(p.length >= 4 && p[3] === 0) return null;            // transparent
+      return (0.2126*p[0] + 0.7152*p[1] + 0.0722*p[2]) / 255;
+    }
+    var l = lum(getComputedStyle(document.body).backgroundColor);
+    if(l === null) l = lum(getComputedStyle(document.documentElement).backgroundColor);
+    if(l === null) l = window.matchMedia("(prefers-color-scheme: dark)").matches ? 0 : 1;
+    var cls = l < 0.45 ? "cose-dark" : "cose-light";
+    bar.classList.add(cls); topbar.classList.add(cls);
+  })();
+
   /* ---------- document map (auto from <h2> headings) ----------
      Works whether headings are wrapped in <section> (radiation page) or are
      bare <h2 id> children of <main> (the shared Okabe-Ito template). */
