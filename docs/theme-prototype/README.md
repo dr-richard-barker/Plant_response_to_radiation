@@ -160,7 +160,13 @@ The theme kit is plain CSS/JS, so it *can* drop into all of these — but the me
    (`docs/_layouts/cose.html`, radiation design + markdown-content styles) rendering the same content
    through a preview page; the live slate `index.md` is untouched. Verified on the live build (9-entry
    doc-map, styled tables/code/figures, branding, no errors). Promote = set `index.md` `layout: cose`.
-6. ⬜ GitBook sites (`AIRI`, `TICTOC`) — decide per-site.
+6. ✅ "GitBook" pair — the classification was off; neither uses hosted GitBook:
+   - **`TICTOC`** is actually a self-contained static `docs/index.html` → CoSE overlay applied
+     **direct-to-live** (6-section doc-map), verified locally.
+   - **`AIRI`** is an **MkDocs Material** site (built by `mkdocs build` in Actions; its native nav +
+     search + dark-mode already give a left doc map). CoSE unification done through Material's own
+     config — COSE header logo + favicon, CoSE blue/teal palette via `extra_css`, COSE footer link —
+     not the static overlay. Pushed; verified on the live build.
 7. ⬜ Built sites (`smallRNAseq-DREAM`, `osdr-plant-microbiome`, `OSDR_jupyter_book.io`) — build-config edits.
 8. ⬜ Resolve `OSDR_plant_spaceflight_omics` access; scaffold `aph-physiospace` when ready.
 9. ⬜ **Hub site** linking all of them (built from `sites.js` — same theme, grid of project cards).
