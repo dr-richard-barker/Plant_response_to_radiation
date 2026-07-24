@@ -51,20 +51,20 @@
   overflow-y:auto;padding:64px 0 24px;
   font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 body.map-open .sitebar{transform:translateX(0)}
-.sitebar .panel{padding:14px 20px}
+.sitebar .cose-panel{padding:14px 20px}
 .sitebar h4{margin:0 0 4px;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-.sitebar .switch{display:flex;gap:4px;margin:0 20px 6px;
+.sitebar .cose-switch{display:flex;gap:4px;margin:0 20px 6px;
   background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px}
-.sitebar .switch button{flex:1;border:0;background:transparent;color:var(--muted);
+.sitebar .cose-switch button{flex:1;border:0;background:transparent;color:var(--muted);
   font:600 .82rem/1 inherit;padding:7px 6px;border-radius:6px;cursor:pointer}
-.sitebar .switch button[aria-selected="true"]{background:var(--accent);color:#fff}
+.sitebar .cose-switch button[aria-selected="true"]{background:var(--accent);color:#fff}
 
 .docmap{list-style:none;margin:6px 0 0;padding:0}
 .docmap li{margin:0}
 .docmap a{display:block;padding:6px 20px;color:var(--muted);
   font-size:.9rem;border-left:2px solid transparent;line-height:1.35;text-decoration:none}
 .docmap a:hover{color:var(--fg)}
-.docmap a.active{color:var(--accent);border-left-color:var(--accent);
+.docmap a.cose-active{color:var(--accent);border-left-color:var(--accent);
   background:linear-gradient(90deg,rgba(59,110,165,.08),transparent)}
 .docmap a.lvl-3{padding-left:34px;font-size:.85rem}
 
@@ -72,10 +72,10 @@ body.map-open .sitebar{transform:translateX(0)}
 .sitemap li{margin:0}
 .sitemap a{display:block;padding:9px 20px;color:var(--fg);font-size:.9rem;line-height:1.25;text-decoration:none}
 .sitemap a:hover{background:rgba(59,110,165,.06)}
-.sitemap a.current{border-left:2px solid var(--accent2);background:rgba(63,182,168,.08)}
+.sitemap a.cose-current{border-left:2px solid var(--accent2);background:rgba(63,182,168,.08)}
 .sitemap a small{display:block;color:var(--muted);font-size:.78rem;font-weight:400;margin-top:2px}
 .sitemap span.pending{color:var(--muted);cursor:default}
-.sitemap .group{padding:14px 20px 4px;font-size:.7rem;letter-spacing:.06em;
+.sitemap .cose-group{padding:14px 20px 4px;font-size:.7rem;letter-spacing:.06em;
   text-transform:uppercase;color:var(--muted);font-weight:700}
 
 .map-scrim{position:fixed;inset:0;background:rgba(10,15,22,.38);z-index:38;

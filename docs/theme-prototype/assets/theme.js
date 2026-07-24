@@ -36,13 +36,13 @@
   if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ topbar.appendChild(themeBtn); }
 
   var bar = el("nav", {class:"sitebar", "aria-label":"Site and document map"});
-  var switcher = el("div", {class:"switch", role:"tablist"});
+  var switcher = el("div", {class:"cose-switch", role:"tablist"});
   var tabDoc  = tab("On this page", true);
   var tabSite = tab("All projects", false);
   switcher.appendChild(tabDoc); switcher.appendChild(tabSite);
 
-  var docPanel  = el("div", {class:"panel", id:"panel-doc"});
-  var sitePanel = el("div", {class:"panel", id:"panel-site", hidden:""});
+  var docPanel  = el("div", {class:"cose-panel", id:"panel-doc"});
+  var sitePanel = el("div", {class:"cose-panel", id:"panel-site", hidden:""});
   bar.appendChild(switcher); bar.appendChild(docPanel); bar.appendChild(sitePanel);
 
   var scrim = el("div", {class:"map-scrim"});
@@ -122,7 +122,7 @@
   if(reg && reg.groups){
     var sl = el("ul", {class:"sitemap"});
     reg.groups.forEach(function(g){
-      var gl = el("li"); var gh = el("div",{class:"group"}); gh.textContent = g.name;
+      var gl = el("li"); var gh = el("div",{class:"cose-group"}); gh.textContent = g.name;
       gl.appendChild(gh); sl.appendChild(gl);
       g.items.forEach(function(it){
         var li = el("li"), node;
@@ -134,7 +134,7 @@
             + '<small style="color:var(--muted)">· page pending</small>';
         } else {
           node = el("a", {href:it.url});
-          if(it.id === slug){ node.className = "current"; }
+          if(it.id === slug){ node.className = "cose-current"; }
           node.innerHTML = esc(it.title) + (it.desc? "<small>"+esc(it.desc)+"</small>":"");
         }
         li.appendChild(node); sl.appendChild(li);
@@ -198,7 +198,7 @@
     spy = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
         if(en.isIntersecting){
-          links.forEach(function(l){ l.a.classList.toggle("active", l.sec===en.target); });
+          links.forEach(function(l){ l.a.classList.toggle("cose-active", l.sec===en.target); });
         }
       });
     }, {rootMargin:"-45% 0px -50% 0px", threshold:0});
