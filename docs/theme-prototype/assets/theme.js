@@ -171,6 +171,12 @@
   /* ---------- restore state ---------- */
   var savedPanel = "doc";
   try{ savedPanel = localStorage.getItem(LS_PANEL) || "doc"; }catch(e){}
+  // Headingless page (single-page app / tool), or a page that opts out with
+  // data-cose-doc="off" (e.g. a tabbed tool whose headings live in hidden
+  // panels): drop the "On this page" tab and show the cross-site map instead.
+  if(!links.length || document.body.getAttribute("data-cose-doc") === "off"){
+    tabDoc.style.display = "none"; savedPanel = "site";
+  }
   selectPanel(savedPanel);
   var wantOpen = false;
   try{ wantOpen = localStorage.getItem(LS_OPEN)==="1"; }catch(e){}
