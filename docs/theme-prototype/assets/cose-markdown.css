@@ -1,0 +1,29 @@
+/* ============================================================================
+   COSE markdown-content styles — pairs with cose-theme-full.css for Jekyll
+   pages whose body is rendered from Markdown (plain <h2>/<p>/<table>/<pre>/
+   <img>/<blockquote>, not the radiation page's hand-built components).
+   ========================================================================== */
+.markdown-body{font-size:1rem}
+.markdown-body h2{margin:34px 0 10px}
+.markdown-body h3{margin:24px 0 8px;font-size:1.12rem}
+.markdown-body p{margin:0 0 14px}
+.markdown-body > p:first-of-type{font-size:1.12rem;color:var(--muted)}   /* lede */
+.markdown-body img{max-width:min(100%,600px);height:auto;display:block;margin:22px auto;
+  border-radius:10px;border:1px solid var(--line);background:#fff}
+.markdown-body hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+.markdown-body ul,.markdown-body ol{padding-left:1.3rem}
+.markdown-body li{margin:.35rem 0}
+.markdown-body blockquote{margin:18px 0;padding:10px 16px;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent2);
+  border-radius:8px}
+.markdown-body blockquote p:last-child{margin:0}
+/* code blocks (rouge highlighter) */
+.markdown-body pre,.markdown-body .highlight{background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:14px 16px;overflow-x:auto;margin:0 0 16px}
+.markdown-body pre code{background:transparent;border:0;padding:0;font-size:.86rem;color:var(--fg)}
+.markdown-body .highlight pre{border:0;padding:0;margin:0;background:transparent}
+/* tables: allow wide ones to scroll instead of overflowing the page */
+.markdown-body table{display:block;width:100%;overflow-x:auto;border-collapse:collapse}
+.markdown-body th,.markdown-body td{white-space:normal;min-width:80px}
+/* the .btn from `{: .btn}` gets a subtle accent treatment */
+.markdown-body a.btn{margin:6px 0}
