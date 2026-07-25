@@ -13,8 +13,10 @@
   function build(){
     var reg = window.BARKER_SITES;
     if(!reg || !reg.groups || document.getElementById("cose-booknav")) return;
-    var target = document.querySelector(".bd-sidebar-primary .sidebar-primary-items__end")
+    var target = document.querySelector(".bd-sidebar-primary .sidebar-primary-items__end")   // jupyter book / pydata
       || document.querySelector(".bd-sidebar-primary nav.bd-links")
+      || document.querySelector(".md-sidebar--primary .md-nav--primary")                     // mkdocs material
+      || document.querySelector(".md-sidebar--primary .md-sidebar__inner")
       || document.querySelector(".bd-sidebar-primary")
       || document.querySelector("nav.bd-links");
     if(!target) return;
@@ -49,4 +51,12 @@
   }
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);
   else build();
+  // MkDocs Material (and other SPA-style docs) re-render the sidebar on
+  // in-page navigation; re-inject if our section gets removed. build() is a
+  // cheap no-op when the section is already present.
+  if("MutationObserver" in window){
+    new MutationObserver(function(){
+      if(!document.getElementById("cose-booknav")) build();
+    }).observe(document.body, {childList:true, subtree:true});
+  }
 })();
