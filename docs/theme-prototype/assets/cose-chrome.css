@@ -108,3 +108,15 @@ body.map-open .map-scrim{opacity:1;visibility:visible}
 /* draggable resize handle on the rail edge */
 .cose-resize{position:absolute;top:0;right:0;bottom:0;width:8px;cursor:ew-resize;z-index:3}
 .cose-resize:hover,.cose-resize:active{background:linear-gradient(90deg,transparent,rgba(59,110,165,.28))}
+
+/* ---- reusable summary hero (for app/tool pages that lack the content-page hero) ---- */
+.cose-hero{max-width:1000px;margin:0 auto;padding:52px 20px 6px}
+.cose-hero .cose-eyebrow{color:var(--accent);font-weight:600;letter-spacing:.04em;
+  text-transform:uppercase;font-size:.72rem;margin:0 0 8px}
+.cose-hero h1{font-size:1.85rem;line-height:1.15;margin:0 0 10px;color:var(--fg)}
+.cose-hero .cose-lede{font-size:1.05rem;color:var(--muted);margin:0 0 16px;max-width:72ch;line-height:1.55}
+.cose-btns{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
+.cose-btn{display:inline-block;padding:8px 15px;border-radius:8px;font-weight:600;font-size:.9rem;
+  border:1px solid var(--line);background:var(--card);color:var(--fg);text-decoration:none}
+.cose-btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.cose-btn:hover{filter:brightness(1.05);text-decoration:none}
