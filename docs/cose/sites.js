@@ -15,19 +15,19 @@ window.BARKER_SITES = {
     {
       name: "Featured",
       items: [
-        { id:"LunarLeaf-CFD", title:"Lunar LEAF — Photorespiration",
+        { id:"LunarLeaf-CFD", emoji:"🍃", title:"Lunar LEAF — Photorespiration",
           desc:"CFD model of photorespiration in a lunar growth chamber",
           url:"https://dr-richard-barker.github.io/LunarLeaf-CFD/" },
-        { id:"deepspace-seed-stress-decoder", title:"DeepSpace Seed Stress Decoder",
+        { id:"deepspace-seed-stress-decoder", emoji:"🌰", title:"DeepSpace Seed Stress Decoder",
           desc:"Decoding seed stress signatures for deep-space conditions",
           url:"https://dr-richard-barker.github.io/deepspace-seed-stress-decoder/" },
-        { id:"Plant_response_to_radiation", title:"OSDR Radiation Review",
+        { id:"Plant_response_to_radiation", emoji:"☢️", title:"OSDR Radiation Review",
           desc:"Radiation review & kinetic pattern-recognition across NASA OSDR",
           url:"https://dr-richard-barker.github.io/Plant_response_to_radiation/" },
-        { id:"Astronaut_health_search", title:"Astronaut Health Summary",
+        { id:"Astronaut_health_search", emoji:"🧬", title:"Astronaut Health Summary",
           desc:"Searchable summary of astronaut health data",
           url:"https://dr-richard-barker.github.io/Astronaut_health_search/" },
-        { id:"Astronaut_trends", title:"Astronaut Trends Dashboard",
+        { id:"Astronaut_trends", emoji:"📊", title:"Astronaut Trends Dashboard",
           desc:"Interactive dashboard of astronaut health trends",
           url:"https://dr-richard-barker.github.io/Astronaut_trends/" },
       ]
@@ -35,22 +35,22 @@ window.BARKER_SITES = {
     {
       name: "Spaceflight Omics & Transcriptomics",
       items: [
-        { id:"Tropism_autodecoder_2026", title:"Tropism Autodecoder 2026",
+        { id:"Tropism_autodecoder_2026", emoji:"🧭", title:"Tropism Autodecoder 2026",
           desc:"Auto-decoder atlas of plant tropism responses",
           url:"https://dr-richard-barker.github.io/Tropism_autodecoder_2026/" },
-        { id:"arabidopsis-spaceflight-omics", title:"Arabidopsis Spaceflight Omics",
+        { id:"arabidopsis-spaceflight-omics", emoji:"🌿", title:"Arabidopsis Spaceflight Omics",
           desc:"LASSO biomarkers, single-cell atlas integration & Ca²⁺ cell–cell signalling across NASA OSDR",
           url:"https://dr-richard-barker.github.io/arabidopsis-spaceflight-omics/" },
-        { id:"B_rappa_LLGCSS", title:"B. rapa — Floral Scent × Radiation",
+        { id:"B_rappa_LLGCSS", emoji:"🌸", title:"B. rapa — Floral Scent × Radiation",
           desc:"Does galactic cosmic radiation alter floral scent? WIP transcriptomics in Brassica rapa",
           url:"https://dr-richard-barker.github.io/B_rappa_LLGCSS/" },
-        { id:"APEX05_results_and_code", title:"APEX-05 Clean-Up & Analysis",
+        { id:"APEX05_results_and_code", emoji:"🪴", title:"APEX-05 Clean-Up & Analysis",
           desc:"APEX-05 results and reproducible analysis code",
           url:"https://dr-richard-barker.github.io/APEX05_results_and_code/" },
-        { id:"TICTOC", title:"TICTOC Project Clean-Up",
+        { id:"TICTOC", emoji:"🧵", title:"TICTOC Project Clean-Up",
           desc:"TICTOC project data clean-up and documentation",
           url:"https://dr-richard-barker.github.io/TICTOC/" },
-        { id:"smallRNAseq-DREAM", title:"MicroRNA Analysis Pipeline",
+        { id:"smallRNAseq-DREAM", emoji:"🧫", title:"MicroRNA Analysis Pipeline",
           desc:"Cross-species small-RNA-seq (miRNA) pipeline & OSDR mining test",
           url:"https://dr-richard-barker.github.io/smallRNAseq-DREAM/" },
       ]
@@ -58,13 +58,13 @@ window.BARKER_SITES = {
     {
       name: "Microbiome & Multi-Omics Reviews",
       items: [
-        { id:"osdr-plant-microbiome", title:"OSDR Plant Microbiome Review",
+        { id:"osdr-plant-microbiome", emoji:"🦠", title:"OSDR Plant Microbiome Review",
           desc:"Plant microbiome review & manuscript",
           url:"https://dr-richard-barker.github.io/osdr-plant-microbiome/" },
-        { id:"veg05-integrated-omics", title:"VEG-05 Integrated-Omics",
+        { id:"veg05-integrated-omics", emoji:"🍅", title:"VEG-05 Integrated-Omics",
           desc:"Multi-omics of ISS dwarf tomato (VEG-05): red- vs blue-rich lighting vs KSC controls",
           url:"https://dr-richard-barker.github.io/veg05-integrated-omics/" },
-        { id:"aph-physiospace", title:"APH Tissue-Specific PhysioSpace DL",
+        { id:"aph-physiospace", emoji:"🧠", title:"APH Tissue-Specific PhysioSpace DL",
           desc:"Tissue-specific PhysioSpace deep learning & salicylic-acid comparison",
           url:"", live:false },
       ]
@@ -72,16 +72,16 @@ window.BARKER_SITES = {
     {
       name: "Interactive Notebooks, Web Tools & Pipelines",
       items: [
-        { id:"Anthocyanin-Image-analysis", title:"Anthocyanin Image Analysis Tool",
+        { id:"Anthocyanin-Image-analysis", emoji:"🍁", title:"Anthocyanin Image Analysis Tool",
           desc:"Browser tool for anthocyanin image analysis",
           url:"https://dr-richard-barker.github.io/Anthocyanin-Image-analysis/" },
-        { id:"astroroot", title:"AstroRoot",
+        { id:"astroroot", emoji:"🛰️", title:"AstroRoot",
           desc:"In-browser root image analysis for the classroom",
           url:"https://dr-richard-barker.github.io/astroroot/" },
-        { id:"virtual-root", title:"Virtual Root",
+        { id:"virtual-root", emoji:"🌱", title:"Virtual Root",
           desc:"Interactive auxin-transport root model",
           url:"https://dr-richard-barker.github.io/virtual-root/" },
-        { id:"madwest-astrobotany", title:"MadWest Astrobotany",
+        { id:"madwest-astrobotany", emoji:"🚀", title:"MadWest Astrobotany",
           desc:"MadWest astrobotany outreach & resources",
           url:"https://dr-richard-barker.github.io/madwest-astrobotany/" },
       ]
@@ -89,7 +89,7 @@ window.BARKER_SITES = {
     {
       name: "Games & 3D Simulations",
       items: [
-        { id:"Settlers_of_Mars_3D_LLM", title:"Settlers of Mars (3D + LLM)",
+        { id:"Settlers_of_Mars_3D_LLM", emoji:"🪐", title:"Settlers of Mars (3D + LLM)",
           desc:"Space-biology education game: browser colony sim, AI role-play & a 3D-printed board",
           url:"https://dr-richard-barker.github.io/Settlers_of_Mars_3D_LLM/" },
       ]
@@ -97,10 +97,10 @@ window.BARKER_SITES = {
     {
       name: "Documentation & Education Hubs",
       items: [
-        { id:"OSDR_jupyter_book.io", title:"OSDR Jupyter Book (TOAST10)",
+        { id:"OSDR_jupyter_book.io", emoji:"📓", title:"OSDR Jupyter Book (TOAST10)",
           desc:"OSDR Jupyter Book / TOAST10 interactive notebooks",
           url:"https://dr-richard-barker.github.io/OSDR_jupyter_book.io/" },
-        { id:"AIRI", title:"Astrobotany International Research Initiative",
+        { id:"AIRI", emoji:"🌍", title:"Astrobotany International Research Initiative",
           desc:"AIRI — astrobotany international research initiative",
           url:"https://dr-richard-barker.github.io/AIRI/" },
       ]

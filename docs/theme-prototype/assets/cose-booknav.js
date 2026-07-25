@@ -43,7 +43,8 @@
       gh.textContent = g.name; box.appendChild(gh);
       g.items.forEach(function(it){
         if(!it.url || it.live === false) return;
-        var a = document.createElement("a"); a.href = it.url; a.textContent = it.title;
+        var a = document.createElement("a"); a.href = it.url;
+        a.textContent = (it.emoji ? it.emoji + " " : "") + it.title;
         box.appendChild(a);
       });
     });
