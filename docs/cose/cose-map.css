@@ -21,7 +21,7 @@
 
 /* ---- LIGHT (default on light OS, and when toggled to light) ---- */
 @media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
-  --bg:var(--cose-l-bg); --panel:var(--cose-l-surface); --panel-2:var(--cose-l-surface2);
+  --bg:var(--cose-l-bg); --bg-2:var(--cose-l-surface2); --panel:var(--cose-l-surface); --panel-2:var(--cose-l-surface2);
   --surface:var(--cose-l-surface); --surface-2:var(--cose-l-surface2); --soft:var(--cose-l-surface);
   --space-900:var(--cose-l-bg); --space-800:var(--cose-l-surface); --space-700:var(--cose-l-surface2); --space-600:#e3e9f2;
   --ink:var(--cose-l-text); --fg:var(--cose-l-text); --ink-soft:var(--cose-l-muted); --muted:var(--cose-l-muted); --ink-faint:var(--cose-l-faint);
@@ -31,7 +31,7 @@
   --sky-400:var(--cose-l-accent); --accent2:var(--cose-l-accent2); --code:#f1f5f9;
 }}
 html[data-theme="light"]{
-  --bg:var(--cose-l-bg); --panel:var(--cose-l-surface); --panel-2:var(--cose-l-surface2);
+  --bg:var(--cose-l-bg); --bg-2:var(--cose-l-surface2); --panel:var(--cose-l-surface); --panel-2:var(--cose-l-surface2);
   --surface:var(--cose-l-surface); --surface-2:var(--cose-l-surface2); --soft:var(--cose-l-surface);
   --space-900:var(--cose-l-bg); --space-800:var(--cose-l-surface); --space-700:var(--cose-l-surface2); --space-600:#e3e9f2;
   --ink:var(--cose-l-text); --fg:var(--cose-l-text); --ink-soft:var(--cose-l-muted); --muted:var(--cose-l-muted); --ink-faint:var(--cose-l-faint);
@@ -44,7 +44,7 @@ html[data-theme="light"]{
 
 /* ---- DARK (default on dark OS, and when toggled to dark) ---- */
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:var(--cose-d-bg); --panel:var(--cose-d-surface); --panel-2:var(--cose-d-surface2);
+  --bg:var(--cose-d-bg); --bg-2:var(--cose-d-surface2); --panel:var(--cose-d-surface); --panel-2:var(--cose-d-surface2);
   --surface:var(--cose-d-surface); --surface-2:var(--cose-d-surface2); --soft:var(--cose-d-surface);
   --space-900:#0b0f14; --space-800:var(--cose-d-surface); --space-700:var(--cose-d-surface2); --space-600:#2b3647;
   --ink:var(--cose-d-text); --fg:var(--cose-d-text); --ink-soft:var(--cose-d-muted); --muted:var(--cose-d-muted); --ink-faint:var(--cose-d-faint);
@@ -54,7 +54,7 @@ html[data-theme="light"]{
   --sky-400:var(--cose-d-accent); --accent2:var(--cose-d-accent2); --code:#0f1a2e;
 }}
 html[data-theme="dark"]{
-  --bg:var(--cose-d-bg); --panel:var(--cose-d-surface); --panel-2:var(--cose-d-surface2);
+  --bg:var(--cose-d-bg); --bg-2:var(--cose-d-surface2); --panel:var(--cose-d-surface); --panel-2:var(--cose-d-surface2);
   --surface:var(--cose-d-surface); --surface-2:var(--cose-d-surface2); --soft:var(--cose-d-surface);
   --space-900:#0b0f14; --space-800:var(--cose-d-surface); --space-700:var(--cose-d-surface2); --space-600:#2b3647;
   --ink:var(--cose-d-text); --fg:var(--cose-d-text); --ink-soft:var(--cose-d-muted); --muted:var(--cose-d-muted); --ink-faint:var(--cose-d-faint);
