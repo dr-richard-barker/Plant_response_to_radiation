@@ -163,3 +163,11 @@ body.map-open .map-scrim{opacity:1;visibility:visible}
 /* draggable resize handle on the rail edge */
 .cose-resize{position:absolute;top:0;right:0;bottom:0;width:8px;cursor:ew-resize;z-index:3}
 .cose-resize:hover,.cose-resize:active{background:linear-gradient(90deg,transparent,rgba(59,110,165,.28))}
+
+/* "all projects" hub link button */
+.cose-hub-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:34px;
+  border-radius:8px;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--fg);
+  box-shadow:0 1px 2px rgba(0,0,0,.04);text-decoration:none}
+.cose-hub-btn:hover{filter:brightness(.98);text-decoration:none}
+.cose-hub-btn svg{display:block}
+@media (min-width:1180px){ body.map-open .cose-hub-btn{background:transparent;border-color:transparent;box-shadow:none} }

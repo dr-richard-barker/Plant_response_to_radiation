@@ -33,6 +33,14 @@
   var themeBtn = el("button", {class:"cose-theme-btn",
     "aria-label":"Toggle light or dark theme", title:"Toggle light / dark"});
   topbar.appendChild(brand); topbar.appendChild(toggle);
+  // "All projects" link back to the COSE hub (from the shared registry)
+  var HUB = (window.BARKER_SITES && window.BARKER_SITES.hub) || "";
+  if(HUB && slug !== "cose-hub"){
+    var hubLink = el("a", {class:"cose-hub-btn", href:HUB,
+      title:"All projects — COSE hub", "aria-label":"All projects — COSE hub"});
+    hubLink.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg>';
+    topbar.appendChild(hubLink);
+  }
   if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ topbar.appendChild(themeBtn); }
 
   var bar = el("nav", {class:"sitebar", "aria-label":"Site and document map"});

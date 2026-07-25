@@ -10,6 +10,7 @@
    ========================================================================== */
 window.BARKER_SITES = {
   brand: { name:"COSE", url:"https://cosecloud.com/", logo:"assets/cose-logo.png" },
+  hub: "https://dr-richard-barker.github.io/CoSE_Cloud/Hub/",
   groups: [
     {
       name: "Featured",
