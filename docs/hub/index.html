@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COSE — Space-Biology Project Family</title>
+<meta name="description" content="An open ecosystem of space-biology and astrobotany projects — spaceflight omics, plant biology, interactive web tools and education — by Richard Barker and collaborators.">
+<link rel="icon" href="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png">
+<link rel="stylesheet" href="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/theme.css">
+<style>
+  .hub-count{display:inline-block;margin-left:8px;font-size:.9rem;color:var(--muted);font-weight:400}
+  #hub section:first-of-type{border-top:1px solid var(--line)}
+  .hubgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:16px 0 2px}
+  .hubcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:16px 16px 14px;color:var(--fg);text-decoration:none;
+    transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+  .hubcard:hover{text-decoration:none;transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(0,0,0,.07);border-color:var(--accent)}
+  .hubcard h3{margin:0 0 6px;font-size:1.02rem;color:var(--fg);letter-spacing:-.01em}
+  .hubcard p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.45;flex:1}
+  .hubcard .go{color:var(--accent);font-weight:600;font-size:.82rem;margin-top:12px}
+  .hubcard.pending{opacity:.62;pointer-events:none}
+  .hubcard.pending .go{color:var(--muted)}
+</style>
+</head>
+<body data-site-id="cose-hub" data-brand-logo="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png">
+<header>
+  <div class="wrap">
+    <p class="eyebrow">COSE · cosecloud.com</p>
+    <h1>The COSE Space-Biology Project Family</h1>
+    <p class="lede">An open ecosystem of space-biology and astrobotany work — spaceflight omics and
+      transcriptomics, plant biology, interactive browser tools, reproducible pipelines, games and
+      classroom education. Every project below is a live, public GitHub Pages site.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://cosecloud.com/">cosecloud.com</a>
+      <a class="btn" href="https://github.com/dr-richard-barker">GitHub · dr-richard-barker</a>
+    </div>
+  </div>
+</header>
+
+<main id="hub"></main>
+
+<footer>
+  <div class="wrap">
+    <p>COSE — The Collaborative Science Environment · <a href="https://cosecloud.com/">cosecloud.com</a><br>
+    Richard Barker and collaborators. This directory is generated from the shared project registry, so
+    it stays in sync as projects are added.</p>
+  </div>
+</footer>
+
+<script src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/sites.js"></script>
+<script>
+(function(){
+  var reg = window.BARKER_SITES, hub = document.getElementById("hub");
+  if(!reg || !reg.groups || !hub) return;
+  var total = 0;
+  reg.groups.forEach(function(g){
+    var sec = document.createElement("section");
+    var wrap = document.createElement("div"); wrap.className = "wrap";
+    var live = g.items.filter(function(it){ return it.url && it.live !== false; }).length;
+    var h = document.createElement("h2");
+    h.textContent = g.name;
+    var c = document.createElement("span"); c.className = "hub-count";
+    c.textContent = live + (live === 1 ? " project" : " projects");
+    h.appendChild(c); wrap.appendChild(h);
+    var grid = document.createElement("div"); grid.className = "hubgrid";
+    g.items.forEach(function(it){
+      var pending = (it.live === false || !it.url), card;
+      if(pending){ card = document.createElement("div"); card.className = "hubcard pending"; }
+      else { card = document.createElement("a"); card.className = "hubcard"; card.href = it.url; total++; }
+      var t = document.createElement("h3"); t.textContent = it.title; card.appendChild(t);
+      if(it.desc){ var p = document.createElement("p"); p.textContent = it.desc; card.appendChild(p); }
+      var go = document.createElement("span"); go.className = "go";
+      go.textContent = pending ? "Coming soon" : "Open →"; card.appendChild(go);
+      grid.appendChild(card);
+    });
+    wrap.appendChild(grid); sec.appendChild(wrap); hub.appendChild(sec);
+  });
+})();
+</script>
+<script src="https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/theme.js"></script>
+</body>
+</html>
