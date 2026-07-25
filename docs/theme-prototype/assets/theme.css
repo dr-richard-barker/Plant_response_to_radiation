@@ -161,8 +161,9 @@ body.map-open .map-scrim{opacity:1;visibility:visible}
 }
 
 /* draggable resize handle on the rail edge */
-.cose-resize{position:absolute;top:0;right:0;bottom:0;width:8px;cursor:ew-resize;z-index:3}
-.cose-resize:hover,.cose-resize:active{background:linear-gradient(90deg,transparent,rgba(59,110,165,.28))}
+.cose-resize{position:absolute;top:0;right:0;bottom:0;width:12px;cursor:ew-resize;z-index:3;display:flex;align-items:center;justify-content:flex-end}
+.cose-resize::before{content:"";width:4px;height:38px;margin-right:1px;border-radius:3px;background:var(--line);transition:background .15s,height .15s}
+.cose-resize:hover::before,.cose-resize:active::before{background:var(--accent);height:56px}
 
 /* "all projects" hub link button */
 .cose-hub-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:34px;
