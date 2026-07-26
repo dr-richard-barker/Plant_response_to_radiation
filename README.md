@@ -1,5 +1,7 @@
 # Plant Response to Radiation
 
+![Plant_Space_Radiation_Response_Timeline](Plant_Space_Radiation_Response_Timeline.png)
+
 Transcriptomic analysis of how plants respond to ionizing radiation in spaceflight-relevant
 environments, using NASA Open Science Data Repository (OSDR) datasets.
 
