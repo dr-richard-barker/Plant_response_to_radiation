@@ -18,6 +18,11 @@ window.BARKER_SITES = {
       "arabidopsis-spaceflight-omics","APEX05_results_and_code","TICTOC","Tropism_autodecoder_2026",
       "Plant_response_to_radiation","B_rappa_LLGCSS","smallRNAseq-DREAM","osdr-plant-microbiome",
       "veg05-integrated-omics","madwest-astrobotany","AIRI"
+    ]},
+    deepspaceag: { label: "Deep Space Agriculture", ids: [
+      "LunarLeaf-CFD","deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers",
+      "Astronaut_health_search","Astronaut_trends","Plant_response_to_radiation",
+      "PhysioSpace_stress_decoding_VEG05","B_rappa_LLGCSS","OSDR_jupyter_book.io"
     ]}
   },
   groups: [
@@ -39,6 +44,9 @@ window.BARKER_SITES = {
         { id:"Astronaut_trends", emoji:"📊", title:"Astronaut Trends Dashboard",
           desc:"Interactive dashboard of astronaut health trends",
           url:"https://dr-richard-barker.github.io/Astronaut_trends/" },
+        { id:"astronaut-oncogene-biomarkers", emoji:"🎗️", title:"Astronaut Oncogene Biomarkers",
+          desc:"Cross-tissue transcriptomics: how spaceflight & radiation converge on shared oncogenic programs",
+          url:"https://dr-richard-barker.github.io/astronaut-oncogene-biomarkers/" },
       ]
     },
     {
@@ -73,9 +81,9 @@ window.BARKER_SITES = {
         { id:"veg05-integrated-omics", emoji:"🍅", title:"VEG-05 Integrated-Omics",
           desc:"Multi-omics of ISS dwarf tomato (VEG-05): red- vs blue-rich lighting vs KSC controls",
           url:"https://dr-richard-barker.github.io/veg05-integrated-omics/" },
-        { id:"aph-physiospace", emoji:"🧠", title:"APH Tissue-Specific PhysioSpace DL",
-          desc:"Tissue-specific PhysioSpace deep learning & salicylic-acid comparison",
-          url:"", live:false },
+        { id:"PhysioSpace_stress_decoding_VEG05", emoji:"🧠", title:"PhysioSpace VEG-05",
+          desc:"Light quality × spaceflight stress decoding with cell-type asymmetry in ISS tomato (OSD-767)",
+          url:"https://dr-richard-barker.github.io/PhysioSpace_stress_decoding_VEG05/" },
       ]
     },
     {
