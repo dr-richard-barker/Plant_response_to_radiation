@@ -11,6 +11,14 @@
 window.BARKER_SITES = {
   brand: { name:"COSE", url:"https://cosecloud.com/", logo:"assets/cose-logo.png" },
   hub: "https://dr-richard-barker.github.io/CoSE_Cloud/Hub/",
+  // Named subsets. A themed hub links with ?cose_scope=NAME to limit the
+  // in-page project rail (and framework sidebars) to just these projects.
+  scopes: {
+    astrobotany: { label: "AstroBotany", ids: [
+      "arabidopsis-spaceflight-omics","APEX05_results_and_code","TICTOC","Tropism_autodecoder_2026",
+      "Plant_response_to_radiation","B_rappa_LLGCSS","smallRNAseq-DREAM","madwest-astrobotany","AIRI"
+    ]}
+  },
   groups: [
     {
       name: "Featured",

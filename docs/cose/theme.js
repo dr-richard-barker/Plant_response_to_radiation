@@ -129,14 +129,38 @@
   if(!links.length){ docPanel.appendChild(hint("No sections on this page.")); }
 
   /* ---------- site map (from registry) ---------- */
-  sitePanel.appendChild(header4("All projects"));
   var reg = window.BARKER_SITES;
+  // Optional "scope": a named subset of the registry (reg.scopes[name] = {label, ids}).
+  // A themed hub links with ?cose_scope=NAME; it's remembered per-tab in
+  // sessionStorage, limits the site map to that subset, and is carried forward
+  // on the rail's links so navigation stays within the subset.
+  var SCOPE = "", scopeIds = null, scopeLabel = "";
+  try {
+    var qs = new URLSearchParams(location.search), sc = qs.get("cose_scope");
+    if(sc !== null){ if(sc){ sessionStorage.setItem("cose.scope", sc); } else { sessionStorage.removeItem("cose.scope"); } }
+    else { sc = sessionStorage.getItem("cose.scope"); }
+    if(sc && reg && reg.scopes && reg.scopes[sc]){ SCOPE = sc; scopeIds = reg.scopes[sc].ids; scopeLabel = reg.scopes[sc].label || sc; }
+  } catch(e){}
+  function inScope(it){ return !scopeIds || scopeIds.indexOf(it.id) >= 0; }
+  function withScope(url){ return SCOPE ? url + (url.indexOf("?") >= 0 ? "&" : "?") + "cose_scope=" + encodeURIComponent(SCOPE) : url; }
+
+  if(SCOPE){
+    var sh = el("div"); sh.style.cssText = "padding:0 20px 2px;display:flex;justify-content:space-between;align-items:baseline;gap:8px";
+    var sh4 = el("h4"); sh4.textContent = scopeLabel; sh4.style.margin = "0"; sh.appendChild(sh4);
+    var allLink = el("a", {href: location.pathname + "?cose_scope="});
+    allLink.textContent = "show all"; allLink.style.cssText = "font-size:.72rem;color:var(--muted);text-decoration:none";
+    sh.appendChild(allLink); sitePanel.appendChild(sh);
+  } else {
+    sitePanel.appendChild(header4("All projects"));
+  }
   if(reg && reg.groups){
     var sl = el("ul", {class:"sitemap"});
     reg.groups.forEach(function(g){
+      var items = g.items.filter(inScope);
+      if(!items.length) return;
       var gl = el("li"); var gh = el("div",{class:"cose-group"}); gh.textContent = g.name;
       gl.appendChild(gh); sl.appendChild(gl);
-      g.items.forEach(function(it){
+      items.forEach(function(it){
         var li = el("li"), node;
         if(it.live === false || !it.url){
           // not published yet — render as plain text, not a dead link (no 404)
@@ -145,7 +169,7 @@
           node.innerHTML = (it.emoji ? it.emoji + " " : "") + esc(it.title) + (it.desc? "<small>"+esc(it.desc)+"</small>":"")
             + '<small style="color:var(--muted)">· page pending</small>';
         } else {
-          node = el("a", {href:it.url});
+          node = el("a", {href: withScope(it.url)});
           if(it.id === slug){ node.className = "cose-current"; }
           node.innerHTML = (it.emoji ? it.emoji + " " : "") + esc(it.title) + (it.desc? "<small>"+esc(it.desc)+"</small>":"");
         }

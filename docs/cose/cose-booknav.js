@@ -21,6 +21,17 @@
       || document.querySelector("nav.bd-links");
     if(!target) return;
 
+    // optional scope (?cose_scope=NAME, remembered per-tab) — limit to a subset
+    var SCOPE = "", scopeIds = null, scopeLabel = "";
+    try {
+      var qs = new URLSearchParams(location.search), sc = qs.get("cose_scope");
+      if(sc !== null){ if(sc){ sessionStorage.setItem("cose.scope", sc); } else { sessionStorage.removeItem("cose.scope"); } }
+      else { sc = sessionStorage.getItem("cose.scope"); }
+      if(sc && reg.scopes && reg.scopes[sc]){ SCOPE = sc; scopeIds = reg.scopes[sc].ids; scopeLabel = reg.scopes[sc].label || sc; }
+    } catch(e){}
+    function inScope(it){ return !scopeIds || scopeIds.indexOf(it.id) >= 0; }
+    function withScope(u){ return SCOPE ? u + (u.indexOf("?") >= 0 ? "&" : "?") + "cose_scope=" + encodeURIComponent(SCOPE) : u; }
+
     var st = document.createElement("style");
     st.textContent =
       "#cose-booknav{padding:14px 0 8px;border-top:1px solid var(--pst-color-border,#e5e9f0);margin-top:14px}"+
@@ -36,14 +47,14 @@
     var box = document.createElement("div");
     box.id = "cose-booknav"; box.className = "sidebar-primary-item";
     var t = document.createElement("p"); t.className = "cn-title";
-    t.textContent = "CoSE Project Family"; box.appendChild(t);
+    t.textContent = SCOPE ? scopeLabel : "CoSE Project Family"; box.appendChild(t);
     reg.groups.forEach(function(g){
-      if(!g.items.some(function(it){ return it.url && it.live !== false; })) return;
+      var items = g.items.filter(function(it){ return it.url && it.live !== false && inScope(it); });
+      if(!items.length) return;
       var gh = document.createElement("div"); gh.className = "cn-grp";
       gh.textContent = g.name; box.appendChild(gh);
-      g.items.forEach(function(it){
-        if(!it.url || it.live === false) return;
-        var a = document.createElement("a"); a.href = it.url;
+      items.forEach(function(it){
+        var a = document.createElement("a"); a.href = withScope(it.url);
         a.textContent = (it.emoji ? it.emoji + " " : "") + it.title;
         box.appendChild(a);
       });
