@@ -16,7 +16,8 @@ window.BARKER_SITES = {
   scopes: {
     astrobotany: { label: "AstroBotany", ids: [
       "arabidopsis-spaceflight-omics","APEX05_results_and_code","TICTOC","Tropism_autodecoder_2026",
-      "Plant_response_to_radiation","B_rappa_LLGCSS","smallRNAseq-DREAM","madwest-astrobotany","AIRI"
+      "Plant_response_to_radiation","B_rappa_LLGCSS","smallRNAseq-DREAM","osdr-plant-microbiome",
+      "veg05-integrated-omics","madwest-astrobotany","AIRI"
     ]}
   },
   groups: [
