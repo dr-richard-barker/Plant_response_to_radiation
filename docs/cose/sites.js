@@ -89,9 +89,9 @@ window.BARKER_SITES = {
     {
       name: "Games & 3D Simulations",
       items: [
-        { id:"Settlers_of_Mars_3D_LLM", emoji:"🪐", title:"Settlers of Mars (3D + LLM)",
+        { id:"Settlers_of_the_Moon_or_Mars", emoji:"🪐", title:"Settlers of the Moon or Mars",
           desc:"Space-biology education game: browser colony sim, AI role-play & a 3D-printed board",
-          url:"https://dr-richard-barker.github.io/Settlers_of_Mars_3D_LLM/" },
+          url:"https://dr-richard-barker.github.io/Settlers_of_the_Moon_or_Mars/" },
       ]
     },
     {
