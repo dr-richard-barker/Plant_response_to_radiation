@@ -22,7 +22,7 @@ window.BARKER_SITES = {
     deepspaceag: { label: "Deep Space Agriculture", ids: [
       "LunarLeaf-CFD","deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers",
       "Astronaut_health_search","Astronaut_trends","Plant_response_to_radiation",
-      "PhysioSpace_stress_decoding_VEG05","B_rappa_LLGCSS","OSDR_jupyter_book.io"
+      "PhysioSpace_stress_decoding_VEG05","B_rappa_LLGCSS","OSDR_jupyter_book.io","Seed_sowing_simulator"
     ]}
   },
   groups: [
