@@ -24,13 +24,13 @@ window.BARKER_SITES = {
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
         ids:["veg05-integrated-omics","TICTOC"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
-        ids:["Tropism_autodecoder_2026","Seed_sowing_simulator","smallRNAseq-DREAM"] },
+        ids:["Tropism_autodecoder_2026","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
         ids:["AIRI","madwest-astrobotany"] }
     ]},
     deepspaceag: { label: "Deep Space Agriculture", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
-        ids:["LunarLeaf-CFD","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","Seed_sowing_simulator"] },
+        ids:["LunarLeaf-CFD","Aero-leaf-CFD-analysis-adapted-from-blender-ish","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","Seed_sowing_simulator"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
