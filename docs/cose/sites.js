@@ -11,18 +11,32 @@
 window.BARKER_SITES = {
   brand: { name:"COSE", url:"https://cosecloud.com/", logo:"assets/cose-logo.png" },
   hub: "https://dr-richard-barker.github.io/CoSE_Cloud/Hub/",
-  // Named subsets. A themed hub links with ?cose_scope=NAME to limit the
+  // Named subsets. A themed sub-hub links with ?cose_scope=NAME to limit the
   // in-page project rail (and framework sidebars) to just these projects.
+  // `sections` is the single source of truth: the matching sub-hub page renders
+  // its card grid from these, and each scope's flat `ids` list (used by the rail
+  // filter) is derived from the sections below — add a project in ONE place.
   scopes: {
-    astrobotany: { label: "AstroBotany", ids: [
-      "arabidopsis-spaceflight-omics","APEX05_results_and_code","TICTOC","Tropism_autodecoder_2026",
-      "Plant_response_to_radiation","B_rappa_LLGCSS","smallRNAseq-DREAM","osdr-plant-microbiome",
-      "veg05-integrated-omics","madwest-astrobotany","AIRI","Seed_sowing_simulator"
+    astrobotany: { label: "AstroBotany", sections: [
+      { name:"Analyses", blurb:"Spaceflight & radiation transcriptomics / multi-omics studies.",
+        ids:["Plant_response_to_radiation","arabidopsis-spaceflight-omics","APEX05_results_and_code",
+             "B_rappa_LLGCSS","osdr-plant-microbiome"] },
+      { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
+        ids:["veg05-integrated-omics","TICTOC"] },
+      { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
+        ids:["Tropism_autodecoder_2026","Seed_sowing_simulator","smallRNAseq-DREAM"] },
+      { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
+        ids:["AIRI","madwest-astrobotany"] }
     ]},
-    deepspaceag: { label: "Deep Space Agriculture", ids: [
-      "LunarLeaf-CFD","deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers",
-      "Astronaut_health_search","Astronaut_trends","Plant_response_to_radiation",
-      "PhysioSpace_stress_decoding_VEG05","B_rappa_LLGCSS","OSDR_jupyter_book.io","Seed_sowing_simulator"
+    deepspaceag: { label: "Deep Space Agriculture", sections: [
+      { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
+        ids:["LunarLeaf-CFD","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","Seed_sowing_simulator"] },
+      { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
+        ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers"] },
+      { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
+        ids:["Astronaut_health_search","Astronaut_trends"] },
+      { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
+        ids:["OSDR_jupyter_book.io"] }
     ]}
   },
   groups: [
@@ -139,3 +153,15 @@ window.BARKER_SITES = {
     }
   ]
 };
+
+// Derive each scope's flat `ids` (consumed by theme.js + cose-booknav.js for the
+// rail filter) from its `sections`, so sections stay the single source of truth.
+(function(reg){
+  if(!reg || !reg.scopes) return;
+  Object.keys(reg.scopes).forEach(function(k){
+    var sc = reg.scopes[k];
+    if(sc && sc.sections && !sc.ids){
+      sc.ids = sc.sections.reduce(function(acc, s){ return acc.concat(s.ids || []); }, []);
+    }
+  });
+})(window.BARKER_SITES);
