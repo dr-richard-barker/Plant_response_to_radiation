@@ -98,6 +98,12 @@ window.BARKER_SITES = {
         { id:"virtual-root", emoji:"🌱", title:"Virtual Root",
           desc:"Interactive auxin-transport root model",
           url:"https://dr-richard-barker.github.io/virtual-root/" },
+        { id:"SBGN-Pathway-viewer", emoji:"🗺️", title:"SBGN / KEGG Pathway Viewer",
+          desc:"Overlay RNA-seq & omics onto KEGG / Reactome pathway maps in the browser — no API key",
+          url:"https://dr-richard-barker.github.io/SBGN-Pathway-viewer/" },
+        { id:"infogenius-standalone", emoji:"💡", title:"InfoGenius — Knowledge Engine",
+          desc:"Keyless browser tool that turns a topic into a researched infographic",
+          url:"https://dr-richard-barker.github.io/infogenius-standalone/" },
         { id:"madwest-astrobotany", emoji:"🚀", title:"MadWest Astrobotany",
           desc:"MadWest astrobotany outreach & resources",
           url:"https://dr-richard-barker.github.io/madwest-astrobotany/" },
@@ -109,6 +115,9 @@ window.BARKER_SITES = {
         { id:"Settlers_of_the_Moon_or_Mars", emoji:"🪐", title:"Settlers of the Moon or Mars",
           desc:"Space-biology education game: browser colony sim, AI role-play & a 3D-printed board",
           url:"https://dr-richard-barker.github.io/Settlers_of_the_Moon_or_Mars/" },
+        { id:"Lunar-and-Martian-frontier-game-prototype", emoji:"🕹️", title:"Lunar & Martian Frontier",
+          desc:"Browser colony-building game prototype set on the Moon and Mars",
+          url:"https://dr-richard-barker.github.io/Lunar-and-Martian-frontier-game-prototype/" },
       ]
     },
     {
