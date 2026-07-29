@@ -17,7 +17,7 @@ window.BARKER_SITES = {
     astrobotany: { label: "AstroBotany", ids: [
       "arabidopsis-spaceflight-omics","APEX05_results_and_code","TICTOC","Tropism_autodecoder_2026",
       "Plant_response_to_radiation","B_rappa_LLGCSS","smallRNAseq-DREAM","osdr-plant-microbiome",
-      "veg05-integrated-omics","madwest-astrobotany","AIRI"
+      "veg05-integrated-omics","madwest-astrobotany","AIRI","Seed_sowing_simulator"
     ]},
     deepspaceag: { label: "Deep Space Agriculture", ids: [
       "LunarLeaf-CFD","deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers",
@@ -98,6 +98,9 @@ window.BARKER_SITES = {
         { id:"virtual-root", emoji:"🌱", title:"Virtual Root",
           desc:"Interactive auxin-transport root model",
           url:"https://dr-richard-barker.github.io/virtual-root/" },
+        { id:"Seed_sowing_simulator", emoji:"🫘", title:"Seed Germination Simulator",
+          desc:"Sow seeds in a virtual Petri dish — watch gravitropism, phototropism & lateral branching in-silico",
+          url:"https://dr-richard-barker.github.io/Seed_sowing_simulator/" },
         { id:"SBGN-Pathway-viewer", emoji:"🗺️", title:"SBGN / KEGG Pathway Viewer",
           desc:"Overlay RNA-seq & omics onto KEGG / Reactome pathway maps in the browser — no API key",
           url:"https://dr-richard-barker.github.io/SBGN-Pathway-viewer/" },
