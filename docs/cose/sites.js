@@ -113,7 +113,7 @@ window.BARKER_SITES = {
           desc:"Interactive auxin-transport root model",
           url:"https://dr-richard-barker.github.io/virtual-root/" },
         { id:"Seed_sowing_simulator", emoji:"🫘", title:"Seed Germination Simulator",
-          desc:"Sow seeds in a virtual Petri dish — watch gravitropism, phototropism & lateral branching in-silico",
+          desc:"Sow seeds in a virtual Petri dish — watch gravitropism, phototropism & lateral branching in-silico. New v2: branching calibrated against real root-image (RSML) data",
           url:"https://dr-richard-barker.github.io/Seed_sowing_simulator/" },
         { id:"Physics-simulator-for-statolith-modelling-", emoji:"⚖️", title:"Statolith Physics Simulator",
           desc:"Sandbox for statolith sedimentation — tune gravity, rotation & stickiness across container shapes",
