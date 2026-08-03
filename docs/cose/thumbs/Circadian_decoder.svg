@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90" role="img" aria-label="Circadian Decoder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec4899" />
+      <stop offset="1" stop-color="#2e1065" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="90" rx="12" fill="url(#g)" />
+  
+  <!-- Star/Glow effects -->
+  <circle cx="25" cy="20" r="1.5" fill="#fff" opacity="0.8" />
+  <circle cx="135" cy="70" r="1" fill="#fff" opacity="0.6" />
+  <circle cx="140" cy="25" r="2" fill="#fff" opacity="0.5" />
+  
+  <!-- Clock Outer -->
+  <circle cx="80" cy="45" r="26" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" />
+  <circle cx="80" cy="45" r="22" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2 3" stroke-opacity="0.6" />
+  
+  <!-- Clock Center -->
+  <circle cx="80" cy="45" r="2.5" fill="#ffffff" />
+  
+  <!-- Clock Hands (representing a phase shift) -->
+  <!-- Minute hand (vertical, pointing up) -->
+  <line x1="80" y1="45" x2="80" y2="28" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <!-- Hour hand (angled, pointing to ~2 o'clock) -->
+  <line x1="80" y1="45" x2="93" y2="35" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Small Leaf representing plant biology -->
+  <path d="M80 45 C70 45 65 52 65 60 C65 68 80 68 80 68 C80 68 95 68 95 60 C95 52 90 45 80 45 Z" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M80 45 V68" stroke="#10b981" stroke-width="1" stroke-opacity="0.5" />
+</svg>

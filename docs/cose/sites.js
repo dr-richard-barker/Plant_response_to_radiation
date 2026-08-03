@@ -20,7 +20,7 @@ window.BARKER_SITES = {
     astrobotany: { label: "AstroBotany", sections: [
       { name:"Analyses", blurb:"Spaceflight & radiation transcriptomics / multi-omics studies.",
         ids:["Plant_response_to_radiation","arabidopsis-spaceflight-omics","APEX05_results_and_code",
-             "B_rappa_LLGCSS","osdr-plant-microbiome"] },
+             "B_rappa_LLGCSS","osdr-plant-microbiome","Circadian_decoder"] },
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
         ids:["veg05-integrated-omics","TICTOC"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
@@ -32,7 +32,7 @@ window.BARKER_SITES = {
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
         ids:["LunarLeaf-CFD","Aero-leaf-CFD-analysis-adapted-from-blender-ish","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","Seed_sowing_simulator"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
-        ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers"] },
+        ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
         ids:["Astronaut_health_search","Astronaut_trends"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
@@ -66,6 +66,9 @@ window.BARKER_SITES = {
     {
       name: "Spaceflight Omics & Transcriptomics",
       items: [
+        { id:"Circadian_decoder", emoji:"⏰", title:"Circadian Decoder",
+          desc:"ChronoGauge deep learning meta-analysis of spaceflight circadian clock phase disruption",
+          url:"https://dr-richard-barker.github.io/Circadian_decoder/" },
         { id:"Tropism_autodecoder_2026", emoji:"🧭", title:"Tropism Autodecoder 2026",
           desc:"Auto-decoder atlas of plant tropism responses",
           url:"https://dr-richard-barker.github.io/Tropism_autodecoder_2026/" },
