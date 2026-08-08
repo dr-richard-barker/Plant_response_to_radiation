@@ -24,7 +24,8 @@ window.BARKER_SITES = {
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
         ids:["veg05-integrated-omics","TICTOC"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
-        ids:["Tropism_autodecoder_2026","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM"] },
+        ids:["Tropism_autodecoder_2026","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
+             "astroroot","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
         ids:["AIRI","madwest-astrobotany"] }
     ]},
@@ -34,7 +35,7 @@ window.BARKER_SITES = {
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
-        ids:["Astronaut_health_search","Astronaut_trends"] },
+        ids:["Astronaut_health_search","Astronaut_trends","Astronaut_brain_food"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
         ids:["OSDR_jupyter_book.io"] }
     ]}
@@ -61,6 +62,9 @@ window.BARKER_SITES = {
         { id:"astronaut-oncogene-biomarkers", emoji:"🎗️", title:"Astronaut Oncogene Biomarkers",
           desc:"Cross-tissue transcriptomics: how spaceflight & radiation converge on shared oncogenic programs",
           url:"https://dr-richard-barker.github.io/astronaut-oncogene-biomarkers/" },
+        { id:"Astronaut_brain_food", emoji:"🥗", title:"Astronaut Opposite Forcing",
+          desc:"Consensus spaceflight transcriptomic signatures reversed via LINCS L1000, translated into vegan nutritional countermeasures",
+          url:"https://dr-richard-barker.github.io/Astronaut_brain_food/" },
       ]
     },
     {
@@ -109,6 +113,9 @@ window.BARKER_SITES = {
         { id:"Anthocyanin-Image-analysis", emoji:"🍁", title:"Anthocyanin Image Analysis Tool",
           desc:"Browser tool for anthocyanin image analysis",
           url:"https://dr-richard-barker.github.io/Anthocyanin-Image-analysis/" },
+        { id:"AstroBotany_calibration_image_sharing_and_analysis", emoji:"📐", title:"AstroBotany Calibration Image DB",
+          desc:"Epicollect5-sourced specimen photos with in-browser ArUco colour/scale calibration — hands off to AstroRoot & Leaf Pigment tools",
+          url:"https://dr-richard-barker.github.io/AstroBotany_calibration_image_sharing_and_analysis/" },
         { id:"astroroot", emoji:"🛰️", title:"AstroRoot",
           desc:"In-browser root image analysis for the classroom",
           url:"https://dr-richard-barker.github.io/astroroot/" },
