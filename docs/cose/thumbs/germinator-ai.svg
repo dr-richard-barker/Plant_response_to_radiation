@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90" role="img" aria-label="Germinator AI">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4CA07A"/>
+      <stop offset="1" stop-color="#2c5c46"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="90" rx="12" fill="url(#g)"/>
+  <!-- Seed -->
+  <ellipse cx="60" cy="55" rx="10" ry="6" fill="#fff" fill-opacity="0.2" stroke="#fff" stroke-width="1.5" transform="rotate(-15 60 55)"/>
+  <!-- Sprout -->
+  <path d="M 64 52 Q 74 38, 90 35 Q 82 46, 68 53 Z" fill="#fff" opacity="0.9"/>
+  <path d="M 66 52 Q 80 44, 94 45 Q 83 52, 68 54 Z" fill="#fff" opacity="0.6"/>
+  <!-- AI Bounding Box -->
+  <path d="M 40 25 H 48 M 40 25 V 33 M 120 25 H 112 M 120 25 V 33 M 40 65 H 48 M 40 65 V 57 M 120 65 H 112 M 120 65 V 57" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.75"/>
+</svg>

@@ -31,7 +31,7 @@ window.BARKER_SITES = {
     ]},
     deepspaceag: { label: "Deep Space Agriculture", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
-        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator"] },
+        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
@@ -158,6 +158,9 @@ window.BARKER_SITES = {
         { id:"madwest-astrobotany", emoji:"🚀", title:"MadWest Astrobotany",
           desc:"MadWest astrobotany outreach & resources",
           url:"https://dr-richard-barker.github.io/madwest-astrobotany/" },
+        { id:"lunar-magnetic-biology", emoji:"🧲", title:"Lunar Magnetic Biology",
+          desc:"Interactive 3D globe visualizing lunar magnetic anomalies and their biological effects",
+          url:"https://dr-richard-barker.github.io/lunar-magnetic-biology/" },
       ]
     },
     {

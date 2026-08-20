@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90" role="img" aria-label="Lunar Magnetic Biology">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3FB6A8"/>
+      <stop offset="1" stop-color="#1d5750"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="90" rx="12" fill="url(#g)"/>
+  <!-- Stylized Moon -->
+  <circle cx="80" cy="45" r="22" fill="#fff" fill-opacity="0.12" stroke="#fff" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="80" cy="45" r="14" fill="#fff" fill-opacity="0.2"/>
+  <!-- Magnetic Field Lines -->
+  <path d="M 80 23 C 55 23, 55 67, 80 67" fill="none" stroke="#fff" stroke-width="1.8" opacity="0.75"/>
+  <path d="M 80 23 C 105 23, 105 67, 80 67" fill="none" stroke="#fff" stroke-width="1.8" opacity="0.75"/>
+  <path d="M 80 15 C 40 15, 40 75, 80 75" fill="none" stroke="#fff" stroke-width="1.2" opacity="0.45"/>
+  <path d="M 80 15 C 120 15, 120 75, 80 75" fill="none" stroke="#fff" stroke-width="1.2" opacity="0.45"/>
+  <!-- Magnet icon center -->
+  <path d="M 76 38 L 76 45 C 76 48, 84 48, 84 45 L 84 38" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="76" y1="38" x2="76" y2="41" stroke="#ff4d4d" stroke-width="3" stroke-linecap="round"/>
+  <line x1="84" y1="38" x2="84" y2="41" stroke="#ff4d4d" stroke-width="3" stroke-linecap="round"/>
+</svg>
