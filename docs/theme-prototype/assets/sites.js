@@ -31,11 +31,13 @@ window.BARKER_SITES = {
     ]},
     deepspaceag: { label: "Deep Space Agriculture", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
-        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology"] },
+        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology"] },
+      { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
+        ids:["mars-magnetic-biology","clpds-planetary-visualization"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
-        ids:["Astronaut_flavenoids_and_biomarkers","Astronaut_trends","Astronaut_brain_food"] },
+        ids:["Muscle-Atrophy-Multi-Omics-OSDR","Astronaut_flavenoids_and_biomarkers","Astronaut_trends","Astronaut_brain_food"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
         ids:["OSDR_jupyter_book.io"] }
     ]},
@@ -103,6 +105,12 @@ window.BARKER_SITES = {
         { id:"Airflow_omics", emoji:"🌬️", title:"Airflow Omics Model",
           desc:"CFD-guided multi-omics meta-analysis of Arabidopsis spaceflight adaptation & gas exchange",
           url:"https://dr-richard-barker.github.io/Airflow_omics/" },
+        { id:"spaceflight-plant-hardware-cfd", emoji:"🛸", title:"Spaceflight Plant Hardware CFD",
+          desc:"OpenFOAM 3D CFD of boundary-layer scaling across five spaceflight growth chambers at four gravity regimes",
+          url:"https://dr-richard-barker.github.io/spaceflight-plant-hardware-cfd/" },
+        { id:"mars-magnetic-biology", emoji:"🔴", title:"Mars Magnetic Biology",
+          desc:"Crustal magnetic field heterogeneity & biological implications at candidate Mars landing sites",
+          url:"https://dr-richard-barker.github.io/mars-magnetic-biology/" },
       ]
     },
     {
@@ -161,6 +169,9 @@ window.BARKER_SITES = {
         { id:"lunar-magnetic-biology", emoji:"🧲", title:"Lunar Magnetic Biology",
           desc:"Interactive 3D globe visualizing lunar magnetic anomalies and their biological effects",
           url:"https://dr-richard-barker.github.io/lunar-magnetic-biology/" },
+        { id:"clpds-planetary-visualization", emoji:"🪐", title:"Planetary Exploration Suite (CLPDS)",
+          desc:"Interactive data visualization suite for China's lunar (Chang'e) and Martian (Tianwen) exploration data",
+          url:"https://dr-richard-barker.github.io/clpds-planetary-visualization/" },
       ]
     },
     {

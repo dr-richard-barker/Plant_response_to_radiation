@@ -33,7 +33,7 @@ window.BARKER_SITES = {
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
         ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology"] },
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
-        ids:["mars-magnetic-biology"] },
+        ids:["mars-magnetic-biology","clpds-planetary-visualization"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
@@ -169,6 +169,9 @@ window.BARKER_SITES = {
         { id:"lunar-magnetic-biology", emoji:"🧲", title:"Lunar Magnetic Biology",
           desc:"Interactive 3D globe visualizing lunar magnetic anomalies and their biological effects",
           url:"https://dr-richard-barker.github.io/lunar-magnetic-biology/" },
+        { id:"clpds-planetary-visualization", emoji:"🪐", title:"Planetary Exploration Suite (CLPDS)",
+          desc:"Interactive data visualization suite for China's lunar (Chang'e) and Martian (Tianwen) exploration data",
+          url:"https://dr-richard-barker.github.io/clpds-planetary-visualization/" },
       ]
     },
     {
