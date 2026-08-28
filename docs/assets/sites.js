@@ -19,7 +19,7 @@ window.BARKER_SITES = {
   scopes: {
     astrobotany: { label: "AstroBotany", sections: [
       { name:"Analyses", blurb:"Spaceflight & radiation transcriptomics / multi-omics studies.",
-        ids:["Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics","APEX05_results_and_code",
+        ids:["arabidopsis-drem-osdr","Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics","APEX05_results_and_code",
              "B_rappa_LLGCSS","osdr-plant-microbiome","Circadian_decoder"] },
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas"] },
@@ -58,6 +58,9 @@ window.BARKER_SITES = {
         { id:"deepspace-seed-stress-decoder", emoji:"🌰", title:"DeepSpace Seed Stress Decoder",
           desc:"Decoding seed stress signatures for deep-space conditions",
           url:"https://dr-richard-barker.github.io/deepspace-seed-stress-decoder/" },
+        { id:"arabidopsis-drem-osdr", emoji:"🧬", title:"DREM cell-type prior",
+          desc:"Cell-type-weighted DREM over OSDR Arabidopsis pseudo-time-series",
+          url:"https://dr-richard-barker.github.io/arabidopsis-drem-osdr/" },
         { id:"Plant_response_to_radiation", emoji:"☢️", title:"OSDR Radiation Review",
           desc:"Radiation review & kinetic pattern-recognition across NASA OSDR",
           url:"https://dr-richard-barker.github.io/Plant_response_to_radiation/" },
