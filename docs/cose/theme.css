@@ -8,20 +8,24 @@
 :root{
   --bg:#ffffff; --fg:#1a2230; --muted:#5a6473; --line:#e5e9f0;
   --card:#f7f9fc; --accent:#3B6EA5; --accent2:#3FB6A8; --grey:#8A8A8A;
+  --header-bg:linear-gradient(180deg, rgba(59,110,165,.35), rgba(59,110,165,.05));
   --maxw:960px; --rail:288px;
 }
 @media (prefers-color-scheme: dark){
   :root{ --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#232c39;
-         --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; }
+         --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; 
+         --header-bg:linear-gradient(180deg,rgba(59,110,165,.10),transparent);}
 }
 /* Manual light/dark override — the theme toggle sets html[data-theme]. */
 html[data-theme="light"]{
   --bg:#ffffff; --fg:#1a2230; --muted:#5a6473; --line:#e5e9f0;
   --card:#f7f9fc; --accent:#3B6EA5; --accent2:#3FB6A8; color-scheme:light;
+  --header-bg:linear-gradient(180deg, rgba(59,110,165,.35), rgba(59,110,165,.05));
 }
 html[data-theme="dark"]{
   --bg:#0f141b; --fg:#e6ebf2; --muted:#9aa6b6; --line:#232c39;
   --card:#161d27; --accent:#6ea3d8; --accent2:#54c9ba; color-scheme:dark;
+  --header-bg:linear-gradient(180deg,rgba(59,110,165,.10),transparent);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);
@@ -33,7 +37,7 @@ a:hover{text-decoration:underline}
 
 /* ---- content design system (unchanged from the reference page) ---- */
 header{border-bottom:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(59,110,165,.10),transparent)}
+  background:var(--header-bg)}
 header .wrap{padding:56px 20px 40px}
 .eyebrow{color:var(--accent);font-weight:600;letter-spacing:.04em;
   text-transform:uppercase;font-size:.78rem;margin:0 0 10px}
@@ -103,7 +107,8 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem}
 .cose-theme-btn{display:inline-flex;align-items:center;justify-content:center;
   width:36px;height:34px;border-radius:8px;cursor:pointer;
   border:1px solid var(--line);background:var(--card);color:var(--fg);
-  box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  box-shadow:0 1px 2px rgba(0,0,0,.04);
+  position:fixed;top:12px;right:12px;z-index:40;}
 .cose-theme-btn:hover{filter:brightness(.98)}
 .cose-theme-btn svg{display:block}
 @media (min-width:1180px){

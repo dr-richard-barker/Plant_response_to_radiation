@@ -41,7 +41,7 @@
     hubLink.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg>';
     topbar.appendChild(hubLink);
   }
-  if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ topbar.appendChild(themeBtn); }
+  if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ document.body.appendChild(themeBtn); }
 
   var bar = el("nav", {class:"sitebar", "aria-label":"Site and document map"});
   var switcher = el("div", {class:"cose-switch", role:"tablist"});
