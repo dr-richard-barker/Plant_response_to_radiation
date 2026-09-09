@@ -172,3 +172,17 @@ body.map-open .map-scrim{opacity:1;visibility:visible}
 .cose-hub-btn:hover{filter:brightness(.98);text-decoration:none}
 .cose-hub-btn svg{display:block}
 @media (min-width:1180px){ body.map-open .cose-hub-btn{background:transparent;border-color:transparent;box-shadow:none} }
+
+/* Search box inside All Projects panel */
+.cose-search-wrap{padding:6px 20px 8px;position:relative}
+.cose-search-input{width:100%;padding:6px 28px 6px 10px;font-size:.84rem;
+  border:1px solid var(--line);border-radius:6px;background:var(--bg);
+  color:var(--fg);outline:none;box-sizing:border-box;font-family:inherit;
+  transition:border-color .15s ease,box-shadow .15s ease}
+.cose-search-input:focus{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 20%,transparent)}
+.cose-search-input::-webkit-search-decoration,
+.cose-search-input::-webkit-search-cancel-button{display:none}
+.cose-search-clear{position:absolute;right:26px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--muted);cursor:pointer;padding:4px;font-size:.82rem;line-height:1}
+.cose-search-clear:hover{color:var(--fg)}
+

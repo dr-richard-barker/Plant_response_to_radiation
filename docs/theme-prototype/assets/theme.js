@@ -153,13 +153,36 @@
   } else {
     sitePanel.appendChild(header4("All projects"));
   }
+
+  /* search box directly under "All projects" */
+  var searchWrap = el("div", {class:"cose-search-wrap"});
+  searchWrap.style.cssText = "padding:6px 20px 8px;position:relative;";
+  var searchInput = el("input", {
+    type: "search",
+    class: "cose-search-input",
+    placeholder: "Search projects...",
+    "aria-label": "Search projects"
+  });
+  searchInput.style.cssText = "width:100%;padding:6px 28px 6px 10px;font-size:0.84rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);outline:none;box-sizing:border-box;font-family:inherit;";
+  var searchClear = el("button", {type:"button", class:"cose-search-clear", title:"Clear search", "aria-label":"Clear search"});
+  searchClear.style.cssText = "position:absolute;right:26px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;padding:4px;display:none;font-size:0.82rem;line-height:1;";
+  searchClear.innerHTML = "&#x2715;";
+  searchWrap.appendChild(searchInput);
+  searchWrap.appendChild(searchClear);
+  sitePanel.appendChild(searchWrap);
+
+  var noMatch = hint("No matching projects found.");
+  noMatch.style.display = "none";
+
   if(reg && reg.groups){
     var sl = el("ul", {class:"sitemap"});
+    var groupRecords = [];
     reg.groups.forEach(function(g){
       var items = g.items.filter(inScope);
       if(!items.length) return;
       var gl = el("li"); var gh = el("div",{class:"cose-group"}); gh.textContent = g.name;
       gl.appendChild(gh); sl.appendChild(gl);
+      var gRecord = { groupEl: gl, items: [] };
       items.forEach(function(it){
         var li = el("li"), node;
         if(it.live === false || !it.url){
@@ -174,9 +197,43 @@
           node.innerHTML = (it.emoji ? it.emoji + " " : "") + esc(it.title) + (it.desc? "<small>"+esc(it.desc)+"</small>":"");
         }
         li.appendChild(node); sl.appendChild(li);
+        var searchable = ((it.title || "") + " " + (it.desc || "") + " " + (it.id || "")).toLowerCase();
+        gRecord.items.push({ li: li, text: searchable });
       });
+      groupRecords.push(gRecord);
     });
     sitePanel.appendChild(sl);
+    sitePanel.appendChild(noMatch);
+
+    function doFilter(){
+      var q = searchInput.value.trim().toLowerCase();
+      searchClear.style.display = q ? "block" : "none";
+      var totalMatch = 0;
+      groupRecords.forEach(function(gr){
+        var gMatches = 0;
+        gr.items.forEach(function(item){
+          var isMatch = !q || item.text.indexOf(q) >= 0;
+          item.li.style.display = isMatch ? "" : "none";
+          if(isMatch) gMatches++;
+        });
+        gr.groupEl.style.display = gMatches > 0 ? "" : "none";
+        totalMatch += gMatches;
+      });
+      noMatch.style.display = (totalMatch === 0) ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", doFilter);
+    searchClear.addEventListener("click", function(){
+      searchInput.value = "";
+      doFilter();
+      searchInput.focus();
+    });
+    searchInput.addEventListener("keydown", function(e){
+      if(e.key === "Escape"){
+        searchInput.value = "";
+        doFilter();
+      }
+    });
   } else {
     sitePanel.appendChild(hint("Site registry not loaded."));
   }
