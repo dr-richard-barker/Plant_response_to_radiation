@@ -26,7 +26,7 @@ window.BARKER_SITES = {
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
         ids:["Tropism_autodecoder_2026","germinator-ai","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
-             "astroroot","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS"] },
+             "astroroot","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
         ids:["AIRI","madwest-astrobotany"] }
     ]},
@@ -35,7 +35,7 @@ window.BARKER_SITES = {
         ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology","AstroRegolith","AstroMycology","microgreen-chamber-cfd","fungal-bgc-atlas","biosim-nextgen","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
              "OSDR-Veggie-Nutrition-Dashboard","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space","Photorespiration_multiomics_microgravity","LunarFarm-BLSS"] },
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
-        ids:["mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer"] },
+        ids:["mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer","lunar-lfm-explorer"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight","SpaceMineralAtlas"] },
       { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
@@ -228,6 +228,9 @@ window.BARKER_SITES = {
         { id:"LunarFarm-BLSS", emoji:"🔄", title:"Lunar Farm BLSS Closed Loop",
           desc:"Human-in-the-loop bioregenerative life support: closed carbon loop dynamics and agricultural biodiversity economics",
           url:"https://dr-richard-barker.github.io/LunarFarm-BLSS/", thumb_ext:"gif" },
+        { id:"lunar-lfm-explorer", emoji:"🌖", title:"NASA-IBM Lunar Foundation Model Explorer",
+          desc:"Interactive multimodal explorer & remote sensing diagnostics for the NASA-IBM Lunar Foundation Model (ViT-B / TerraMind / SomBench)",
+          url:"https://dr-richard-barker.github.io/lunar-lfm-explorer/", thumb_ext:"gif" },
       ]
     },
     {
