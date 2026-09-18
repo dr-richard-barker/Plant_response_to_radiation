@@ -26,7 +26,7 @@ window.BARKER_SITES = {
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
         ids:["Tropism_autodecoder_2026","germinator-ai","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
-             "astroroot","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer"] },
+             "astroroot","astroroot-painter","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
         ids:["AIRI","madwest-astrobotany"] }
     ]},
@@ -147,6 +147,9 @@ window.BARKER_SITES = {
         { id:"astroroot", emoji:"🛰️", title:"AstroRoot",
           desc:"In-browser root image analysis for the classroom",
           url:"https://dr-richard-barker.github.io/astroroot/" },
+        { id:"astroroot-painter", emoji:"🖌️", title:"AstroRoot Painter",
+          desc:"RootPainter's corrective-annotation training loop, in the browser — astroroot's model-training companion",
+          url:"https://dr-richard-barker.github.io/astroroot-painter/" },
         { id:"virtual-root", emoji:"🌱", title:"Virtual Root",
           desc:"Interactive auxin-transport root model",
           url:"https://dr-richard-barker.github.io/virtual-root/" },
