@@ -43,7 +43,7 @@ window.BARKER_SITES = {
     ]},
     astronauthealth: { label: "Astronaut Health", sections: [
       { name: "Physiology & Countermeasures", blurb: "Astronaut muscle atrophy, oncogene biomarkers, and nutritional countermeasures.",
-        ids: ["Muscle-Atrophy-Multi-Omics-OSDR", "Astronaut_flavenoids_and_biomarkers", "Astronaut_brain_food", "astronaut-oncogene-biomarkers", "SpaceMineralAtlas", "OSDR-Veggie-Nutrition-Dashboard"] },
+        ids: ["Muscle-Atrophy-Multi-Omics-OSDR", "Astronaut_flavenoids_and_biomarkers", "Astronaut_brain_food", "astronaut-oncogene-biomarkers", "SpaceMineralAtlas", "OSDR-Veggie-Nutrition-Dashboard", "astronaut-mineral-final"] },
       { name: "Analytics & Dashboards", blurb: "Interactive dashboards and evidence analytics for crew health.",
         ids: ["Astronaut_trends"] }
     ]}
@@ -211,6 +211,9 @@ window.BARKER_SITES = {
         { id:"OSDR-Veggie-Nutrition-Dashboard", emoji:"🥬", title:"OSDR Veggie Nutrition Dashboard",
           desc:"Multi-crop space agriculture meta-analysis (OSD-745): nutritional profiles, carotenoids, and biomass under microgravity",
           url:"https://dr-richard-barker.github.io/OSDR-Veggie-Nutrition-Dashboard/", thumb_ext:"gif" },
+        { id:"astronaut-mineral-final", emoji:"🦴", title:"Astronaut Mineral Analysis",
+          desc:"Analysis of astronaut mineral and dietary impacts against NHANES reference population.",
+          url:"https://dr-richard-barker.github.io/astronaut-mineral-final/", thumb_ext:"png" },
         { id:"arabidopsis-gwas-spaceflight", emoji:"🧬", title:"Arabidopsis Spaceflight GWAS",
           desc:"Genome-wide association study mapping genetic variation across Arabidopsis accessions under microgravity and spaceflight stressors",
           url:"https://dr-richard-barker.github.io/arabidopsis-gwas-spaceflight/", thumb_ext:"gif" },
