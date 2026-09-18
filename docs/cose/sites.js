@@ -37,9 +37,7 @@ window.BARKER_SITES = {
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
         ids:["mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer","lunar-lfm-explorer"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
-        ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight","SpaceMineralAtlas"] },
-      { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
-        ids:["Muscle-Atrophy-Multi-Omics-OSDR","Astronaut_flavenoids_and_biomarkers","Astronaut_trends","Astronaut_brain_food","SpaceMineralAtlas","OSDR-Veggie-Nutrition-Dashboard"] },
+        ids:["deepspace-seed-stress-decoder","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
         ids:["OSDR_jupyter_book.io"] }
     ]},
