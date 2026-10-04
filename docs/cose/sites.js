@@ -11,6 +11,7 @@
 window.BARKER_SITES = {
   brand: { name:"COSE", url:"https://cosecloud.com/", logo:"assets/cose-logo.png" },
   hub: "https://dr-richard-barker.github.io/CoSE_Cloud/Hub/",
+  profile: "https://github.com/dr-richard-barker",
   // Named subsets. A themed sub-hub links with ?cose_scope=NAME to limit the
   // in-page project rail (and framework sidebars) to just these projects.
   // `sections` is the single source of truth: the matching sub-hub page renders
@@ -40,6 +41,10 @@ window.BARKER_SITES = {
         ids:["deepspace-seed-stress-decoder","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
         ids:["OSDR_jupyter_book.io"] }
+    ]},
+    simulations: { label: "Serious Games & Academy", sections: [
+      { name:"CoSE Academy Modules", blurb:"Interactive assessment modules with embedded real-time space colony simulations.",
+        ids:["dr-richard-barker","LunarSims","lunar-arcade","Settlers_of_the_Moon_or_Mars","Training_LLM_game-theory_using_bloodbowl","Lunar_Red_Alert","cose-arcade"] }
     ]},
     astronauthealth: { label: "Astronaut Health", sections: [
       { name: "Physiology & Countermeasures", blurb: "Astronaut muscle atrophy, oncogene biomarkers, and nutritional countermeasures.",
@@ -120,6 +125,12 @@ window.BARKER_SITES = {
         { id:"arabidopsis-atlas", emoji:"🌱", title:"Arabidopsis Atlas",
           desc:"Interactive 3D organ and ecotype atlas linking natural-variation metabolome GWAS to the OSD-522 spaceflight transcriptome and proteome",
           url:"https://dr-richard-barker.github.io/arabidopsis-atlas/", thumb_ext:"png" },
+        { id:"tomato-spaceflight-VEG05-APH-SA-integration", emoji:"🍅", title:"Tomato Spaceflight VEG-05 x APH",
+          desc:"Cross-mission integration of two ISS tomato spaceflight RNA-seq studies: salicylic acid and defense priming.",
+          url:"https://dr-richard-barker.github.io/tomato-spaceflight-VEG05-APH-SA-integration/" },
+        { id:"OSDR_X-species_V2", emoji:"🧬", title:"OSDR Cross-Species V2",
+          desc:"Cross-species meta-analysis of spaceflight transcriptomics (22 NASA OSDR datasets, 6 species) revealing conserved mitochondrial suppression.",
+          url:"https://dr-richard-barker.github.io/OSDR_X-species_V2/" },
       ]
     },
     {
@@ -134,6 +145,9 @@ window.BARKER_SITES = {
         { id:"PhysioSpace_stress_decoding_VEG05", emoji:"🧠", title:"PhysioSpace VEG-05",
           desc:"Light quality × spaceflight stress decoding with cell-type asymmetry in ISS tomato (OSD-767)",
           url:"https://dr-richard-barker.github.io/PhysioSpace_stress_decoding_VEG05/" },
+        { id:"lunar-regolith-blss-review", emoji:"🧱", title:"Sintered Regolith for BLSS",
+          desc:"From Dust to Bio-Infrastructure: Sintered Regolith Ceramics for Lunar Bioregenerative Life Support Systems (npj Microgravity review).",
+          url:"https://dr-richard-barker.github.io/lunar-regolith-blss-review/" },
       ]
     },
     {
@@ -244,6 +258,15 @@ window.BARKER_SITES = {
         { id:"lunar-lfm-explorer", emoji:"🌖", title:"NASA-IBM Lunar Foundation Model Explorer",
           desc:"Interactive multimodal explorer & remote sensing diagnostics for the NASA-IBM Lunar Foundation Model (ViT-B / TerraMind / SomBench)",
           url:"https://dr-richard-barker.github.io/lunar-lfm-explorer/", thumb_ext:"gif" },
+        { id:"quantum-biology-atlas", emoji:"⚛️", title:"Quantum Biology Atlas",
+          desc:"Cross-species ontology and SBGN pathway maps for quantum-biological processes (radical-pair, Fe-S, flavin) linked to NASA OSDR.",
+          url:"https://dr-richard-barker.github.io/quantum-biology-atlas/" },
+        { id:"Rothamsted_BroadBaulk", emoji:"🌾", title:"Rothamsted Broadbalk Explorer",
+          desc:"180+ Years of continuous wheat yields, climate overlays & scientific data narratives for long-term crop resilience.",
+          url:"https://dr-richard-barker.github.io/Rothamsted_BroadBaulk/" },
+        { id:"rice-atlas", emoji:"🌾", title:"Rice Atlas (procedural viewer)",
+          desc:"Procedurally generated interactive 3D rice-plant viewer — a conceptual model with no measured Oryza sativa data; the starting point for the Arabidopsis Atlas.",
+          url:"https://dr-richard-barker.github.io/rice-atlas/" },
       ]
     },
     {
@@ -270,6 +293,9 @@ window.BARKER_SITES = {
         { id:"LunarSims", emoji:"🌕", title:"Lunar Sims Suite",
           desc:"Original browser simulation games (Lunar Farm, Artemis City, Lunar Metro) in the spirit of classic Maxis sims",
           url:"https://dr-richard-barker.github.io/LunarSims/", thumb_ext:"gif" },
+        { id:"Training_LLM_game-theory_using_bloodbowl", emoji:"🏈", title:"Brute Bowl — LLM Game Theory",
+          desc:"Exploring the use of LLMs to model stochastic probability, risk mitigation, and team dynamics in constrained environments.",
+          url:"https://dr-richard-barker.github.io/Training_LLM_game-theory_using_bloodbowl/game/" },
       ]
     },
     {
@@ -284,6 +310,24 @@ window.BARKER_SITES = {
         { id:"fungal-bgc-atlas", emoji:"🧬", title:"Fungal BGC Atlas",
           desc:"Curated, evidence-linked database of 609 fungal biosynthetic gene cluster (BGC) dossiers",
           url:"https://dr-richard-barker.github.io/fungal-bgc-atlas/", thumb_ext:"gif" },
+        { id:"CoSE_Cloud", emoji:"☁️", title:"CoSE Cloud Hub",
+          desc:"The umbrella project directory and ecosystem hub for The Collaborative Science Environment.",
+          url:"https://dr-richard-barker.github.io/CoSE_Cloud/Hub/" },
+        { id:"AstroBotany", emoji:"🌱", title:"AstroBotany Hub",
+          desc:"Focused hub of plant space-biology projects: growing and understanding plants beyond Earth.",
+          url:"https://dr-richard-barker.github.io/AstroBotany/" },
+        { id:"DeepSpaceAg", emoji:"🚀", title:"Deep Space Agriculture Hub",
+          desc:"Sustaining plants and people on long-duration missions: gas transport, closed loops, and planetary regolith.",
+          url:"https://dr-richard-barker.github.io/DeepSpaceAg/" },
+        { id:"AstronautHealth", emoji:"🩺", title:"Astronaut Health Hub",
+          desc:"Central hub for human physiology, transcriptomic biomarkers, and nutritional countermeasures for spaceflight.",
+          url:"https://dr-richard-barker.github.io/AstronautHealth/" },
+        { id:"dr-richard-barker", emoji:"🌌", title:"CoSE Academy Portal",
+          desc:"Educational impact assessment portal featuring 7 lunar & Martian serious games with pre/post-session research evaluations.",
+          url:"https://dr-richard-barker.github.io/dr-richard-barker/" },
+        { id:"genai-spacebio-roadmap", emoji:"🗺️", title:"GenAI SpaceBio Roadmap",
+          desc:"Cross-references Dr. Barker's portfolio against Cell's 15 challenges for generative AI in cell biology.",
+          url:"https://github.com/dr-richard-barker/genai-spacebio-roadmap" },
       ]
     }
   ]
