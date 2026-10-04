@@ -26,7 +26,7 @@ window.BARKER_SITES = {
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
         ids:["Tropism_autodecoder_2026","germinator-ai","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
-             "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer"] },
+             "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer","arabidopsis-atlas"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
         ids:["AIRI","madwest-astrobotany"] }
     ]},
@@ -37,15 +37,13 @@ window.BARKER_SITES = {
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
         ids:["mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer","lunar-lfm-explorer"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
-        ids:["deepspace-seed-stress-decoder","astronaut-oncogene-biomarkers","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight","SpaceMineralAtlas"] },
-      { name:"Astronaut health", blurb:"Searchable evidence and trend analytics for crew health.",
-        ids:["Muscle-Atrophy-Multi-Omics-OSDR","Astronaut_flavenoids_and_biomarkers","Astronaut_trends","Astronaut_brain_food","SpaceMineralAtlas","OSDR-Veggie-Nutrition-Dashboard"] },
+        ids:["deepspace-seed-stress-decoder","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
         ids:["OSDR_jupyter_book.io"] }
     ]},
     astronauthealth: { label: "Astronaut Health", sections: [
       { name: "Physiology & Countermeasures", blurb: "Astronaut muscle atrophy, oncogene biomarkers, and nutritional countermeasures.",
-        ids: ["Muscle-Atrophy-Multi-Omics-OSDR", "Astronaut_flavenoids_and_biomarkers", "Astronaut_brain_food", "astronaut-oncogene-biomarkers", "SpaceMineralAtlas", "OSDR-Veggie-Nutrition-Dashboard"] },
+        ids: ["Muscle-Atrophy-Multi-Omics-OSDR", "Astronaut_flavenoids_and_biomarkers", "Astronaut_brain_food", "astronaut-oncogene-biomarkers", "SpaceMineralAtlas", "OSDR-Veggie-Nutrition-Dashboard", "astronaut-mineral-final"] },
       { name: "Analytics & Dashboards", blurb: "Interactive dashboards and evidence analytics for crew health.",
         ids: ["Astronaut_trends"] }
     ]}
@@ -119,6 +117,9 @@ window.BARKER_SITES = {
         { id:"mars-magnetic-biology", emoji:"🔴", title:"Mars Magnetic Biology",
           desc:"Crustal magnetic field heterogeneity & biological implications at candidate Mars landing sites",
           url:"https://dr-richard-barker.github.io/mars-magnetic-biology/" },
+        { id:"arabidopsis-atlas", emoji:"🌱", title:"Arabidopsis Atlas",
+          desc:"Interactive 3D organ and ecotype atlas linking natural-variation metabolome GWAS to the OSD-522 spaceflight transcriptome and proteome",
+          url:"https://dr-richard-barker.github.io/arabidopsis-atlas/", thumb_ext:"png" },
       ]
     },
     {
@@ -213,6 +214,9 @@ window.BARKER_SITES = {
         { id:"OSDR-Veggie-Nutrition-Dashboard", emoji:"🥬", title:"OSDR Veggie Nutrition Dashboard",
           desc:"Multi-crop space agriculture meta-analysis (OSD-745): nutritional profiles, carotenoids, and biomass under microgravity",
           url:"https://dr-richard-barker.github.io/OSDR-Veggie-Nutrition-Dashboard/", thumb_ext:"gif" },
+        { id:"astronaut-mineral-final", emoji:"🦴", title:"Astronaut Mineral Analysis",
+          desc:"Analysis of astronaut mineral and dietary impacts against NHANES reference population.",
+          url:"https://dr-richard-barker.github.io/astronaut-mineral-final/", thumb_ext:"png" },
         { id:"arabidopsis-gwas-spaceflight", emoji:"🧬", title:"Arabidopsis Spaceflight GWAS",
           desc:"Genome-wide association study mapping genetic variation across Arabidopsis accessions under microgravity and spaceflight stressors",
           url:"https://dr-richard-barker.github.io/arabidopsis-gwas-spaceflight/", thumb_ext:"gif" },
