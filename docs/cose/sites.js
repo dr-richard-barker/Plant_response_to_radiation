@@ -26,7 +26,7 @@ window.BARKER_SITES = {
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
         ids:["Tropism_autodecoder_2026","germinator-ai","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
-             "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer"] },
+             "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer","arabidopsis-atlas"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
         ids:["AIRI","madwest-astrobotany"] }
     ]},
@@ -117,6 +117,9 @@ window.BARKER_SITES = {
         { id:"mars-magnetic-biology", emoji:"🔴", title:"Mars Magnetic Biology",
           desc:"Crustal magnetic field heterogeneity & biological implications at candidate Mars landing sites",
           url:"https://dr-richard-barker.github.io/mars-magnetic-biology/" },
+        { id:"arabidopsis-atlas", emoji:"🌱", title:"Arabidopsis Atlas",
+          desc:"Interactive 3D organ and ecotype atlas linking natural-variation metabolome GWAS to the OSD-522 spaceflight transcriptome and proteome",
+          url:"https://dr-richard-barker.github.io/arabidopsis-atlas/", thumb_ext:"png" },
       ]
     },
     {
