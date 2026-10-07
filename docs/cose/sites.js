@@ -20,7 +20,7 @@ window.BARKER_SITES = {
   scopes: {
     astrobotany: { label: "AstroBotany", sections: [
       { name:"Analyses", blurb:"Spaceflight & radiation transcriptomics / multi-omics studies.",
-        ids:["arabidopsis-drem-osdr","Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics","APEX05_results_and_code",
+        ids:["arabidopsis-drem-osdr","Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics","ChromDecode-At","APEX05_results_and_code",
              "B_rappa_LLGCSS","osdr-plant-microbiome","Circadian_decoder","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
              "arabidopsis-gwas-spaceflight","OSD615-glycome-cytoskeleton-systems-biology","OSDR_Plant_Alternative_Splicing","Photorespiration_multiomics_microgravity"] },
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
@@ -101,6 +101,9 @@ window.BARKER_SITES = {
         { id:"arabidopsis-spaceflight-omics", emoji:"🌿", title:"Arabidopsis Spaceflight Omics",
           desc:"LASSO biomarkers, single-cell atlas integration & Ca²⁺ cell–cell signalling across NASA OSDR",
           url:"https://dr-richard-barker.github.io/arabidopsis-spaceflight-omics/" },
+        { id:"ChromDecode-At", emoji:"🧬", title:"ChromDecode-At — Spaceflight Chromatin States",
+          desc:"Spaceflight-repressed Arabidopsis genes sit in Polycomb chromatin: OSDR-wide chromatin-state decoding, SOG1 ChIP-seq and methylation tests",
+          url:"https://dr-richard-barker.github.io/ChromDecode-At/" },
         { id:"B_rappa_LLGCSS", emoji:"🌸", title:"B. rapa — Floral Scent × Radiation",
           desc:"Does galactic cosmic radiation alter floral scent? WIP transcriptomics in Brassica rapa",
           url:"https://dr-richard-barker.github.io/B_rappa_LLGCSS/" },
