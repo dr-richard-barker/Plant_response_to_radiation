@@ -33,7 +33,7 @@ window.BARKER_SITES = {
     ]},
     deepspaceag: { label: "Deep Space Agriculture", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
-        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology","AstroRegolith","AstroMycology","microgreen-chamber-cfd","fungal-bgc-atlas","biosim-nextgen","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
+        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Hardware_OSDR_review","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology","AstroRegolith","AstroMycology","microgreen-chamber-cfd","fungal-bgc-atlas","biosim-nextgen","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
              "OSDR-Veggie-Nutrition-Dashboard","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space","Photorespiration_multiomics_microgravity","LunarFarm-BLSS"] },
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
         ids:["mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer","lunar-lfm-explorer"] },
@@ -122,6 +122,9 @@ window.BARKER_SITES = {
         { id:"spaceflight-plant-hardware-cfd", emoji:"🛸", title:"Spaceflight Plant Hardware CFD",
           desc:"OpenFOAM 3D CFD of boundary-layer scaling across five spaceflight growth chambers at four gravity regimes",
           url:"https://dr-richard-barker.github.io/spaceflight-plant-hardware-cfd/" },
+        { id:"Hardware_OSDR_review", emoji:"🛰️", title:"Which Spaceflight Hardware Can Be Modelled?",
+          desc:"Metadata audit of NASA SPLASH + OSDR space-biology hardware, an MI-CFD-HW checklist and verified 0 g / 1 g OpenFOAM models of the CFD-ready habitats",
+          url:"https://dr-richard-barker.github.io/Hardware_OSDR_review/", thumb_ext:"gif" },
         { id:"mars-magnetic-biology", emoji:"🔴", title:"Mars Magnetic Biology",
           desc:"Crustal magnetic field heterogeneity & biological implications at candidate Mars landing sites",
           url:"https://dr-richard-barker.github.io/mars-magnetic-biology/" },
