@@ -59,8 +59,7 @@
   var MOON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
   var themeBtn = el("button", {class:"cose-theme-btn",
     "aria-label":"Toggle light or dark theme", title:"Toggle light / dark"});
-  // In the top bar beside the hub link (theme.css pins it top-right instead).
-  if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ topbar.appendChild(themeBtn); }
+  if(document.body.getAttribute("data-cose-themetoggle") !== "off"){ document.body.appendChild(themeBtn); }
 
   /* Wrap existing body content in div.page. The wrapper was added for the
      retired rail; it's kept so the DOM (and any CSS written against it) on
