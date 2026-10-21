@@ -17,26 +17,31 @@ window.BARKER_SITES = {
   // `sections` is the single source of truth: the matching sub-hub page renders
   // its card grid from these, and each scope's flat `ids` list (used by the rail
   // filter) is derived from the sections below — add a project in ONE place.
+  // `hub` is the sub-hub page; theme.js's back-to-hub link returns there when
+  // the visitor arrived through it (`hubLabel` shortens the button text).
   scopes: {
-    astrobotany: { label: "AstroBotany", sections: [
+    astrobotany: { label: "AstroBotany", hub: "https://dr-richard-barker.github.io/AstroBotany/", sections: [
       { name:"Analyses", blurb:"Spaceflight & radiation transcriptomics / multi-omics studies.",
         ids:["arabidopsis-drem-osdr","Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics","ChromDecode-At","APEX05_results_and_code",
              "B_rappa_LLGCSS","osdr-plant-microbiome","Circadian_decoder","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
-             "arabidopsis-gwas-spaceflight","OSD615-glycome-cytoskeleton-systems-biology","OSDR_Plant_Alternative_Splicing","Photorespiration_multiomics_microgravity"] },
+             "arabidopsis-gwas-spaceflight","OSD615-glycome-cytoskeleton-systems-biology","OSDR_Plant_Alternative_Splicing","Photorespiration_multiomics_microgravity",
+             "Suborbital_Arabidopsis","arabidopsis-exploration-atmosphere-tabpfn"] },
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
         ids:["Tropism_autodecoder_2026","germinator-ai","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
-             "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer","arabidopsis-atlas"] },
+             "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer","arabidopsis-atlas",
+             "ABCD_v2","groot-dashboard","plant-mitocarta","plant-pathway-atlas"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
-        ids:["AIRI","madwest-astrobotany"] }
+        ids:["AIRI","madwest-astrobotany","AIR_for_undergrads","Space_Biology_Education.io","Space_Photography_Guide.io"] }
     ]},
-    deepspaceag: { label: "Deep Space Agriculture", sections: [
+    deepspaceag: { label: "Deep Space Agriculture", hubLabel: "Deep Space Ag", hub: "https://dr-richard-barker.github.io/DeepSpaceAg/", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
         ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Hardware_OSDR_review","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","Seed_sowing_simulator","lunar-magnetic-biology","AstroRegolith","AstroMycology","microgreen-chamber-cfd","fungal-bgc-atlas","biosim-nextgen","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
-             "OSDR-Veggie-Nutrition-Dashboard","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space","Photorespiration_multiomics_microgravity","LunarFarm-BLSS"] },
+             "OSDR-Veggie-Nutrition-Dashboard","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space","Photorespiration_multiomics_microgravity","LunarFarm-BLSS",
+             "ISS_EDEN","LEAF_GBC2_pot_model","LED-pattern-synth"] },
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
-        ids:["mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer","lunar-lfm-explorer"] },
+        ids:["mars-magnetic-biology","lunar-mars-magnetic-biology","clpds-planetary-visualization","earth-magnetosphere-4d-viz","nssdc-cosmic-explorer","lunar-lfm-explorer","cose-magbio-3d-report"] },
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
@@ -46,7 +51,7 @@ window.BARKER_SITES = {
       { name:"CoSE Academy Modules", blurb:"Interactive assessment modules with embedded real-time space colony simulations.",
         ids:["dr-richard-barker","LunarSims","lunar-arcade","Settlers_of_the_Moon_or_Mars","Training_LLM_game-theory_using_bloodbowl","Lunar_Red_Alert","cose-arcade"] }
     ]},
-    astronauthealth: { label: "Astronaut Health", sections: [
+    astronauthealth: { label: "Astronaut Health", hub: "https://dr-richard-barker.github.io/AstronautHealth/", sections: [
       { name: "Physiology & Countermeasures", blurb: "Astronaut muscle atrophy, oncogene biomarkers, and nutritional countermeasures.",
         ids: ["Muscle-Atrophy-Multi-Omics-OSDR", "Astronaut_flavenoids_and_biomarkers", "Astronaut_brain_food", "astronaut-oncogene-biomarkers", "SpaceMineralAtlas", "OSDR-Veggie-Nutrition-Dashboard", "astronaut-mineral-final"] },
       { name: "Analytics & Dashboards", blurb: "Interactive dashboards and evidence analytics for crew health.",
@@ -137,6 +142,18 @@ window.BARKER_SITES = {
         { id:"OSDR_X-species_V2", emoji:"🧬", title:"OSDR Cross-Species V2",
           desc:"Cross-species meta-analysis of spaceflight transcriptomics (22 NASA OSDR datasets, 6 species) revealing conserved mitochondrial suppression.",
           url:"https://dr-richard-barker.github.io/OSDR_X-species_V2/" },
+        { id:"Suborbital_Arabidopsis", emoji:"🚀", title:"NS-26 Suborbital Arabidopsis Omics",
+          desc:"Transcriptional reprogramming of Arabidopsis during suborbital flight on Blue Origin New Shepard NS-26, compared across missions",
+          url:"https://dr-richard-barker.github.io/Suborbital_Arabidopsis/", thumb_ext:"png" },
+        { id:"arabidopsis-exploration-atmosphere-tabpfn", emoji:"🌬️", title:"Arabidopsis Exploration Atmosphere (TabPFN v2)",
+          desc:"Decoupling total barometric pressure from oxygen partial pressure in the exploration atmosphere with the TabPFN v2 tabular foundation model",
+          url:"https://dr-richard-barker.github.io/arabidopsis-exploration-atmosphere-tabpfn/", thumb_ext:"png" },
+        { id:"lunar-mars-magnetic-biology", emoji:"🧲", title:"Lunar & Martian Magnetobiology",
+          desc:"Comparative planetary magnetobiology of the Moon and Mars: geophysical field mapping and hypomagnetic stress",
+          url:"https://dr-richard-barker.github.io/lunar-mars-magnetic-biology/", thumb_ext:"png" },
+        { id:"cose-magbio-3d-report", emoji:"🧲", title:"CoSE MagBio-3D Report",
+          desc:"Design-stage report for a three-axis Helmholtz chamber: CAD inspector, Biot–Savart field visualiser and bill of materials",
+          url:"https://dr-richard-barker.github.io/cose-magbio-3d-report/", thumb_ext:"png" },
       ]
     },
     {
@@ -273,6 +290,27 @@ window.BARKER_SITES = {
         { id:"rice-atlas", emoji:"🌾", title:"Rice Atlas (procedural viewer)",
           desc:"Procedurally generated interactive 3D rice-plant viewer — a conceptual model with no measured Oryza sativa data; the starting point for the Arabidopsis Atlas.",
           url:"https://dr-richard-barker.github.io/rice-atlas/" },
+        { id:"ABCD_v2", emoji:"🎨", title:"ABCD v2 Calibration Card",
+          desc:"AstroBotany calibration card with Munsell-defined plant and soil colour patches and ArUco corner markers",
+          url:"https://dr-richard-barker.github.io/ABCD_v2/", thumb_ext:"png" },
+        { id:"groot-dashboard", emoji:"🌱", title:"GRooT Root Traits Explorer",
+          desc:"Interactive explorer for plant root functional traits from the Global Root Traits (GRooT) database",
+          url:"https://dr-richard-barker.github.io/groot-dashboard/", thumb_ext:"png" },
+        { id:"plant-mitocarta", emoji:"🔋", title:"Plant MitoCarta Atlas",
+          desc:"Subcellular digital doubles, inter-organellar signalling and cross-kingdom synteny",
+          url:"https://dr-richard-barker.github.io/plant-mitocarta/", thumb_ext:"png" },
+        { id:"plant-pathway-atlas", emoji:"🗺️", title:"Plant Pathway Atlas",
+          desc:"Plant pathway maps and cross-species omics projection, modernising MapMan and PlantCyc",
+          url:"https://dr-richard-barker.github.io/plant-pathway-atlas/", thumb_ext:"png" },
+        { id:"ISS_EDEN", emoji:"🥬", title:"EDEN ISS Space Greenhouse",
+          desc:"Biomass yields and FAIR data explorer for OSD-895, the EDEN ISS greenhouse in Antarctica (2018)",
+          url:"https://dr-richard-barker.github.io/ISS_EDEN/", thumb_ext:"png" },
+        { id:"LEAF_GBC2_pot_model", emoji:"🌙", title:"LEAF Lunar Plant Chamber CFD",
+          desc:"3D CFD and biophysics portal for the LEAF plant chamber pot: 1 g Earth vs 0.166 g lunar",
+          url:"https://dr-richard-barker.github.io/LEAF_GBC2_pot_model/", thumb_ext:"png" },
+        { id:"LED-pattern-synth", emoji:"💡", title:"Horticultural LED Designer",
+          desc:"Browser app for designing horticultural LED patterns",
+          url:"https://dr-richard-barker.github.io/LED-pattern-synth/", thumb_ext:"png" },
       ]
     },
     {
@@ -307,12 +345,21 @@ window.BARKER_SITES = {
     {
       name: "Documentation & Education Hubs",
       items: [
-        { id:"OSDR_jupyter_book.io", emoji:"📓", title:"OSDR Jupyter Book (TOAST10)",
-          desc:"OSDR Jupyter Book / TOAST10 interactive notebooks",
+        { id:"OSDR_jupyter_book.io", emoji:"📓", title:"OSDR Astrobotany — Interactive FAIR Notebook",
+          desc:"Jupyter Book of interactive notebooks for finding and analysing NASA OSDR data",
           url:"https://dr-richard-barker.github.io/OSDR_jupyter_book.io/" },
         { id:"AIRI", emoji:"🌍", title:"Astrobotany International Research Initiative",
           desc:"AIRI — astrobotany international research initiative",
           url:"https://dr-richard-barker.github.io/AIRI/" },
+        { id:"AIR_for_undergrads", emoji:"🎓", title:"AIR — AstroBotany Investigation Resource",
+          desc:"Hands-on undergraduate astrobotany: a 12-week course growing plants, analysing phenotypes and mining spaceflight transcriptomics",
+          url:"https://dr-richard-barker.github.io/AIR_for_undergrads/", thumb_ext:"png" },
+        { id:"Space_Biology_Education.io", emoji:"📚", title:"Space Biology Education",
+          desc:"Training material, notebooks and challenges for using NASA OSDR data in analysis",
+          url:"https://dr-richard-barker.github.io/Space_Biology_Education.io/", thumb_ext:"png" },
+        { id:"Space_Photography_Guide.io", emoji:"📷", title:"Space Biology Photography Guide",
+          desc:"Astrobiology photography training guide and lesson brainstorming",
+          url:"https://dr-richard-barker.github.io/Space_Photography_Guide.io/", thumb_ext:"png" },
         { id:"fungal-bgc-atlas", emoji:"🧬", title:"Fungal BGC Atlas",
           desc:"Curated, evidence-linked database of 609 fungal biosynthetic gene cluster (BGC) dossiers",
           url:"https://dr-richard-barker.github.io/fungal-bgc-atlas/", thumb_ext:"gif" },
@@ -339,8 +386,8 @@ window.BARKER_SITES = {
   ]
 };
 
-// Derive each scope's flat `ids` (consumed by theme.js + cose-booknav.js for the
-// rail filter) from its `sections`, so sections stay the single source of truth.
+// Derive each scope's flat `ids` (the sub-hub pages and the Academy Portal
+// read them) from its `sections`, so sections stay the single source of truth.
 (function(reg){
   if(!reg || !reg.scopes) return;
   Object.keys(reg.scopes).forEach(function(k){

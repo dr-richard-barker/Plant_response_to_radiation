@@ -1,74 +1,8 @@
 /* ============================================================================
-   COSE book-nav (v0.1) — integrates the cross-site project map into the NATIVE
-   sidebar of framework docs sites (Jupyter Book / sphinx-book-theme / pydata),
-   which already have their own left nav. Additive only: it appends a "CoSE
-   Project Family" section from window.BARKER_SITES (sites.js) to the primary
-   sidebar. No DOM restructuring, so it can't fight the theme's layout. If the
-   sidebar isn't found it does nothing.
-
-   Use: load sites.js then this file via the book's html_js_files.
+   COSE book-nav — RETIRED 2026-10-21 (intentional no-op).
+   It used to append a "CoSE Project Family" list to the native sidebar of the
+   framework docs sites (Jupyter Book, MkDocs Material). Cross-site navigation
+   now lives on the hub pages (personal site → hub → project), so the docs
+   sites keep only their own TOC. The file stays so pages that still load it
+   (AIRI, AIR_for_undergrads) don't 404; it is safe to drop their include.
    ========================================================================== */
-(function(){
-  "use strict";
-  function build(){
-    var reg = window.BARKER_SITES;
-    if(!reg || !reg.groups || document.getElementById("cose-booknav")) return;
-    var target = document.querySelector(".bd-sidebar-primary .sidebar-primary-items__end")   // jupyter book / pydata
-      || document.querySelector(".bd-sidebar-primary nav.bd-links")
-      || document.querySelector(".md-sidebar--primary .md-nav--primary")                     // mkdocs material
-      || document.querySelector(".md-sidebar--primary .md-sidebar__inner")
-      || document.querySelector(".bd-sidebar-primary")
-      || document.querySelector("nav.bd-links");
-    if(!target) return;
-
-    // optional scope (?cose_scope=NAME, remembered per-tab) — limit to a subset
-    var SCOPE = "", scopeIds = null, scopeLabel = "";
-    try {
-      var qs = new URLSearchParams(location.search), sc = qs.get("cose_scope");
-      if(sc !== null){ if(sc){ sessionStorage.setItem("cose.scope", sc); } else { sessionStorage.removeItem("cose.scope"); } }
-      else { sc = sessionStorage.getItem("cose.scope"); }
-      if(sc && reg.scopes && reg.scopes[sc]){ SCOPE = sc; scopeIds = reg.scopes[sc].ids; scopeLabel = reg.scopes[sc].label || sc; }
-    } catch(e){}
-    function inScope(it){ return !scopeIds || scopeIds.indexOf(it.id) >= 0; }
-    function withScope(u){ return SCOPE ? u + (u.indexOf("?") >= 0 ? "&" : "?") + "cose_scope=" + encodeURIComponent(SCOPE) : u; }
-
-    var st = document.createElement("style");
-    st.textContent =
-      "#cose-booknav{padding:14px 0 8px;border-top:1px solid var(--pst-color-border,#e5e9f0);margin-top:14px}"+
-      "#cose-booknav .cn-title{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;"+
-        "color:var(--pst-color-primary,#3B6EA5);margin:0 0 6px;padding:0 6px}"+
-      "#cose-booknav .cn-grp{font-size:.64rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;"+
-        "color:var(--pst-color-text-muted,#8a8a8a);margin:11px 6px 2px}"+
-      "#cose-booknav a{display:block;padding:4px 8px;font-size:.82rem;line-height:1.3;border-radius:6px;"+
-        "color:var(--pst-color-text-base,inherit);text-decoration:none}"+
-      "#cose-booknav a:hover{background:var(--pst-color-surface,rgba(59,110,165,.08));text-decoration:none}";
-    document.head.appendChild(st);
-
-    var box = document.createElement("div");
-    box.id = "cose-booknav"; box.className = "sidebar-primary-item";
-    var t = document.createElement("p"); t.className = "cn-title";
-    t.textContent = SCOPE ? scopeLabel : "CoSE Project Family"; box.appendChild(t);
-    reg.groups.forEach(function(g){
-      var items = g.items.filter(function(it){ return it.url && it.live !== false && inScope(it); });
-      if(!items.length) return;
-      var gh = document.createElement("div"); gh.className = "cn-grp";
-      gh.textContent = g.name; box.appendChild(gh);
-      items.forEach(function(it){
-        var a = document.createElement("a"); a.href = withScope(it.url);
-        a.textContent = (it.emoji ? it.emoji + " " : "") + it.title;
-        box.appendChild(a);
-      });
-    });
-    target.appendChild(box);
-  }
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);
-  else build();
-  // MkDocs Material (and other SPA-style docs) re-render the sidebar on
-  // in-page navigation; re-inject if our section gets removed. build() is a
-  // cheap no-op when the section is already present.
-  if("MutationObserver" in window){
-    new MutationObserver(function(){
-      if(!document.getElementById("cose-booknav")) build();
-    }).observe(document.body, {childList:true, subtree:true});
-  }
-})();
