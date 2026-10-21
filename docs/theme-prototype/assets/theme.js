@@ -10,13 +10,15 @@
    - Progressive enhancement: if this script doesn't run, the page is unchanged.
 
    To use on a page:  set  <body data-site-id="THIS_REPO_SLUG">
-   and include sites.js, then theme.js, at the end of <body>.
+   and include sites.js, then theme.js, at the end of <body>. The logo defaults
+   to the hosted copy; data-brand-logo overrides it.
    ========================================================================== */
 (function(){
   "use strict";
   var LS_THEME = "barker.theme";
   var slug = document.body.getAttribute("data-site-id") || "";
-  var LOGO = document.body.getAttribute("data-brand-logo") || "assets/cose-logo.png";
+  var LOGO = document.body.getAttribute("data-brand-logo")
+    || "https://dr-richard-barker.github.io/Plant_response_to_radiation/cose/cose-logo.png";
   var BRAND_URL = document.body.getAttribute("data-brand-url") || "https://cosecloud.com/";
   var reg = window.BARKER_SITES || {};
 
