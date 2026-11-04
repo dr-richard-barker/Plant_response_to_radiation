@@ -30,15 +30,28 @@ stress-signaling wave across plant organs with ggPlantmap.
 
 | Path | Contents |
 |------|----------|
-| [`code/`](code/) | Numbered pipeline scripts `01`–`15` (acquisition → modeling → validation) |
+| [`code/`](code/) | Numbered pipeline scripts `01`–`15` (Arabidopsis cohort) and `16`–`20` (Brassica rapa extension) |
 | [`data/`](data/) | Metadata, expression matrix, ortholog map, LR pairs, model checkpoint, validation inputs |
-| [`results/`](results/) | Deconvolution, trajectories, CellChat, WGCNA, RRI, pathway tables, and figures |
-| [`manuscript_chapter.md`](manuscript_chapter.md) | Full manuscript draft |
+| [`results/`](results/) | Deconvolution, trajectories, CellChat, WGCNA, RRI, pathway tables, decoders, and figures |
+| [`manuscript_chapter.md`](manuscript_chapter.md) | Full manuscript draft (Arabidopsis 10-study kinetic landscape) |
+| [`docs/manuscript_brappa_radiation_decoding.md`](docs/manuscript_brappa_radiation_decoding.md) | Full manuscript draft (Brassica rapa cross-species radiation decoding) |
 | [`README_pipeline.md`](README_pipeline.md) | Detailed pipeline reference + **Data Dictionary** |
 | [`docs/`](docs/) | GitHub Pages landing page |
 
 See **[`README_pipeline.md`](README_pipeline.md)** for the complete data dictionary, reproduction
 guide, and methodological notes.
+
+---
+
+## Extension Analysis — Cross-Species Radiation Decoding in *Brassica rapa* (Lunar LEAF)
+
+Building upon the 10-study *Arabidopsis* kinetic architecture, this repository integrates the *Brassica rapa* Lunar LEAF (LLGCSS) 40 cGy GCR dataset (Aubry O'Rourke, Richard Barker et al.) with cross-species latent decoders:
+- **DSRS Stress Classifier** ([`code/17_run_dsrs_classifier.py`](code/17_run_dsrs_classifier.py)): GSEA-based single-cell projection proving *B. rapa* 40 cGy GCR preferentially matches `radiation_GCR` (mean ρ = 0.1504) and acute gamma (`rad_100Gy_co60`, ρ = 0.2545).
+- **Redox CVAE Decoder** ([`code/18_run_redox_cvae_decoder.py`](code/18_run_redox_cvae_decoder.py)): Resolves the "antioxidant shield deficit" in *anthocyaninless* mutants ($O_2^{\bullet-}$ burst, 24.9% vs. WT $H_2O_2$ buffering 51.1%).
+- **RRI & Fixative Parity** ([`code/19_brappa_rri_and_antioxidant_shield.py`](code/19_brappa_rri_and_antioxidant_shield.py)): Demonstrates Deep Space Preservative (DRS) parity with RNAlater (RL) across 18,770 orthologs ($r = 0.297$, $P < 10^{-15}$).
+- **Dedicated Interactive Platforms**:
+  - Web Application: [lunar-leaf-radiation-decoder](https://dr-richard-barker.github.io/lunar-leaf-radiation-decoder/)
+  - Study Portal: [B_rappa_LLGCSS](https://dr-richard-barker.github.io/B_rappa_LLGCSS/)
 
 ### Large / regenerable files
 
