@@ -43,15 +43,13 @@ guide, and methodological notes.
 
 ---
 
-## Extension Analysis — Cross-Species Radiation Decoding in *Brassica rapa* (Lunar LEAF)
+## Extension Analysis — Cross-Species Radiation Decoding in *Brassica rapa* (draft under audit)
 
-Building upon the 10-study *Arabidopsis* kinetic architecture, this repository integrates the *Brassica rapa* Lunar LEAF (LLGCSS) 40 cGy GCR dataset (Aubry O'Rourke, Richard Barker et al.) with cross-species latent decoders:
-- **DSRS Stress Classifier** ([`code/17_run_dsrs_classifier.py`](code/17_run_dsrs_classifier.py)): GSEA-based single-cell projection proving *B. rapa* 40 cGy GCR preferentially matches `radiation_GCR` (mean ρ = 0.1504) and acute gamma (`rad_100Gy_co60`, ρ = 0.2545).
-- **Redox CVAE Decoder** ([`code/18_run_redox_cvae_decoder.py`](code/18_run_redox_cvae_decoder.py)): Resolves the "antioxidant shield deficit" in *anthocyaninless* mutants ($O_2^{\bullet-}$ burst, 24.9% vs. WT $H_2O_2$ buffering 51.1%).
-- **RRI & Fixative Parity** ([`code/19_brappa_rri_and_antioxidant_shield.py`](code/19_brappa_rri_and_antioxidant_shield.py)): Demonstrates Deep Space Preservative (DRS) parity with RNAlater (RL) across 18,770 orthologs ($r = 0.297$, $P < 10^{-15}$).
-- **Dedicated Interactive Platforms**:
-  - Web Application: [lunar-leaf-radiation-decoder](https://dr-richard-barker.github.io/lunar-leaf-radiation-decoder/)
-  - Study Portal: [B_rappa_LLGCSS](https://dr-richard-barker.github.io/B_rappa_LLGCSS/)
+Scripts `16`–`20` apply *Arabidopsis*-built tools to a *Brassica rapa* 40 cGy GCR RNA-seq dataset (dose × genotype × fixative; 31 of 39 libraries in the processed matrix). An ABAI check on 2026-11-07 found the agent-written draft overstated what the scripts show. The draft is being revised; see the audit banner in [`docs/manuscript_brappa_radiation_decoding.md`](docs/manuscript_brappa_radiation_decoding.md). What the output tables show:
+- **DSRS projection** ([`code/17_run_dsrs_classifier.py`](code/17_run_dsrs_classifier.py)). The WT 40 cGy signature does **not** rank radiation first: radiation families rank 9th–11th of 13. The dose × genotype interaction does (`radiation_GCR` mean ρ = 0.150; top contrast acute ⁶⁰Co gamma, ρ = 0.254). No significance test was run.
+- **Redox scoring** ([`code/18_run_redox_cvae_decoder.py`](code/18_run_redox_cvae_decoder.py)). This is a hand-weighted heuristic over 16 redox-sensor orthologs. It does not call the Redox_decoder CVAE, and its scores are not evidence about redox mechanism.
+- **RRI and fixatives** ([`code/19_brappa_rri_and_antioxidant_shield.py`](code/19_brappa_rri_and_antioxidant_shield.py)). The RRI takes WT 0 cGy as its reference, so every other group scores lower by construction. The WT dose effect measured in DRS and in RNAlater correlates at r = 0.297 across 30,756 expressed genes, and no gene has a significant dose × fixative interaction.
+- **Related sites** (built from the same draft and not yet audited): [lunar-leaf-radiation-decoder](https://dr-richard-barker.github.io/lunar-leaf-radiation-decoder/) and [B_rappa_LLGCSS](https://dr-richard-barker.github.io/B_rappa_LLGCSS/).
 
 ### Large / regenerable files
 

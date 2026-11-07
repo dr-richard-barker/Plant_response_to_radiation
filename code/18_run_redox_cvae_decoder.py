@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """
 18_run_redox_cvae_decoder.py
-Phase 2.2 — Run the Arabidopsis ROS Decoder (CVAE latent space & redox profiling)
-on Brassica rapa Lunar LEAF pure radiation contrasts.
+Phase 2.2 — Hand-weighted redox heuristic on Brassica rapa GCR contrasts.
+
+NOTE (ABAI check, 2026-11-07): despite the file name, this script does NOT load or call
+the Redox_decoder CVAE. REDOX_REFERENCE below is a hand-assigned table of stimulus weights,
+response times and cell-type scores for 18 sensor genes (close to, but not identical with,
+the values in Redox_decoder's web-viewer builder). Stimulus "probabilities" are a softmax of
+activation-weighted weight sums; "inferred_hours" is an activation-weighted mean of the
+assigned times; cell-type "vulnerability" shares are normalised weighted cell scores. None of
+these outputs is a model prediction or a data-derived estimate.
 
 Evaluates 4 radiation contrasts:
 1. WT 40 cGy vs 0 cGy GCR (acclimated wild-type response)

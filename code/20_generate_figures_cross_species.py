@@ -69,10 +69,10 @@ ax.set_xlim(0, 1)
 ax.set_ylim(0, 1)
 
 # Title & Subtitle Banner
-fig.suptitle("Figure 1: Cross-Species Framework for Spaceflight Cosmic Radiation & Redox Decoding",
+fig.suptitle("Figure 1: Analysis Framework for B. rapa 40 cGy GCR Contrasts (draft under audit)",
              fontsize=15.5, weight="bold", y=0.978, color="#111827")
 
-ax.text(0.5, 0.948, "Cross-species projection of 40 cGy GCR exposure in Brassica rapa into Arabidopsis latent manifolds resolves operational triage and antioxidant biology",
+ax.text(0.5, 0.948, "Brassica rapa GCR contrasts scored with Arabidopsis-built tools through 18,770 one-to-one orthologs (31 of 39 libraries in the processed matrix)",
         ha="center", va="center", fontsize=9.2, style="italic", color="#4B5563")
 
 # Top Cards
@@ -85,15 +85,15 @@ top_cards = [
     {
         "id": "card1",
         "badge": "FACTORIAL COHORT", "badge_color": "#1D4ED8",
-        "title": "1. Lunar LEAF Experiment",
+        "title": "1. B. rapa GCR Dataset",
         "subtitle": "Brassica rapa (Wisconsin Fast Plants)",
         "xy": (0.04, y_top), "w": card_w, "h": card_h,
         "bg": "#F8FAFC", "border": "#2563EB", "header_bg": "#EFF6FF",
         "items": [
-            ("Radiation Dose", "0 cGy (Sham) vs 40 cGy GCR (NSRL)"),
+            ("Radiation Dose", "0 cGy (Sham) vs 40 cGy GCR"),
             ("Genotype Contrast", "Wild-Type (WT) vs anthocyaninless (anl)"),
-            ("Fixative Hardware", "Deep Space (DRS) vs RNAlater (RL)"),
-            ("Cohort Scope", "39 factorial RNA-seq sample libraries")
+            ("Fixative", "DRS vs RNAlater (RL)"),
+            ("Cohort Scope", "39 libraries; 31 in processed matrix")
         ]
     },
     {
@@ -105,23 +105,23 @@ top_cards = [
         "bg": "#F8FAF8", "border": "#16A34A", "header_bg": "#F0FDF4",
         "items": [
             ("1:1 RBH Mapping", "18,770 reciprocal best hits (Bra → AGI)"),
-            ("Genome Scope", "Proteome-wide capture across Brassicaceae"),
-            ("Conservation", "High structural & catalytic identity"),
-            ("Zero-Shot Projection", "Direct transfer to Arabidopsis models")
+            ("Search", "DIAMOND blastp both ways, E ≤ 1e-5"),
+            ("Filter", "Reciprocal best hit, identity ≥ 50%"),
+            ("Projection", "B. rapa log2FC keyed by AGI code")
         ]
     },
     {
         "id": "card3",
-        "badge": "MACHINE LEARNING", "badge_color": "#B45309",
-        "title": "3. Multi-Tier Decoders",
-        "subtitle": "Latent Space Pattern Recognition",
+        "badge": "SCORING TOOLS", "badge_color": "#B45309",
+        "title": "3. Four Analyses",
+        "subtitle": "Arabidopsis references and heuristics",
         "xy": (0.04 + 2 * (card_w + gap_top), y_top), "w": card_w, "h": card_h,
         "bg": "#FFFDF7", "border": "#D97706", "header_bg": "#FEF3C7",
         "items": [
-            ("Tier 1: DSRS", "27 spaceflight stressors / 123 seed panels"),
-            ("Tier 2: Redox CVAE", "41D latent manifold, 15 ROS classes"),
-            ("Tier 3: RRI Manifold", "Composite physiological resilience index"),
-            ("Tier 4: DDR Network", "Double-strand break repair & flavonoids")
+            ("Tier 1: DSRS", "27 reference contrasts / 123 seed panels"),
+            ("Tier 2: Redox heuristic", "Hand-assigned weights, 16 sensors"),
+            ("Tier 3: RRI", "Referenced to the WT 0 cGy samples"),
+            ("Tier 4: DNA repair", "Six orthologs, none significant")
         ]
     }
 ]
@@ -134,38 +134,38 @@ w_bot = 0.44
 bottom_cards = [
     {
         "id": "card4",
-        "badge": "OPERATIONAL DIAGNOSTIC LAYER (TRIAGE)", "badge_color": "#1D4ED8",
-        "title": "Automated Spaceflight Stress Recognition",
-        "subtitle": "Can ML models rapidly classify radiation exposure without retraining?",
+        "badge": "STRESS RECOGNITION: WHAT THE TABLES SHOW", "badge_color": "#1D4ED8",
+        "title": "DSRS Projection",
+        "subtitle": "Does an Arabidopsis-built DSRS recognise GCR in B. rapa?",
         "xy": (0.04, y_bot), "w": w_bot, "h": h_bot,
         "bg": "#F8FAFC", "border": "#2563EB", "header_bg": "#EFF6FF",
         "bullets": [
-            ("Automated Stress Recognition",
-             "DSRS accurately classifies 40 cGy GCR, top-ranking acute gamma (rad_100Gy_co60, ρ = 0.255) and cosmic rays (gcr_80cGy, ρ = 0.217) across 123 developmental panels."),
-            ("Stressor Family Concordance",
-             "Radiation_GCR (mean ρ = 0.150) and radiation_lowdose (0.132) significantly outperform microgravity (0.084) and hypoxia (0.052), confirming high-fidelity classification."),
-            ("Conserved Core Response",
-             "Evolutionarily conserved GCR transcriptional programs across Brassicaceae enable robust zero-shot transfer from Arabidopsis to agricultural crops."),
-            ("Kinetic Window Inference",
-             "Redox CVAE infers elapsed response time at 3.84 h, isolating the acute post-irradiation crisis nadir.")
+            ("WT 40 cGy Signature",
+             "Closest matches are microgravity root (ρ = 0.259) and UV-B (ρ = 0.197); the three radiation families rank 9th-11th of 13."),
+            ("Dose × Genotype Interaction",
+             "Radiation ranks first: acute 60Co gamma (ρ = 0.254), gcr_80cGy (0.217); radiation_GCR family mean ρ = 0.150."),
+            ("No Significance Test",
+             "No null distribution or significance test was computed for these panel correlations."),
+            ("Weak Dose Signal",
+             "DESeq2: 7 WT genes at padj < 0.05; 0 in anl; 1 for dose × genotype; 0 for dose × fixative.")
         ]
     },
     {
         "id": "card5",
-        "badge": "MECHANISTIC BIOLOGY LAYER (DISCOVERY)", "badge_color": "#B91C1C",
-        "title": "Antioxidant Biology & Hardware Fidelity",
-        "subtitle": "What specific pathways and hardware determine crop survival off-Earth?",
+        "badge": "REMAINING ANALYSES: OPEN QUESTIONS", "badge_color": "#B91C1C",
+        "title": "Redox, Resilience & Fixatives",
+        "subtitle": "What these analyses can and cannot show",
         "xy": (0.52, y_bot), "w": w_bot, "h": h_bot,
         "bg": "#FEF2F2", "border": "#DC2626", "header_bg": "#FEE2E2",
         "bullets": [
-            ("Antioxidant Shield Deficit",
-             "WT buffers radiation into secondary H₂O₂ (51.1%); anl mutants suffer an unbuffered superoxide O₂•⁻ free-radical burst (24.9% at 2.23 h)."),
-            ("Resilience Index Collapse",
-             "40 cGy triggers significant RRI collapse in WT (0.762 → 0.636; P = 4.2 × 10⁻⁴); anl mutants exhibit severe constitutive baseline depression (RRI = 0.638)."),
-            ("Fixative Hardware Parity",
-             "Ambient Deep Space Preservative (DRS) matches laboratory-standard RNAlater (r = 0.297, P < 10⁻¹⁵) across all 18,770 orthologs, certifying dry-storage return hardware."),
-            ("DDR Activation & Suppression",
-             "Robust induction of double-strand break repair (BRCA1 +2.03, PARP2 +0.86) in WT; negative interaction terms in anl confirm impaired genomic maintenance.")
+            ("Redox Scores Are Heuristic",
+             "Hand-assigned weights, not the CVAE: WT H₂O₂ 51.1%; anl paraquat 24.9% vs H₂O₂ 23.7%. No sensor gene is DE."),
+            ("RRI Is Self-Referenced",
+             "WT 0 cGy defines the index (0.762); WT 40 cGy (0.636) and anl at both doses (0.637) score lower by construction."),
+            ("Fixative Comparison",
+             "WT dose effects in DRS vs RNAlater correlate (r = 0.297, 30,756 genes); no gene has a significant dose × fixative term."),
+            ("DNA Repair Orthologs",
+             "BRCA1 +2.03 and PARP2 +0.86 log2FC in WT, but padj ≥ 0.72 and baseMean ≤ 12: not significant.")
         ]
     }
 ]
@@ -230,7 +230,7 @@ x3_start = top_cards[2]["xy"][0]
 mid2 = (x2_end + x3_start) / 2
 
 # Draw Badge 2
-t2 = ax.text(mid2, y_mid, "LATENT\nMODELS", ha="center", va="center", fontsize=6.8, weight="bold", color="#B45309",
+t2 = ax.text(mid2, y_mid, "AGI\nKEYED", ha="center", va="center", fontsize=6.8, weight="bold", color="#B45309",
              bbox=dict(boxstyle="round,pad=0.3", facecolor="#FEF3C7", edgecolor="#D97706", lw=0.9))
 # Arrow in and out
 ax.annotate("", xy=(mid2 - 0.022, y_mid), xytext=(x2_end + 0.003, y_mid),
@@ -244,7 +244,7 @@ junction_y = 0.542
 ax.plot([junction_x, junction_x], [y_top, junction_y + 0.016], color="#64748B", lw=1.6, linestyle="--")
 
 # Milestone Pill
-ax.text(junction_x, junction_y, "Cross-Species Latent Manifold Decoding",
+ax.text(junction_x, junction_y, "Cross-Species Projection",
         ha="center", va="center", fontsize=8.2, weight="bold", color="#1E293B",
         bbox=dict(boxstyle="round,pad=0.32", facecolor="#F8FAFC", edgecolor="#64748B", lw=1.0))
 
@@ -322,6 +322,8 @@ colors = ["#D93025" if "rad" in s or "gcr" in s else "#1A73E8" for s in inter_ra
 ax1.barh(inter_ranks["stressor"], inter_ranks["spearman_rho"], color=colors, edgecolor="black", alpha=0.85)
 ax1.set_xlabel("Spearman Rank Correlation (ρ with Reference Stressor)")
 ax1.set_title("A. DSRS Top Matches for Radiation × Genotype Interaction", weight="bold")
+ax1.legend(handles=[patches.Patch(facecolor="#D93025", edgecolor="black", label="Radiation family"),
+                    patches.Patch(facecolor="#1A73E8", edgecolor="black", label="Other family")], loc="lower right")
 ax1.invert_yaxis()
 ax1.grid(axis="x", linestyle="--", alpha=0.5)
 
@@ -339,7 +341,7 @@ sns.heatmap(fam_pivot, annot=True, fmt=".2f", cmap="vlag", center=0, ax=ax2, cba
 ax2.set_title("B. Stressor Family Fingerprint Concordance", weight="bold")
 ax2.set_ylabel("Stressor Class / Family")
 
-fig.suptitle("Figure 2: DSRS Stress Recognition Accurately Decodes GCR Radiation in Brassica rapa", fontsize=13, weight="bold", y=0.98)
+fig.suptitle("Figure 2: DSRS Projection of B. rapa GCR Signatures (Spearman ρ; no significance test)", fontsize=13, weight="bold", y=0.98)
 plt.tight_layout()
 fig.savefig(FIG_DIR / "fig2_dsrs_stress_recognition.png")
 fig.savefig(FIG_DIR / "fig2_dsrs_stress_recognition.pdf")
@@ -365,8 +367,8 @@ ax1.bar(x + 1.5*width, pred_plot["Interaction_Dose_x_Preservative"] * 100, width
 
 ax1.set_xticks(x)
 ax1.set_xticklabels(stim_labels, rotation=25, ha="right")
-ax1.set_ylabel("Predicted Probability (%)")
-ax1.set_title("A. Decoded Reactive Oxygen Species (ROS) Profiles", weight="bold")
+ax1.set_ylabel("Softmax Score (%)")
+ax1.set_title("A. Heuristic Stimulus Scores (hand-assigned weights)", weight="bold")
 ax1.legend(loc="upper right")
 ax1.grid(axis="y", linestyle="--", alpha=0.5)
 
@@ -378,8 +380,8 @@ bars = ax2.bar(contrasts_disp, hours, color=colors_time, edgecolor="black", widt
 ax2.axhspan(0, 1.0, color="#E8F0FE", alpha=0.4, label="Immediate (<1h)")
 ax2.axhspan(1.0, 4.0, color="#FEF7E0", alpha=0.4, label="Early Acute (1-4h)")
 ax2.axhspan(4.0, 12.0, color="#FCE8E6", alpha=0.4, label="Mid Response (4-12h)")
-ax2.set_ylabel("Inferred Elapsed Response Time (Hours)")
-ax2.set_title("B. Inferred Redox Signaling Kinetics", weight="bold")
+ax2.set_ylabel("Weighted Assigned Time (Hours)")
+ax2.set_title("B. Activation-Weighted Mean of Assigned Response Times", weight="bold")
 ax2.set_ylim(0, 7.0)
 for b in bars:
     y = b.get_height()
@@ -387,7 +389,7 @@ for b in bars:
 ax2.legend(loc="upper left")
 ax2.grid(axis="y", linestyle="--", alpha=0.5)
 
-fig.suptitle("Figure 3: Arabidopsis ROS Decoder Identifies Antioxidant Shield Failure in Anthocyaninless Fast Plants", fontsize=12, weight="bold", y=0.98)
+fig.suptitle("Figure 3: Hand-Weighted Redox Heuristic Scores (not Redox_decoder CVAE output)", fontsize=12, weight="bold", y=0.98)
 plt.tight_layout()
 fig.savefig(FIG_DIR / "fig3_redox_cvae_decoding.png")
 fig.savefig(FIG_DIR / "fig3_redox_cvae_decoding.pdf")
@@ -421,7 +423,7 @@ ax2.set_ylim(0, 0.7)
 ax2.grid(axis="y", linestyle="--", alpha=0.5)
 ax2.legend(title="Dose")
 
-fig.suptitle("Figure 4: 40 cGy GCR Drives RRI Nadir in Wild-Type and Constitutive Stress in Anthocyaninless Plants", fontsize=12, weight="bold", y=0.98)
+fig.suptitle("Figure 4: RRI by Genotype and Dose (WT 0 cGy is the reference group for every component)", fontsize=12, weight="bold", y=0.98)
 plt.tight_layout()
 fig.savefig(FIG_DIR / "fig4_rri_degradation.png")
 fig.savefig(FIG_DIR / "fig4_rri_degradation.pdf")
@@ -436,7 +438,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 # Panel A: Preservative comparison
 sns.boxplot(data=rri_scores, x="preservative", y="RRI", hue="condition",
             palette={"0_cGy": "#8AB4F8", "40_cGy": "#EA4335"}, ax=ax1, width=0.5)
-ax1.set_title("A. Preservative Fidelity: Deep Space (DRS) vs RNAlater", weight="bold")
+ax1.set_title("A. RRI by Fixative: DRS vs RNAlater", weight="bold")
 ax1.set_xlabel("Preservative Fixative")
 ax1.set_ylabel("Radiation Resilience Index (RRI)")
 ax1.set_ylim(0.45, 0.9)
@@ -458,11 +460,11 @@ ax2.set_yticks(y)
 ax2.set_yticklabels(symbols)
 ax2.axvline(0, color="black", linestyle="-", linewidth=1)
 ax2.set_xlabel("Log2 Fold-Change (40 cGy vs 0 cGy)")
-ax2.set_title("B. DNA Repair Core & Flavonoid Pathway Activation", weight="bold")
+ax2.set_title("B. DNA Repair & Flavonoid Orthologs (none significant)", weight="bold")
 ax2.legend(loc="lower right")
 ax2.grid(axis="x", linestyle="--", alpha=0.5)
 
-fig.suptitle("Figure 5: Preservative Fixative Parity and DNA Double-Strand Break Repair Activation", fontsize=12, weight="bold", y=0.98)
+fig.suptitle("Figure 5: Fixative Comparison and DNA-Repair / Flavonoid Ortholog Fold Changes", fontsize=12, weight="bold", y=0.98)
 plt.tight_layout()
 fig.savefig(FIG_DIR / "fig5_preservative_and_ddr.png")
 fig.savefig(FIG_DIR / "fig5_preservative_and_ddr.pdf")
@@ -483,9 +485,9 @@ spat_pivot = spat_pivot.rename(columns={
 })
 spat_pivot = spat_pivot.sort_values(by="Dose × Genotype", ascending=False)
 
-sns.heatmap(spat_pivot * 100, annot=True, fmt=".1f", cmap="YlOrRd", ax=ax, cbar_kws={"label": "Predicted Vulnerability Share (%)"})
-ax.set_title("Figure 6: Spatial Anatomical Susceptibility Profile Across Plant Organs", weight="bold")
-ax.set_ylabel("Tissue / Cell Layer (ggPlantMap)")
+sns.heatmap(spat_pivot * 100, annot=True, fmt=".1f", cmap="YlOrRd", ax=ax, cbar_kws={"label": "Weighted Share (%)"})
+ax.set_title("Figure 6: Cell-Type Shares from Hand-Assigned Sensor Weights (not data-derived)", weight="bold")
+ax.set_ylabel("Cell-Type Label")
 
 plt.tight_layout()
 fig.savefig(FIG_DIR / "fig6_spatial_vulnerability.png")
