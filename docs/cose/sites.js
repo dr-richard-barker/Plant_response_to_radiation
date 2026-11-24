@@ -34,7 +34,7 @@ window.BARKER_SITES = {
              "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer","arabidopsis-atlas",
              "ABCD_v2","groot-dashboard","plant-mitocarta","plant-pathway-atlas"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
-        ids:["AIRI","madwest-astrobotany","AIR_for_undergrads","Space_Biology_Education.io","Space_Photography_Guide.io"] }
+        ids:["Comics","AIRI","madwest-astrobotany","AIR_for_undergrads","Space_Biology_Education.io","Space_Photography_Guide.io"] }
     ]},
     deepspaceag: { label: "Deep Space Agriculture", hubLabel: "Deep Space Ag", hub: "https://dr-richard-barker.github.io/DeepSpaceAg/", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
@@ -361,6 +361,9 @@ window.BARKER_SITES = {
     {
       name: "Documentation & Education Hubs",
       items: [
+        { id:"Comics", emoji:"📚", title:"CoSE Science Comics Anthology",
+          desc:"114 illustrated K–12 academic graphic novels across 8 art styles connecting every CoSE research project, with SVG/PNG/GIF/PDF export and a Concept Constellation",
+          url:"https://dr-richard-barker.github.io/Comics/" },
         { id:"OSDR_jupyter_book.io", emoji:"📓", title:"OSDR Astrobotany — Interactive FAIR Notebook",
           desc:"Jupyter Book of interactive notebooks for finding and analysing NASA OSDR data",
           url:"https://dr-richard-barker.github.io/OSDR_jupyter_book.io/" },
