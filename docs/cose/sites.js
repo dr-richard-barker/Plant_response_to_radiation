@@ -22,23 +22,23 @@ window.BARKER_SITES = {
   scopes: {
     astrobotany: { label: "AstroBotany", hub: "https://dr-richard-barker.github.io/AstroBotany/", sections: [
       { name:"Analyses", blurb:"Spaceflight & radiation transcriptomics / multi-omics studies.",
-        ids:["arabidopsis-drem-osdr","Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics","ChromDecode-At","APEX05_results_and_code",
+        ids:["arabidopsis-drem-osdr","Plant_response_to_radiation","Airflow_omics","arabidopsis-spaceflight-omics-cellChat_Ca_signaling","ChromDecode-At","APEX05_results_and_code",
              "B_rappa_LLGCSS","lunar-leaf-radiation-decoder","osdr-plant-microbiome","Circadian_decoder","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
              "arabidopsis-gwas-spaceflight","OSD615-glycome-cytoskeleton-systems-biology","OSDR_Plant_Alternative_Splicing","Photorespiration_multiomics_microgravity",
-             "Suborbital_Arabidopsis","arabidopsis-exploration-atmosphere-tabpfn","arabidopsis-metabolome-story","PathoFluor-At",
-             "spaceflight-metabolism-natural-variation"] },
+             "Spaceflight-Plant-Biophysics-Multiomics","Suborbital_Arabidopsis","arabidopsis-exploration-atmosphere-tabpfn","arabidopsis-metabolome-story","PathoFluor-At",
+             "FloodWave-At","spaceflight-metabolism-natural-variation"] },
       { name:"Crops", blurb:"Crop plants grown and studied in spaceflight conditions.",
         ids:["veg05-integrated-omics","TICTOC","fungal-bgc-atlas","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space"] },
       { name:"Tools", blurb:"Interactive decoders, simulators & reusable analysis pipelines.",
-        ids:["Tropism_autodecoder_2026","germinator-ai","deepspace-seed-twin","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
+        ids:["Tropism_autodecoder_2026","germinator-ai","deepspace-seed-twin","Seed_model_in_GBC1_model","Seed_sowing_simulator","Physics-simulator-for-statolith-modelling-","smallRNAseq-DREAM",
              "astroroot","astroroot-painter","segment-any-plant","AstroBotany_calibration_image_sharing_and_analysis","Anthocyanin-Image-analysis","ares-curation","AstroRegolith","AstroMycology","Lunar_Red_Alert","biosim-nextgen","Redox_decoder","cose-arcade","lunar-arcade","cose-fiji","LunarFarm-BLSS","lunar-lfm-explorer","arabidopsis-atlas",
              "ABCD_v2","groot-dashboard","plant-mitocarta","plant-pathway-atlas"] },
       { name:"Education", blurb:"Courses & classroom-facing astrobotany outreach.",
-        ids:["Comics","AIRI","madwest-astrobotany","AIR_for_undergrads","Space_Biology_Education.io","Space_Photography_Guide.io"] }
+        ids:["Comics","Plant_the_moon","AIRI","madwest-astrobotany","AIR_for_undergrads","Space_Biology_Education.io","Space_Photography_Guide.io"] }
     ]},
     deepspaceag: { label: "Deep Space Agriculture", hubLabel: "Deep Space Ag", hub: "https://dr-richard-barker.github.io/DeepSpaceAg/", sections: [
       { name:"Plant systems & crops", blurb:"Growth-chamber gas transport, radiation, germination and crop physiology off Earth.",
-        ids:["LunarLeaf-CFD","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Hardware_OSDR_review","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","deepspace-seed-twin","Seed_sowing_simulator","lunar-magnetic-biology","AstroRegolith","AstroMycology","microgreen-chamber-cfd","fungal-bgc-atlas","biosim-nextgen","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
+        ids:["LunarLeaf-CFD","Spaceflight-Plant-Biophysics-Multiomics","Airflow_omics","Aero-leaf-CFD-analysis-adapted-from-blender-ish","spaceflight-plant-hardware-cfd","Hardware_OSDR_review","Plant_response_to_radiation","B_rappa_LLGCSS","PhysioSpace_stress_decoding_VEG05","germinator-ai","deepspace-seed-twin","Seed_model_in_GBC1_model","Seed_sowing_simulator","lunar-magnetic-biology","AstroRegolith","AstroMycology","cose-mycoponic-mvp","microgreen-chamber-cfd","fungal-bgc-atlas","biosim-nextgen","VEGGIE_Tom_Red_Blue_Leaves_and_adv_roots",
              "OSDR-Veggie-Nutrition-Dashboard","brachypodium-gwas-spaceflight","Microbiome_of_seedlings_in_space","Photorespiration_multiomics_microgravity","LunarFarm-BLSS",
              "ISS_EDEN","LEAF_GBC2_pot_model","LED-pattern-synth"] },
       { name:"Planetary environment", blurb:"Magnetic fields, radiation, and environmental conditions on the Moon and Mars.",
@@ -46,11 +46,11 @@ window.BARKER_SITES = {
       { name:"Stress & biomarker decoders", blurb:"Machine-learning decoders of spaceflight and radiation stress signatures.",
         ids:["deepspace-seed-stress-decoder","Circadian_decoder","Redox_decoder","arabidopsis-gwas-spaceflight"] },
       { name:"Data & education", blurb:"Open OSDR data notebooks and training resources.",
-        ids:["OSDR_jupyter_book.io"] }
+        ids:["OSDR_jupyter_book.io","Plant_the_moon"] }
     ]},
     simulations: { label: "Serious Games & Academy", sections: [
       { name:"CoSE Academy Modules", blurb:"Interactive assessment modules with embedded real-time space colony simulations.",
-        ids:["dr-richard-barker","LunarSims","lunar-arcade","Settlers_of_the_Moon_or_Mars","Training_LLM_game-theory_using_bloodbowl","Lunar_Red_Alert","cose-arcade"] }
+        ids:["dr-richard-barker","LunarSims","lunar-arcade","Settlers_of_the_Moon_or_Mars","Training_LLM_game-theory_using_bloodbowl","Lunar_Red_Alert","cose-arcade","roda-orbital"] }
     ]},
     astronauthealth: { label: "Astronaut Health", hub: "https://dr-richard-barker.github.io/AstronautHealth/", sections: [
       { name: "Physiology & Countermeasures", blurb: "Astronaut muscle atrophy, oncogene biomarkers, and nutritional countermeasures.",
@@ -107,9 +107,9 @@ window.BARKER_SITES = {
         { id:"Tropism_autodecoder_2026", emoji:"🧭", title:"Tropism Autodecoder 2026",
           desc:"Auto-decoder atlas of plant tropism responses",
           url:"https://dr-richard-barker.github.io/Tropism_autodecoder_2026/" },
-        { id:"arabidopsis-spaceflight-omics", emoji:"🌿", title:"Arabidopsis Spaceflight Omics",
+        { id:"arabidopsis-spaceflight-omics-cellChat_Ca_signaling", emoji:"🌿", title:"Arabidopsis Spaceflight Omics",
           desc:"LASSO biomarkers, single-cell atlas integration & Ca²⁺ cell–cell signalling across NASA OSDR",
-          url:"https://dr-richard-barker.github.io/arabidopsis-spaceflight-omics/" },
+          url:"https://dr-richard-barker.github.io/arabidopsis-spaceflight-omics-cellChat_Ca_signaling/" },
         { id:"ChromDecode-At", emoji:"🧬", title:"ChromDecode-At — Spaceflight Chromatin States",
           desc:"Spaceflight-repressed Arabidopsis genes sit in Polycomb chromatin: OSDR-wide chromatin-state decoding, SOG1 ChIP-seq and methylation tests",
           url:"https://dr-richard-barker.github.io/ChromDecode-At/" },
@@ -149,6 +149,12 @@ window.BARKER_SITES = {
         { id:"PathoFluor-At", emoji:"🦠", title:"PathoFluor-At — Pathogen Fluorescence Signatures",
           desc:"2016 fluorescence hyperspectral imaging of Arabidopsis (fls2, cml24) after flg22 or Pseudomonas: an early pathogen signature, an FLS2-independent flg22 artefact, FAIR raw data",
           url:"https://dr-richard-barker.github.io/PathoFluor-At/", thumb_ext:"png" },
+        { id:"FloodWave-At", emoji:"🌊", title:"FloodWave-At — Root Flooding Ca²⁺ & ROS",
+          desc:"Forensic re-analysis of widefield GCaMP time-lapse recordings of Arabidopsis thaliana rosettes during root flooding, linking root-to-shoot hydraulic, ROS and Ca²⁺ signaling",
+          url:"https://dr-richard-barker.github.io/FloodWave-At/" },
+        { id:"Spaceflight-Plant-Biophysics-Multiomics", emoji:"🍃", title:"Spaceflight Plant Biophysics & Multi-Omics",
+          desc:"Coupled 2D lattice-Boltzmann CFD, Farquhar–von Caemmerer–Berry C3 model, and NASA OSDR multi-omics analysis of spaceflight plant gas exchange and enclosure carbon starvation",
+          url:"https://dr-richard-barker.github.io/Spaceflight-Plant-Biophysics-Multiomics/" },
         { id:"spaceflight-metabolism-natural-variation", emoji:"🌗", title:"Spaceflight Light/Dark Metabolism",
           desc:"Natural-variation light/dark metabolomes test a carbon-starvation model of plant spaceflight: pre-registered gene-set tests on six flight contrasts, PaintOmics with a measured metabolite layer, GC-MS panel power",
           url:"https://dr-richard-barker.github.io/spaceflight-metabolism-natural-variation/", thumb_ext:"png" },
@@ -249,6 +255,9 @@ window.BARKER_SITES = {
         { id:"AstroMycology", emoji:"🍄", title:"AstroMycology Scan Database",
           desc:"Vite/React image + 3D scan library with an in-browser mesh viewer and volume/surface analysis",
           url:"https://dr-richard-barker.github.io/AstroMycology/", thumb_ext:"gif" },
+        { id:"cose-mycoponic-mvp", emoji:"🍄", title:"CoSE Mycoponic Chamber — 3D-Printable MVP",
+          desc:"3D-printable Minimal Viable Prototype of the CoSE Mycoponic Bioreactor Chamber with interactive orthographic viewer, ceramic filter candle, and Luer gas exchange",
+          url:"https://dr-richard-barker.github.io/cose-mycoponic-mvp/" },
         { id:"microgreen-chamber-cfd", emoji:"🌬️", title:"Microgreen CFD Model",
           desc:"OpenFOAM 3D computational fluid dynamics (CFD) internal airflow analysis of a growth chamber",
           url:"https://dr-richard-barker.github.io/microgreen-chamber-cfd/", thumb_ext:"gif" },
@@ -324,6 +333,9 @@ window.BARKER_SITES = {
         { id:"LEAF_GBC2_pot_model", emoji:"🌙", title:"LEAF Lunar Plant Chamber CFD",
           desc:"3D CFD and biophysics portal for the LEAF plant chamber pot: 1 g Earth vs 0.166 g lunar",
           url:"https://dr-richard-barker.github.io/LEAF_GBC2_pot_model/", thumb_ext:"png" },
+        { id:"Seed_model_in_GBC1_model", emoji:"🌱", title:"LEAF GBC1 — 164-Seed Cellular Digital Twin",
+          desc:"Coupled 164-seed cellular digital twin of community growth in the Artemis III LEAF GBC1 spaceflight plant growth chamber (32 B. rapa + 100 Arabidopsis + 32 B. rapa) with 3D CFD",
+          url:"https://dr-richard-barker.github.io/Seed_model_in_GBC1_model/" },
         { id:"LED-pattern-synth", emoji:"💡", title:"Horticultural LED Designer",
           desc:"Browser app for designing horticultural LED patterns",
           url:"https://dr-richard-barker.github.io/LED-pattern-synth/", thumb_ext:"png" },
@@ -356,6 +368,9 @@ window.BARKER_SITES = {
         { id:"Training_LLM_game-theory_using_bloodbowl", emoji:"🏈", title:"Brute Bowl — LLM Game Theory",
           desc:"Exploring the use of LLMs to model stochastic probability, risk mitigation, and team dynamics in constrained environments.",
           url:"https://dr-richard-barker.github.io/Training_LLM_game-theory_using_bloodbowl/game/" },
+        { id:"roda-orbital", emoji:"🤸", title:"Roda Orbital — 3D Capoeira Game",
+          desc:"Interactive 3D Capoeira fighting game in the browser",
+          url:"https://dr-richard-barker.github.io/roda-orbital/" },
       ]
     },
     {
@@ -364,6 +379,9 @@ window.BARKER_SITES = {
         { id:"Comics", emoji:"📚", title:"CoSE Science Comics Anthology",
           desc:"114 illustrated K–12 academic graphic novels across 8 art styles connecting every CoSE research project, with SVG/PNG/GIF/PDF export and a Concept Constellation",
           url:"https://dr-richard-barker.github.io/Comics/" },
+        { id:"Plant_the_moon", emoji:"🌖", title:"Plant the Moon — Regolith AI/ML Meta-Analysis",
+          desc:"FAIR AI/ML meta-analysis of Plant the Moon Challenge regolith reports (2021–2026) with Typst manuscript and CoSE Jupyter Book",
+          url:"https://dr-richard-barker.github.io/Plant_the_moon/" },
         { id:"OSDR_jupyter_book.io", emoji:"📓", title:"OSDR Astrobotany — Interactive FAIR Notebook",
           desc:"Jupyter Book of interactive notebooks for finding and analysing NASA OSDR data",
           url:"https://dr-richard-barker.github.io/OSDR_jupyter_book.io/" },
